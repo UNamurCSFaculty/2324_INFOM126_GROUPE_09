@@ -1,0 +1,57 @@
+<div>
+  <div class="d-flex justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <h1 data-cy="loginTitle">Authentification</h1>
+      <div class="alert alert-danger" *ngIf="authenticationError" data-cy="loginError">
+        <strong>Erreur d'authentification !</strong> Veuillez vérifier vos identifiants de connexion.
+      </div>
+      <form class="form" role="form" (ngSubmit)="login()" [formGroup]="loginForm">
+        <div class="mb-3">
+          <label class="username-label" for="username">Nom d'utilisateur</label>
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            id="username"
+            placeholder="Votre nom d'utilisateur"
+            formControlName="username"
+            #username
+            data-cy="username"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="password">Mot de passe</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            placeholder="Votre mot de passe"
+            formControlName="password"
+            data-cy="password"
+          />
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label" for="rememberMe">
+            <input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe" formControlName="rememberMe" />
+            <span>Garder la session ouverte</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" data-cy="submit">Connexion</button>
+      </form>
+      <div class="mt-3 alert alert-warning">
+        <a class="alert-link" routerLink="/account/reset/request" data-cy="forgetYourPasswordSelector"
+          >Avez-vous oublié votre mot de passe ?</a
+        >
+      </div>
+
+      <div class="alert alert-warning">
+        <span>Vous n'avez pas encore de compte ?</span>
+        <a class="alert-link" routerLink="/account/register">Créer un compte</a>
+      </div>
+    </div>
+  </div>
+</div>

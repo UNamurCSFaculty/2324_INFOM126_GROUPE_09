@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-md-3">
+    <span class="hipster img-fluid rounded"></span>
+  </div>
+
+  <div class="col-md-9">
+    <h1 class="display-4"><span>Bienvenue, Java Hipster !</span> (Pipeline TFM)</h1>
+
+    <p class="lead">Ceci est votre page d'accueil</p>
+
+    <div [ngSwitch]="account !== null">
+      <div class="alert alert-success" *ngSwitchCase="true">
+        <span id="home-logged-message" *ngIf="account">Vous êtes connecté en tant que "{{ account.login }}".</span>
+      </div>
+
+      <div class="alert alert-warning" *ngSwitchCase="false">
+        <span>Si vous voulez vous </span>
+        <a class="alert-link" (click)="login()">connecter</a
+        ><span
+          >, vous pouvez utiliser les comptes par défaut : <br />
+          - Administrateur (nom d'utilisateur="admin" et mot de passe ="admin") <br />
+          - Utilisateur (nom d'utilisateur="user" et mot de passe ="user").</span
+        >
+      </div>
+
+      <div class="alert alert-warning" *ngSwitchCase="false">
+        <span>Vous n'avez pas encore de compte ?</span>&nbsp;
+        <a class="alert-link" routerLink="/account/register">Créer un compte</a>
+      </div>
+    </div>
+
+    <p>Si vous avez des questions à propos de JHipster :</p>
+
+    <ul>
+      <li><a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer">Page d'accueil de JHipster</a></li>
+      <li>
+        <a href="https://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener noreferrer">JHipster sur Stack Overflow</a>
+      </li>
+      <li>
+        <a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener noreferrer"
+          >JHipster bug tracker</a
+        >
+      </li>
+      <li>
+        <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">JHipster public chat room</a>
+      </li>
+      <li><a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer">Suivez @jhipster sur Twitter</a></li>
+    </ul>
+
+    <p>
+      <span>Si vous aimez JHipster, donnez nous une étoile sur</span>
+      <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">GitHub </a>!
+    </p>
+  </div>
+</div>

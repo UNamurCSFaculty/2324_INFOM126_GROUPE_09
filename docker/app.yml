@@ -1,0 +1,16 @@
+# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+name: pipelinetfm
+services:
+  app:
+    build:
+      context: ../
+      dockerfile: Dockerfile-Back
+    ports:
+      - 127.0.0.1:5000:80
+    depends_on:
+      postgresql:
+        condition: service_healthy
+  postgresql:
+    extends:
+      file: ./postgresql.yml
+      service: postgresql
