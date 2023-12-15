@@ -8,7 +8,7 @@ Chaque branche doit correspondre à un **issue** GitHub. Pour chaque issue cré�
 
 ### Nommage
 
-Chaque branche créée doit suivre le format suivant: ``TFM-{ID}``, ``{ID}`` étant l'identifiant de **l'issue**.
+Chaque branche créée doit suivre le format suivant: ``TFM-{ID}``, ``{ID}`` étant un nombre représentant l'identifiant de **l'issue**.
 
 ## Commits
 
