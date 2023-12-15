@@ -1,7 +1,5 @@
 # PipelineTFM
 
-Test
-
 This application was generated using JHipster 8.0.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.0.0](https://www.jhipster.tech/documentation-archive/v8.0.0).
 
 This application was generated using JHipster 8.0.0 and JHipster .Net Core , you can find documentation and help at https://jhipsternet.readthedocs.io/en/latest/index.html and [https://www.jhipster.tech/documentation-archive/v8.0.0](https://www.jhipster.tech/documentation-archive/v8.0.0).
