@@ -23,6 +23,10 @@ jobs:
           dotnet-version: 7.0.x
       - name: Format C# code
         run: dotnet format
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
       - name: Format TS code
         run: npm run prettier:format
         working-directory: src/PipelineTFM/ClientApp
