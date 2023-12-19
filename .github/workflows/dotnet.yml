@@ -3,9 +3,11 @@
 
 name: TFM Workflow .NET
 
+# Executed only when a commit/push is done on main
+# or when a pull requestion towards main branch is done
 on:
   push:
-    branches: [ "main", "TFM-*" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -23,7 +25,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build -c Release --no-restore
     
   test:
 
@@ -37,3 +39,4 @@ jobs:
         dotnet-version: 7.0.x
     - name: Test
       run: dotnet test --no-build --verbosity normal
+  
