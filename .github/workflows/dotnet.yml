@@ -27,6 +27,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18.x
+      - name: Install Dev dependencies
+        run: npm install -D
       - name: Format TS code
         run: npm run prettier:format
         working-directory: src/PipelineTFM/ClientApp
