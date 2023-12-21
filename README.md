@@ -1,4 +1,4 @@
-# PipelineTFM
+# PipelineTFM [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/UNamurCSFaculty/2324_INFOM126_GROUPE_09/dotnet.yml)](https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09/actions)
 
 This application was generated using JHipster 8.0.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.0.0](https://www.jhipster.tech/documentation-archive/v8.0.0).
 
