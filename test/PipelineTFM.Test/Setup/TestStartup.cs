@@ -40,7 +40,7 @@ public class TestStartup : Startup
             DataSource = ":memory:"
         }.ToString());
 
-        services.AddDbContext<ApplicationDatabaseContext>(context => context.UseSqlite(connection));
-        services.AddScoped<DbContext>(provider => provider.GetService<ApplicationDatabaseContext>());
+        services.AddDbContext<MessageDbContext>(context => context.UseSqlite(connection));
+        services.AddScoped<DbContext>(provider => provider.GetService<MessageDbContext>());
     }
 }

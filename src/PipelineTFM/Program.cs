@@ -5,14 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Serilog;
 using System;
 using System.IO;
-using System.Security.Authentication;
 using PipelineTFM;
 using PipelineTFM.Configuration;
 using IStartup = PipelineTFM.IStartup;
-using static JHipsterNet.Core.Boot.BannerPrinter;
-using Microsoft.Extensions.Hosting;
-
-PrintBanner(10 * 1000);
 
 try
 {
@@ -48,7 +43,6 @@ try
 }
 catch (Exception ex)
 {
-    // Use ForContext to give a context to this static environment (for Serilog LoggerNameEnricher).
     Log.ForContext<Program>().Fatal(ex, "Host terminated unexpectedly");
     return 1;
 }

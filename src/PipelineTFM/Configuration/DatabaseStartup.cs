@@ -17,7 +17,7 @@ public static class DatabaseConfiguration
         string connectionString = null;
         string databaseUrl = configuration.GetValue<string>("DATABASE_URL");
 
-        if (!String.IsNullOrEmpty(databaseUrl) && Uri.IsWellFormedUriString(databaseUrl, UriKind.RelativeOrAbsolute))
+        if (!string.IsNullOrEmpty(databaseUrl) && Uri.IsWellFormedUriString(databaseUrl, UriKind.RelativeOrAbsolute))
         {
             Console.WriteLine("DATABASE_URL will be used to create the connection string.");
             //  Parse the connection string
@@ -51,9 +51,9 @@ public static class DatabaseConfiguration
 
         // Opt out of the new timestamp mapping logic for postgres (https://www.npgsql.org/efcore/release-notes/6.0.html#opting-out-of-the-new-timestamp-mapping-logic)
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-        services.AddDbContext<ApplicationDatabaseContext>(context => { context.UseNpgsql(connectionString); });
+        services.AddDbContext<MessageDbContext>(context => { context.UseNpgsql(connectionString); });
 
-        services.AddScoped<DbContext>(provider => provider.GetService<ApplicationDatabaseContext>());
+        services.AddScoped<DbContext>(provider => provider.GetService<MessageDbContext>());
 
         return services;
     }
@@ -64,7 +64,7 @@ public static class DatabaseConfiguration
         {
             using (var scope = app.ApplicationServices.CreateScope())
             {
-                var context = scope.ServiceProvider.GetRequiredService<ApplicationDatabaseContext>();
+                var context = scope.ServiceProvider.GetRequiredService<MessageDbContext>();
                 context.Database.OpenConnection();
                 context.Database.EnsureCreated();
             }

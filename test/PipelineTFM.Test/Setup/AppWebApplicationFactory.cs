@@ -1,10 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using PipelineTFM.Crosscutting.Constants;
-using PipelineTFM.Configuration;
-using PipelineTFM.Security;
 using PipelineTFM.Test.Configuration;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
@@ -22,7 +16,6 @@ public class AppWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntr
 {
     private IStartup _startup;
     private IServiceProvider _serviceProvider;
-    private ClaimsPrincipal _user { get; set; }
 
     public AppWebApplicationFactory()
     {
@@ -49,7 +42,6 @@ public class AppWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntr
                     .AddMvc(TestMvcStartup.ConfigureMvcAuthorization());
                 services.Replace(new ServiceDescriptor(typeof(IHttpContextFactory), typeof(MockHttpContextFactory),
                     ServiceLifetime.Transient));
-                services.AddTransient(_ => new MockClaimsPrincipalProvider(_user));
             })
             .Configure((context, applicationBuilder) =>
             {
@@ -62,22 +54,5 @@ public class AppWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntr
     public TService GetRequiredService<TService>()
     {
         return _serviceProvider.GetRequiredService<TService>();
-    }
-
-    public AppWebApplicationFactory<TEntryPoint> WithMockUser(string name = "user",
-        IEnumerable<string> roles = null, string authenticationType = "MockAuthenticationType")
-    {
-        _user = BuildClaimsPrincipal(name, roles, authenticationType);
-        return this;
-    }
-
-    private static ClaimsPrincipal BuildClaimsPrincipal(string name, IEnumerable<string> roles,
-        string authenticationType)
-    {
-        if (roles == null || !roles.Any()) roles = new HashSet<string> { RolesConstants.USER };
-
-        var claims = new List<Claim> { new Claim(SecurityStartup.UserNameClaimType, name) };
-        claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
-        return new ClaimsPrincipal(new ClaimsIdentity(claims.ToArray(), authenticationType));
     }
 }

@@ -1,8 +1,9 @@
+﻿using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 using Scrutor;
-using PipelineTFM.Domain.Entities;
 using PipelineTFM.Domain.Repositories.Interfaces;
 using PipelineTFM.Infrastructure.Data.Repositories;
+using Serilog;
 
 namespace PipelineTFM.Configuration;
 
@@ -29,7 +30,7 @@ public static class RepositoryStartup
             .AsImplementedInterfaces()
             .WithScopedLifetime()
         );
-
+        
         return services;
     }
 }

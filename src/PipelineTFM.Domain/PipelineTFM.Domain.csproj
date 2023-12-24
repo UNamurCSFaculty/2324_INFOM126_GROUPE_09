@@ -15,6 +15,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\PipelineTFM.Crosscutting\PipelineTFM.Crosscutting.csproj" />
+        <ProjectReference Include="..\PipelineTFM.Dto\PipelineTFM.Dto.csproj" />
     </ItemGroup>
 
 </Project>
