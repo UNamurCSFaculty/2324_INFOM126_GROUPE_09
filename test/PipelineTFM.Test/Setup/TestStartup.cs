@@ -1,4 +1,3 @@
-using PipelineTFM.Infrastructure.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

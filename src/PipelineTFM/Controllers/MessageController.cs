@@ -20,23 +20,13 @@ public class MessageController : ControllerBase
     public ActionResult<IList<MessageDto>> GetMessages()
     {
         var messages = _service.GetMessages();
-
-        if (messages != null)
-        {
-            return Ok(messages);
-        }
-        return new StatusCodeResult(500);
+        return Ok(messages);
     }
 
     [HttpPost("")]
     public ActionResult<MessageDto> PostMessage([FromBody] MessageDto messageDto)
     {
         var entity = _service.PostMessage(messageDto);
-
-        if (entity != null)
-        {
-            return Ok(entity);
-        }
-        return new StatusCodeResult(500);
+        return Ok(entity);
     }
 }

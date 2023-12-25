@@ -1,7 +1,6 @@
 using System;
 using PipelineTFM.Infrastructure.Data;
 using PipelineTFM.Configuration;
-using PipelineTFM.Infrastructure.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc;

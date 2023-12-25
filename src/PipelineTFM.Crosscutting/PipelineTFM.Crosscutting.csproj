@@ -6,4 +6,8 @@
         <OutputType>Library</OutputType>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Utilities\" />
+    </ItemGroup>
+
 </Project>

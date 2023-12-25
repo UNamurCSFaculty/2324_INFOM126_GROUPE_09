@@ -49,10 +49,4 @@ public static class TestUtil
         var domainObject2 = Activator.CreateInstance(type);
         domainObject1.Should().NotBe(domainObject2);
     }
-
-    public static void BuildHttpContextWithMockUser(string username)
-    {
-        //            var mock = new Mock<HttpContext>();
-        //            mock.Setup(httpContext => httpContext.User).Returns(null);
-    }
 }

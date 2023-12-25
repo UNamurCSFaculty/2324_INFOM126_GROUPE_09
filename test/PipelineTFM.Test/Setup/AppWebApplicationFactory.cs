@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.IdentityModel.JsonWebTokens;
+using PipelineTFM.Domain.Services;
+using Serilog;
 
 namespace PipelineTFM.Test.Setup;
 
@@ -20,6 +22,7 @@ public class AppWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntr
     public AppWebApplicationFactory()
     {
         _startup = new TEntryPoint();
+        
     }
 
     protected override IWebHostBuilder CreateWebHostBuilder()
@@ -38,8 +41,8 @@ public class AppWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntr
             .UseSolutionRelativeContentRoot("src/PipelineTFM")
             .ConfigureServices(services =>
             {
-                services
-                    .AddMvc(TestMvcStartup.ConfigureMvcAuthorization());
+                services.AddMvc(TestMvcStartup.ConfigureMvcAuthorization());
+                services.AddScoped<MessagesService>();
                 services.Replace(new ServiceDescriptor(typeof(IHttpContextFactory), typeof(MockHttpContextFactory),
                     ServiceLifetime.Transient));
             })
@@ -51,8 +54,5 @@ public class AppWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntr
             });
     }
 
-    public TService GetRequiredService<TService>()
-    {
-        return _serviceProvider.GetRequiredService<TService>();
-    }
+    public TService GetRequiredService<TService>() => Services.GetRequiredService<TService>();
 }

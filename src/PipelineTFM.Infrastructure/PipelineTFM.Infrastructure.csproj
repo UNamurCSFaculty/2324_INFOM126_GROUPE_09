@@ -20,4 +20,8 @@
         <ProjectReference Include="..\PipelineTFM.Crosscutting\PipelineTFM.Crosscutting.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Configuration\" />
+    </ItemGroup>
+
 </Project>

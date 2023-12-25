@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using PipelineTFM.Infrastructure.Configuration;
 
 namespace PipelineTFM.Configuration;
 
