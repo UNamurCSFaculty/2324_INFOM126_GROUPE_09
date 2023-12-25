@@ -1,9 +1,11 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PipelineTFM.Web.Extensions;
 
+[ExcludeFromCodeCoverage]
 public class ActionResultWithHeaders : ActionResult
 {
     private readonly IHeaderDictionary _headers;
