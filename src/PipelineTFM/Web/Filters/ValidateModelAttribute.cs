@@ -1,9 +1,11 @@
+using System.Diagnostics.CodeAnalysis;
 using PipelineTFM.Web.Rest.Problems;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace PipelineTFM.Web.Filters;
 
+[ExcludeFromCodeCoverage]
 public class ValidateModelAttribute : ActionFilterAttribute
 {
     public override void OnActionExecuting(ActionExecutingContext context)

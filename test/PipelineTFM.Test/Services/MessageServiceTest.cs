@@ -25,7 +25,6 @@ public class MessageServiceTest
     {
         const string authorName = "testAuthor";
         const string content = "test content";
-        var pubDate = DateTime.Now;
         
         var service = _factory.GetRequiredService<MessagesService>();
         

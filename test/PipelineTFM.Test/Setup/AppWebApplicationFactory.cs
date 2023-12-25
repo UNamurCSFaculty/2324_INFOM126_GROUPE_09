@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.IdentityModel.JsonWebTokens;
 using PipelineTFM.Domain.Services;
+using PipelineTFM.Infrastructure.Data.Repositories;
 using Serilog;
 
 namespace PipelineTFM.Test.Setup;
@@ -42,6 +43,8 @@ public class AppWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntr
             .ConfigureServices(services =>
             {
                 services.AddMvc(TestMvcStartup.ConfigureMvcAuthorization());
+                // Should be added in a better way
+                services.AddScoped<MessageRepository>();
                 services.AddScoped<MessagesService>();
                 services.Replace(new ServiceDescriptor(typeof(IHttpContextFactory), typeof(MockHttpContextFactory),
                     ServiceLifetime.Transient));

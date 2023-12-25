@@ -5,7 +5,7 @@
         <RootNamespace>PipelineTFM.Infrastructure</RootNamespace>
         <OutputType>Library</OutputType>
     </PropertyGroup>
-
+    
     <ItemGroup>
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
         <PackageReference Include="Serilog" />
@@ -18,10 +18,6 @@
         <ProjectReference Include="..\PipelineTFM.Domain\PipelineTFM.Domain.csproj" />
         <ProjectReference Include="..\PipelineTFM.Dto\PipelineTFM.Dto.csproj" />
         <ProjectReference Include="..\PipelineTFM.Crosscutting\PipelineTFM.Crosscutting.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Configuration\" />
     </ItemGroup>
 
 </Project>

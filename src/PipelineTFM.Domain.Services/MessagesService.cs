@@ -34,6 +34,7 @@ public class MessagesService : IMessagesService
     {
         postedMessage.PublicationDate = DateTime.Now;
         var addedMessage = _repository.Add(_mapper.Map<Message>(postedMessage));
+        _repository.SaveChangesAsync();
         return _mapper.Map<MessageDto>(addedMessage);
     }
 }

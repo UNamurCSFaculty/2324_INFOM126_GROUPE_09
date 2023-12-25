@@ -24,7 +24,6 @@ public class MessageRepository: IMessageRepository
     public Message Add(Message message)
     {
         var savedMessage = _dbContext.Add(message).Entity;
-        _dbContext.SaveChangesAsync();
         return savedMessage;
     }
 
