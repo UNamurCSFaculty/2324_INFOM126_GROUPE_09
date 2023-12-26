@@ -5,8 +5,12 @@
 
   <div class="w-100">
     <h1 class="display-4 row justify-content-center">Bienvenue sur le livre de bronze PipelineTFM</h1>
+    <h2 class="row justify-content-center">Les 10 messages les plus récents</h2>
     <div class="d-flex align-items-center flex-column" *ngFor="let msg of messages | async">
-      <message class="w-75" [message]="msg"></message>
+      <tfm-message class="w-50" [message]="msg"></tfm-message>
+    </div>
+    <div class="d-flex justify-content-center">
+      <tfm-send-form (messagePosted)="getMessages()" class="w-50"></tfm-send-form>
     </div>
   </div>
 </div>

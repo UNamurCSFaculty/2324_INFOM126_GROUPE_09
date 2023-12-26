@@ -3,7 +3,7 @@ import { Message } from 'app/entities/message.model';
 
 @Component({
   standalone: true,
-  selector: 'message',
+  selector: 'tfm-message',
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.scss'],
 })
@@ -14,9 +14,9 @@ export class MessageComponent {
     publicationDate: new Date(),
   };
 
-  public printDate(date: Date) {
+  public printDate(date: Date | undefined) {
     // Important since date won't considered as a Date
-    const toDate: Date = new Date(date);
+    const toDate: Date = date ? new Date(date) : new Date();
     return `${this.getAtLeastTwoDigits(toDate.getDate())}/${this.getAtLeastTwoDigits(toDate.getMonth())}/${this.getAtLeastTwoDigits(
       toDate.getFullYear(),
     )} 

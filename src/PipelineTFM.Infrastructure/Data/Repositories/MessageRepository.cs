@@ -1,7 +1,4 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +17,14 @@ public class MessageRepository: IMessageRepository
     }
 
     public async Task<IEnumerable<Message>> GetAllAsync() => await _dbContext.Messages.ToListAsync();
+
+    public async Task<IEnumerable<Message>> GetLastsAsync(int number)
+    {
+        return await _dbContext.Messages
+            .OrderByDescending(msg => msg.PublicationDate)
+            .Take(number)
+            .ToListAsync();
+    }
 
     public Message Add(Message message)
     {

@@ -17,9 +17,9 @@ public class MessageController : ControllerBase
     }
 
     [HttpGet("")]
-    public ActionResult<IList<MessageDto>> GetMessages()
+    public ActionResult<IList<MessageDto>> GetMessages([FromQuery(Name = "number")] int? number)
     {
-        var messages = _service.GetMessages();
+        var messages = number.HasValue ? _service.GetMessages(number.Value) : _service.GetMessages();
         return Ok(messages);
     }
 

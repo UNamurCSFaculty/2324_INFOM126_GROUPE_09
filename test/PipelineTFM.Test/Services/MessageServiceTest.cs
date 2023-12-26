@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using FluentAssertions;
 using PipelineTFM.Domain.Services;
+using PipelineTFM.Domain.Services.Interfaces;
 using PipelineTFM.Dto.Messages;
 using PipelineTFM.Infrastructure.Data;
 using PipelineTFM.Test.Controllers;
@@ -53,8 +54,20 @@ public class MessageServiceTest
 
         messages.Should().HaveCount(numberOfMessages);
     }
+    
+    [Fact]
+    public void TestPostGetMultipleMessagesMaxN()
+    {
+        const int numberOfMessages = 10;
+        const int maxNumberOfMessages = 5;
+        var service = _factory.GetRequiredService<MessagesService>();
+        PostMultipleMessages(numberOfMessages, service);
+        var messages = service.GetMessages(maxNumberOfMessages);
 
-    private void PostMultipleMessages(int messagesToPost, MessagesService service)
+        messages.Should().HaveCount(maxNumberOfMessages);
+    }
+
+    private void PostMultipleMessages(int messagesToPost, IMessagesService service)
     {
         for (int i = 0; i < messagesToPost; i++)
         {

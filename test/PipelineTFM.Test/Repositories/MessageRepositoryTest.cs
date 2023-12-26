@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using FluentAssertions;
+using LanguageExt;
 using PipelineTFM.Domain.Entities;
 using PipelineTFM.Domain.Repositories.Interfaces;
 using PipelineTFM.Infrastructure.Data.Repositories;
@@ -56,16 +57,29 @@ public class MessageRepositoryTest
     }
     
     [Fact]
-    public async Task TestSaveGetMessages()
+    public async Task TestSaveMessages()
     {
         const int messagesToAdd = 5;
         var messageRepository = _factory.GetRequiredService<MessageRepository>();
         
-        var messages = await AddMessages(messagesToAdd, messageRepository);
+        var messagesNumber = await AddMessages(messagesToAdd, messageRepository);
         
-        messages.Should().Be(messagesToAdd);
+        messagesNumber.Should().Be(messagesToAdd);
     }
+    
+    [Fact]
+    public async Task TestSaveGetNMessagesCount()
+    {
+        const int messagesToAdd = 10;
+        const int maxMessages = 5;
+        var messageRepository = _factory.GetRequiredService<MessageRepository>();
+        
+        await AddMessages(messagesToAdd, messageRepository);
 
+        var messages = await messageRepository.GetLastsAsync(maxMessages);
+        messages.Count().Should().Be(maxMessages);
+    }
+    
     private Task<int> AddMessages(int numberToAdd, IMessageRepository repository)
     {
         for (int i = 0; i < numberToAdd; i++)

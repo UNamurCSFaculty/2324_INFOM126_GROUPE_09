@@ -18,7 +18,7 @@ import NavbarComponent from './layouts/navbar/navbar.component';
         },
         ...errorRoute,
       ],
-      { enableTracing: DEBUG_INFO_ENABLED, bindToComponentInputs: true },
+      { enableTracing: DEBUG_INFO_ENABLED, bindToComponentInputs: true, onSameUrlNavigation: 'reload' },
     ),
   ],
   exports: [RouterModule],

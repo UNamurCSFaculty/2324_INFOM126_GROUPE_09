@@ -2,12 +2,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ApplicationConfigService } from 'app/core/config/application-config.service';
 import { Message } from 'app/entities/message.model';
-import { Observable } from 'rxjs';
+import { Observable, map, take } from 'rxjs';
 
 // Should be injected in a module and not in root
 @Injectable({ providedIn: 'root' })
 export class MessagesService {
   private readonly apiUrl = this.applicationConfigService.getEndpointFor('api/messages');
+  private readonly maxMessages = 10;
 
   constructor(
     private http: HttpClient,
@@ -24,6 +25,6 @@ export class MessagesService {
   }
 
   public getMessages(): Observable<Message[]> {
-    return this.http.get<Message[]>(this.apiUrl);
+    return this.http.get<Message[]>(`${this.apiUrl}?number=${this.maxMessages}`);
   }
 }

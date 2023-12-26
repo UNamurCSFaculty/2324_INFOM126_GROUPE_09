@@ -81,4 +81,12 @@ public class MessageControllerTest
         var response = await httpClient.PostAsync("/api/messages", TestUtil.ToJsonContent(message));
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
     }
+
+    [Fact]
+    public async Task TestGetNMessagesReturnsOk()
+    {
+        var httpClient = _factory.CreateClient();
+        var response = await httpClient.GetAsync("/api/messages?number=10");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+    }
 }

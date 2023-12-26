@@ -30,6 +30,14 @@ public class MessagesService : IMessagesService
             .ToList();
     }
 
+    public List<MessageDto> GetMessages(int number)
+    { 
+        return _repository.GetLastsAsync(number)
+            .Result
+            .Select(msgEntity => _mapper.Map<MessageDto>(msgEntity))
+            .ToList();
+    }
+
     public MessageDto PostMessage(MessageDto postedMessage)
     {
         postedMessage.PublicationDate = DateTime.Now;
