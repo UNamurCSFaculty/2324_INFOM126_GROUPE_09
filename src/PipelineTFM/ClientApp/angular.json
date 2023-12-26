@@ -26,21 +26,11 @@
             "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/content",
-              "src/favicon.ico",
-              "src/manifest.webapp",
-              "src/robots.txt"
-            ],
-            "styles": [
-              "src/content/scss/vendor.scss",
-              "src/content/scss/global.scss"
-            ],
+            "assets": ["src/content", "src/favicon.ico", "src/manifest.webapp", "src/robots.txt"],
+            "styles": ["src/content/scss/vendor.scss", "src/content/scss/global.scss"],
             "scripts": []
           },
           "configurations": {
