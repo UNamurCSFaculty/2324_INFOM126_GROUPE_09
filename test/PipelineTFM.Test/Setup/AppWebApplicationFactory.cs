@@ -23,7 +23,7 @@ public class AppWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntr
     public AppWebApplicationFactory()
     {
         _startup = new TEntryPoint();
-        
+
     }
 
     protected override IWebHostBuilder CreateWebHostBuilder()

@@ -18,7 +18,7 @@ public class MessageControllerTest
     {
         _factory = new AppWebApplicationFactory<TestStartup>();
     }
-    
+
     [Fact]
     public async Task TestGetMessage()
     {
@@ -33,9 +33,11 @@ public class MessageControllerTest
         var httpClient = _factory.CreateClient();
         var message = new MessageDto()
         {
-            Author = "testAuthor", Content = "test content", PublicationDate = DateTime.Now
+            Author = "testAuthor",
+            Content = "test content",
+            PublicationDate = DateTime.Now
         };
-        
+
         var response = await httpClient.PostAsync("/api/messages", TestUtil.ToJsonContent(message));
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
@@ -49,35 +51,41 @@ public class MessageControllerTest
         var httpClient = _factory.CreateClient();
         var message = new MessageDto()
         {
-            Author = "a", Content = "test content", PublicationDate = DateTime.Now
+            Author = "a",
+            Content = "test content",
+            PublicationDate = DateTime.Now
         };
-        
+
         var response = await httpClient.PostAsync("/api/messages", TestUtil.ToJsonContent(message));
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
     }
-    
+
     [Fact]
     public async Task TestPostMessageAuthorNameTooLong()
     {
         var httpClient = _factory.CreateClient();
         var message = new MessageDto()
         {
-            Author = TestUtil.RandomAlphabetic(33), Content = "test content", PublicationDate = DateTime.Now
+            Author = TestUtil.RandomAlphabetic(33),
+            Content = "test content",
+            PublicationDate = DateTime.Now
         };
-        
+
         var response = await httpClient.PostAsync("/api/messages", TestUtil.ToJsonContent(message));
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
     }
-    
+
     [Fact]
     public async Task TestPostMessageContentTooLong()
     {
         var httpClient = _factory.CreateClient();
         var message = new MessageDto()
         {
-            Author = "testAuthor", Content = TestUtil.RandomAlphabetic(513), PublicationDate = DateTime.Now
+            Author = "testAuthor",
+            Content = TestUtil.RandomAlphabetic(513),
+            PublicationDate = DateTime.Now
         };
-        
+
         var response = await httpClient.PostAsync("/api/messages", TestUtil.ToJsonContent(message));
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
     }

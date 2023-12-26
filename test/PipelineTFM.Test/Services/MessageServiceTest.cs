@@ -15,7 +15,7 @@ namespace PipelineTFM.Test.Services;
 public class MessageServiceTest
 {
     private readonly AppWebApplicationFactory<TestStartup> _factory;
-    
+
     public MessageServiceTest()
     {
         _factory = new AppWebApplicationFactory<TestStartup>();
@@ -26,17 +26,17 @@ public class MessageServiceTest
     {
         const string authorName = "testAuthor";
         const string content = "test content";
-        
+
         var service = _factory.GetRequiredService<MessagesService>();
-        
+
         service.PostMessage(new MessageDto()
         {
             Author = authorName,
             Content = content
         });
-        
+
         var messages = service.GetMessages();
-        
+
         messages.Should().HaveCount(1);
 
         var message = messages[0];
@@ -54,7 +54,7 @@ public class MessageServiceTest
 
         messages.Should().HaveCount(numberOfMessages);
     }
-    
+
     [Fact]
     public void TestPostGetMultipleMessagesMaxN()
     {

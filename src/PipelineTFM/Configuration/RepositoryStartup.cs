@@ -30,7 +30,7 @@ public static class RepositoryStartup
             .AsImplementedInterfaces()
             .WithScopedLifetime()
         );
-        
+
         return services;
     }
 }

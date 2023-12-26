@@ -10,7 +10,7 @@ namespace PipelineTFM.Controllers;
 public class MessageController : ControllerBase
 {
     private readonly IMessagesService _service;
-    
+
     public MessageController(IMessagesService service)
     {
         _service = service;

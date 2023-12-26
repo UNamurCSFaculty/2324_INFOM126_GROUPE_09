@@ -7,10 +7,10 @@ using PipelineTFM.Domain.Repositories.Interfaces;
 
 namespace PipelineTFM.Infrastructure.Data.Repositories;
 
-public class MessageRepository: IMessageRepository
+public class MessageRepository : IMessageRepository
 {
     private readonly MessageDbContext _dbContext;
-    
+
     public MessageRepository(MessageDbContext dbContext)
     {
         _dbContext = dbContext;

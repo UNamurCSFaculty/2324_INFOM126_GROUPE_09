@@ -14,7 +14,7 @@ public class MessagesService : IMessagesService
 {
     private readonly IMessageRepository _repository;
     private readonly IMapper _mapper;
-    
+
     public MessagesService(IMessageRepository repository, IMapper mapper)
     {
         _repository = repository;
@@ -31,7 +31,7 @@ public class MessagesService : IMessagesService
     }
 
     public List<MessageDto> GetMessages(int number)
-    { 
+    {
         return _repository.GetLastsAsync(number)
             .Result
             .Select(msgEntity => _mapper.Map<MessageDto>(msgEntity))

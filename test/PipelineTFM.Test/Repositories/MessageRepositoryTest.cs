@@ -15,12 +15,12 @@ namespace PipelineTFM.Test.Repositories;
 public class MessageRepositoryTest
 {
     private readonly AppWebApplicationFactory<TestStartup> _factory;
-    
+
     public MessageRepositoryTest()
     {
         _factory = new AppWebApplicationFactory<TestStartup>();
     }
-    
+
     [Fact]
     public async Task TestAddSaveMessage()
     {
@@ -28,7 +28,7 @@ public class MessageRepositoryTest
         const string author = "testAuthor";
         const string content = "test content";
         var publicationDate = DateTime.Now;
-        
+
         var messageRepository = _factory.GetRequiredService<MessageRepository>();
         var messageEntity = new Message()
         {
@@ -37,7 +37,7 @@ public class MessageRepositoryTest
             Content = content,
             PublicationDate = publicationDate
         };
-        
+
         var insertedMessage = messageRepository.Add(messageEntity);
         int insertedNumber = await messageRepository.SaveChangesAsync();
 
@@ -55,31 +55,31 @@ public class MessageRepositoryTest
         var messages = await messageRepository.GetAllAsync();
         messages.Count().Should().Be(0);
     }
-    
+
     [Fact]
     public async Task TestSaveMessages()
     {
         const int messagesToAdd = 5;
         var messageRepository = _factory.GetRequiredService<MessageRepository>();
-        
+
         var messagesNumber = await AddMessages(messagesToAdd, messageRepository);
-        
+
         messagesNumber.Should().Be(messagesToAdd);
     }
-    
+
     [Fact]
     public async Task TestSaveGetNMessagesCount()
     {
         const int messagesToAdd = 10;
         const int maxMessages = 5;
         var messageRepository = _factory.GetRequiredService<MessageRepository>();
-        
+
         await AddMessages(messagesToAdd, messageRepository);
 
         var messages = await messageRepository.GetLastsAsync(maxMessages);
         messages.Count().Should().Be(maxMessages);
     }
-    
+
     private Task<int> AddMessages(int numberToAdd, IMessageRepository repository)
     {
         for (int i = 0; i < numberToAdd; i++)
