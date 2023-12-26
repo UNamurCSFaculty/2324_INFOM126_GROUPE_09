@@ -94,4 +94,5 @@ jobs:
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"TFM" /d:sonar.token="${{ secrets.SONARQUBE_TOKEN }}" /d:sonar.host.url="${{ secrets.SONARQUBE_HOST }}"
           dotnet build -c Release
+          dotnet test --no-build --verbosity normal
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONARQUBE_TOKEN }}"
