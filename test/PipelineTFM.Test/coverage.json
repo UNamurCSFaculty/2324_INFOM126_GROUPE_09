@@ -1,0 +1,880 @@
+{
+  "PipelineTFM.dll": {
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Program.cs": {
+      "Program": {
+        "System.Int32 Program::<Main>$(System.String[])": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Startup.cs": {
+      "PipelineTFM.Startup": {
+        "System.Void PipelineTFM.Startup::Configure(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "19": 10,
+            "20": 10,
+            "21": 10,
+            "24": 10,
+            "25": 10
+          },
+          "Branches": []
+        },
+        "System.Void PipelineTFM.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Hosting.IHostEnvironment)": {
+          "Lines": {
+            "28": 10,
+            "29": 10,
+            "30": 10,
+            "31": 10,
+            "32": 10,
+            "33": 10,
+            "34": 10,
+            "35": 10,
+            "36": 10
+          },
+          "Branches": []
+        },
+        "System.Void PipelineTFM.Startup::ConfigureMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)": {
+          "Lines": {
+            "39": 10,
+            "40": 10,
+            "41": 10,
+            "42": 10,
+            "43": 10
+          },
+          "Branches": []
+        },
+        "System.Void PipelineTFM.Startup::ConfigureEndpoints(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)": {
+          "Lines": {
+            "46": 10,
+            "47": 10,
+            "48": 10,
+            "49": 10,
+            "50": 10
+          },
+          "Branches": []
+        },
+        "System.Void PipelineTFM.Startup::AddDatabase(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "53": 0,
+            "54": 0,
+            "55": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Controllers\\MessageController.cs": {
+      "PipelineTFM.Controllers.MessageController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.IList`1<PipelineTFM.Dto.Messages.MessageDto>> PipelineTFM.Controllers.MessageController::GetMessages()": {
+          "Lines": {
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<PipelineTFM.Dto.Messages.MessageDto> PipelineTFM.Controllers.MessageController::PostMessage(PipelineTFM.Dto.Messages.MessageDto)": {
+          "Lines": {
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1
+          },
+          "Branches": []
+        },
+        "System.Void PipelineTFM.Controllers.MessageController::.ctor(PipelineTFM.Domain.Services.Interfaces.IMessagesService)": {
+          "Lines": {
+            "14": 5,
+            "15": 5,
+            "16": 5,
+            "17": 5
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Configuration\\AppSettingsStartup.cs": {
+      "PipelineTFM.Configuration.AppSettingsConfiguration": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection PipelineTFM.Configuration.AppSettingsConfiguration::AddAppSettingsModule(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "10": 10,
+            "12": 10,
+            "13": 10
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Configuration\\AutoMapperStartup.cs": {
+      "PipelineTFM.Configuration.AutoMapperStartup": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection PipelineTFM.Configuration.AutoMapperStartup::AddAutoMapperModule(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "9": 10,
+            "10": 10,
+            "11": 10,
+            "12": 10
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Configuration\\ConfigurationHelper.cs": {
+      "PipelineTFM.Configuration.ConfigurationHelper": {
+        "TModel PipelineTFM.Configuration.ConfigurationHelper::GetOptions(Microsoft.Extensions.Configuration.IConfiguration,System.String)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Configuration\\DatabaseStartup.cs": {
+      "PipelineTFM.Configuration.DatabaseConfiguration": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection PipelineTFM.Configuration.DatabaseConfiguration::AddDatabaseModule(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "27": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "57": 0,
+            "58": 0
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 32,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 46,
+              "EndOffset": 51,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 125,
+              "EndOffset": 127,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 139,
+              "EndOffset": 144,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 156,
+              "EndOffset": 161,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 125,
+              "EndOffset": 183,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 139,
+              "EndOffset": 351,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 156,
+              "EndOffset": 519,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 173,
+              "EndOffset": 687,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 173,
+              "EndOffset": 852,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 46,
+              "EndOffset": 868,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Builder.IApplicationBuilder PipelineTFM.Configuration.DatabaseConfiguration::UseApplicationDatabase(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)": {
+          "Lines": {
+            "61": 10,
+            "62": 10,
+            "63": 10,
+            "64": 10,
+            "65": 10,
+            "66": 10,
+            "67": 10,
+            "68": 10,
+            "69": 10,
+            "70": 10,
+            "72": 10,
+            "73": 10
+          },
+          "Branches": [
+            {
+              "Line": 62,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 10
+            },
+            {
+              "Line": 62,
+              "Offset": 7,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 62,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 10
+            },
+            {
+              "Line": 62,
+              "Offset": 20,
+              "EndOffset": 87,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 10
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Configuration\\LoggerStartup.cs": {
+      "PipelineTFM.Configuration.SerilogConfiguration": {
+        "Microsoft.Extensions.Logging.ILoggingBuilder PipelineTFM.Configuration.SerilogConfiguration::AddSerilog(Microsoft.Extensions.Logging.ILoggingBuilder,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "29": 0,
+            "30": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 35,
+              "EndOffset": 37,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 70,
+              "EndOffset": 72,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 70,
+              "EndOffset": 77,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 35,
+              "EndOffset": 78,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 99,
+              "EndOffset": 101,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 99,
+              "EndOffset": 108,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 151,
+              "EndOffset": 153,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 151,
+              "EndOffset": 160,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Configuration\\MvcStartup.cs": {
+      "PipelineTFM.Configuration.WebConfiguration": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection PipelineTFM.Configuration.WebConfiguration::AddWebModule(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "16": 10,
+            "17": 10,
+            "19": 10,
+            "22": 10,
+            "24": 40,
+            "25": 10,
+            "26": 10,
+            "27": 10,
+            "28": 10,
+            "29": 10,
+            "30": 10,
+            "31": 10,
+            "32": 20,
+            "34": 10,
+            "35": 10,
+            "36": 10,
+            "37": 20,
+            "39": 10,
+            "40": 10
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Builder.IApplicationBuilder PipelineTFM.Configuration.WebConfiguration::UseApplicationWeb(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)": {
+          "Lines": {
+            "43": 10,
+            "44": 10,
+            "45": 10,
+            "47": 10,
+            "48": 10,
+            "49": 10,
+            "50": 10,
+            "51": 10,
+            "52": 20,
+            "55": 10,
+            "57": 10,
+            "58": 10,
+            "59": 10,
+            "60": 20,
+            "61": 10,
+            "62": 10,
+            "63": 10,
+            "64": 10,
+            "66": 10,
+            "67": 10
+          },
+          "Branches": [
+            {
+              "Line": 61,
+              "Offset": 133,
+              "EndOffset": 135,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 10
+            },
+            {
+              "Line": 61,
+              "Offset": 133,
+              "EndOffset": 144,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 10
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Configuration\\ProblemDetailsStartup.cs": {
+      "PipelineTFM.Configuration.ProblemDetailsStartup": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection PipelineTFM.Configuration.ProblemDetailsStartup::AddProblemDetailsModule(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Hosting.IHostEnvironment)": {
+          "Lines": {
+            "18": 10,
+            "19": 10,
+            "20": 10,
+            "21": 10,
+            "22": 10,
+            "23": 10,
+            "24": 10,
+            "25": 10,
+            "26": 10,
+            "27": 10,
+            "28": 10,
+            "29": 10,
+            "30": 10,
+            "31": 10,
+            "32": 10,
+            "33": 10,
+            "34": 10,
+            "35": 10,
+            "36": 10,
+            "37": 10,
+            "38": 10,
+            "39": 10,
+            "40": 10,
+            "41": 10,
+            "42": 10,
+            "43": 10,
+            "44": 10,
+            "45": 10,
+            "46": 10,
+            "47": 10,
+            "48": 20,
+            "50": 10,
+            "52": 10,
+            "53": 10
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 10
+            },
+            {
+              "Line": 21,
+              "Offset": 9,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 10
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Builder.IApplicationBuilder PipelineTFM.Configuration.ProblemDetailsStartup::UseApplicationProblemDetails(Microsoft.AspNetCore.Builder.IApplicationBuilder)": {
+          "Lines": {
+            "56": 10,
+            "57": 10,
+            "58": 10,
+            "59": 10
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Configuration\\RepositoryStartup.cs": {
+      "PipelineTFM.Configuration.RepositoryStartup": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection PipelineTFM.Configuration.RepositoryStartup::AddRepositoryModule(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "13": 10,
+            "16": 20,
+            "17": 20,
+            "18": 20,
+            "19": 10,
+            "20": 20,
+            "21": 20,
+            "22": 20,
+            "23": 20,
+            "24": 20,
+            "25": 20,
+            "26": 20,
+            "27": 50,
+            "28": 50,
+            "29": 20,
+            "30": 20,
+            "31": 20,
+            "32": 10,
+            "34": 10,
+            "35": 10
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 20
+            },
+            {
+              "Line": 27,
+              "Offset": 16,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 20
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Configuration\\ServiceStartup.cs": {
+      "PipelineTFM.Configuration.ServiceStartup": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection PipelineTFM.Configuration.ServiceStartup::AddServiceModule(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "11": 10,
+            "12": 20,
+            "13": 20,
+            "14": 20,
+            "15": 20,
+            "16": 10,
+            "17": 20,
+            "18": 20,
+            "19": 20,
+            "20": 20,
+            "21": 20,
+            "22": 20,
+            "23": 20,
+            "24": 20,
+            "25": 70,
+            "26": 70,
+            "27": 20,
+            "28": 20,
+            "29": 20,
+            "30": 10,
+            "31": 10,
+            "32": 10
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 40
+            },
+            {
+              "Line": 25,
+              "Offset": 16,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 20
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Configuration\\SwaggerStartup.cs": {
+      "PipelineTFM.Configuration.SwaggerConfiguration": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection PipelineTFM.Configuration.SwaggerConfiguration::AddSwaggerModule(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "12": 10,
+            "13": 10,
+            "14": 5,
+            "15": 5,
+            "16": 5,
+            "17": 15,
+            "19": 10,
+            "20": 10
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Builder.IApplicationBuilder PipelineTFM.Configuration.SwaggerConfiguration::UseApplicationSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)": {
+          "Lines": {
+            "23": 10,
+            "24": 10,
+            "25": 10,
+            "26": 10,
+            "27": 20,
+            "28": 10,
+            "29": 10,
+            "30": 10,
+            "31": 20,
+            "32": 10,
+            "33": 10
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM\\Configuration\\AutoMapper\\AutoMapperProfile.cs": {
+      "PipelineTFM.Configuration.AutoMapper.AutoMapperProfile": {
+        "System.Void PipelineTFM.Configuration.AutoMapper.AutoMapperProfile::.ctor()": {
+          "Lines": {
+            "11": 7,
+            "12": 7,
+            "26": 7,
+            "27": 7,
+            "33": 7
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "PipelineTFM.Domain.dll": {
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM.Domain\\Entities\\BaseEntity.cs": {
+      "PipelineTFM.Domain.Entities.BaseEntity`1": {
+        "TKey PipelineTFM.Domain.Entities.BaseEntity`1::get_Id()": {
+          "Lines": {
+            "10": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM.Domain\\Entities\\Message.cs": {
+      "PipelineTFM.Domain.Entities.Message": {
+        "System.String PipelineTFM.Domain.Entities.Message::get_Author()": {
+          "Lines": {
+            "12": 42
+          },
+          "Branches": []
+        },
+        "System.String PipelineTFM.Domain.Entities.Message::get_Content()": {
+          "Lines": {
+            "17": 42
+          },
+          "Branches": []
+        },
+        "System.DateTime PipelineTFM.Domain.Entities.Message::get_PublicationDate()": {
+          "Lines": {
+            "21": 42
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "PipelineTFM.Domain.Services.dll": {
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM.Domain.Services\\MessagesService.cs": {
+      "PipelineTFM.Domain.Services.MessagesService": {
+        "System.Collections.Generic.List`1<PipelineTFM.Dto.Messages.MessageDto> PipelineTFM.Domain.Services.MessagesService::GetMessages()": {
+          "Lines": {
+            "25": 3,
+            "26": 3,
+            "27": 3,
+            "28": 3,
+            "29": 11,
+            "30": 3,
+            "31": 3
+          },
+          "Branches": []
+        },
+        "PipelineTFM.Dto.Messages.MessageDto PipelineTFM.Domain.Services.MessagesService::PostMessage(PipelineTFM.Dto.Messages.MessageDto)": {
+          "Lines": {
+            "34": 12,
+            "35": 12,
+            "36": 12,
+            "37": 12,
+            "38": 12,
+            "39": 12
+          },
+          "Branches": []
+        },
+        "System.Void PipelineTFM.Domain.Services.MessagesService::.ctor(PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository,AutoMapper.IMapper)": {
+          "Lines": {
+            "18": 7,
+            "19": 7,
+            "20": 7,
+            "21": 7,
+            "22": 7
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM.Domain.Services\\ServicesClassesAssemblyHelper.cs": {
+      "PipelineTFM.Domain.Services.ServicesClassesAssemblyHelper": {
+        "System.Void PipelineTFM.Domain.Services.ServicesClassesAssemblyHelper::.cctor()": {
+          "Lines": {
+            "6": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM.Domain.Services\\Interfaces\\ServicesInterfacesAssemblyHelper.cs": {
+      "PipelineTFM.Domain.Services.Interfaces.ServicesInterfacesAssemblyHelper": {
+        "System.Void PipelineTFM.Domain.Services.Interfaces.ServicesInterfacesAssemblyHelper::.cctor()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "PipelineTFM.Infrastructure.dll": {
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM.Infrastructure\\Data\\MessageDbContext.cs": {
+      "PipelineTFM.Infrastructure.Data.MessageDbContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<PipelineTFM.Domain.Entities.Message> PipelineTFM.Infrastructure.Data.MessageDbContext::get_Messages()": {
+          "Lines": {
+            "8": 24
+          },
+          "Branches": []
+        },
+        "System.Void PipelineTFM.Infrastructure.Data.MessageDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
+          "Lines": {
+            "10": 20,
+            "11": 20,
+            "13": 20
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\deryc\\Documents\\2324_INFOM126_GROUPE_09\\src\\PipelineTFM.Infrastructure\\Data\\Repositories\\MessageRepository.cs": {
+      "PipelineTFM.Infrastructure.Data.Repositories.MessageRepository": {
+        "PipelineTFM.Domain.Entities.Message PipelineTFM.Infrastructure.Data.Repositories.MessageRepository::Add(PipelineTFM.Domain.Entities.Message)": {
+          "Lines": {
+            "25": 18,
+            "26": 18,
+            "27": 18,
+            "28": 18
+          },
+          "Branches": []
+        },
+        "System.Void PipelineTFM.Infrastructure.Data.Repositories.MessageRepository::.ctor(PipelineTFM.Infrastructure.Data.MessageDbContext)": {
+          "Lines": {
+            "17": 10,
+            "18": 10,
+            "19": 10,
+            "20": 10
+          },
+          "Branches": []
+        }
+      },
+      "PipelineTFM.Infrastructure.Data.Repositories.MessageRepository/<GetAllAsync>d__2": {
+        "System.Void PipelineTFM.Infrastructure.Data.Repositories.MessageRepository/<GetAllAsync>d__2::MoveNext()": {
+          "Lines": {
+            "22": 4
+          },
+          "Branches": []
+        }
+      },
+      "PipelineTFM.Infrastructure.Data.Repositories.MessageRepository/<SaveChangesAsync>d__4": {
+        "System.Void PipelineTFM.Infrastructure.Data.Repositories.MessageRepository/<SaveChangesAsync>d__4::MoveNext()": {
+          "Lines": {
+            "30": 14
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

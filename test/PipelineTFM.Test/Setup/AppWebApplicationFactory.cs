@@ -1,10 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using PipelineTFM.Crosscutting.Constants;
-using PipelineTFM.Configuration;
-using PipelineTFM.Security;
 using PipelineTFM.Test.Configuration;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
@@ -14,6 +8,9 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.IdentityModel.JsonWebTokens;
+using PipelineTFM.Domain.Services;
+using PipelineTFM.Infrastructure.Data.Repositories;
+using Serilog;
 
 namespace PipelineTFM.Test.Setup;
 
@@ -22,11 +19,11 @@ public class AppWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntr
 {
     private IStartup _startup;
     private IServiceProvider _serviceProvider;
-    private ClaimsPrincipal _user { get; set; }
 
     public AppWebApplicationFactory()
     {
         _startup = new TEntryPoint();
+
     }
 
     protected override IWebHostBuilder CreateWebHostBuilder()
@@ -45,11 +42,12 @@ public class AppWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntr
             .UseSolutionRelativeContentRoot("src/PipelineTFM")
             .ConfigureServices(services =>
             {
-                services
-                    .AddMvc(TestMvcStartup.ConfigureMvcAuthorization());
+                services.AddMvc(TestMvcStartup.ConfigureMvcAuthorization());
+                // Should be added in a better way
+                services.AddScoped<MessageRepository>();
+                services.AddScoped<MessagesService>();
                 services.Replace(new ServiceDescriptor(typeof(IHttpContextFactory), typeof(MockHttpContextFactory),
                     ServiceLifetime.Transient));
-                services.AddTransient(_ => new MockClaimsPrincipalProvider(_user));
             })
             .Configure((context, applicationBuilder) =>
             {
@@ -59,25 +57,5 @@ public class AppWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntr
             });
     }
 
-    public TService GetRequiredService<TService>()
-    {
-        return _serviceProvider.GetRequiredService<TService>();
-    }
-
-    public AppWebApplicationFactory<TEntryPoint> WithMockUser(string name = "user",
-        IEnumerable<string> roles = null, string authenticationType = "MockAuthenticationType")
-    {
-        _user = BuildClaimsPrincipal(name, roles, authenticationType);
-        return this;
-    }
-
-    private static ClaimsPrincipal BuildClaimsPrincipal(string name, IEnumerable<string> roles,
-        string authenticationType)
-    {
-        if (roles == null || !roles.Any()) roles = new HashSet<string> { RolesConstants.USER };
-
-        var claims = new List<Claim> { new Claim(SecurityStartup.UserNameClaimType, name) };
-        claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
-        return new ClaimsPrincipal(new ClaimsIdentity(claims.ToArray(), authenticationType));
-    }
+    public TService GetRequiredService<TService>() => Services.GetRequiredService<TService>();
 }

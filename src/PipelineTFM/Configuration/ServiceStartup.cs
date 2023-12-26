@@ -10,7 +10,7 @@ public static class ServiceStartup
     public static IServiceCollection AddServiceModule(this IServiceCollection services)
     {
         services.Scan(scan => scan
-            .FromAssembliesOf(typeof(ServicesInterfacesAssemblyHelper), typeof(ServicesClassesAssemblyHelper))
+            .FromAssembliesOf(typeof(IMessagesService), typeof(MessagesService))
                 // Find services and register its matching interfaces/implementations.
                 // For example: JobService matches IJobService, EmployeeService matches IEmployeeService, etc...
                 .AddClasses(classes => classes.InNamespaces(ServicesClassesAssemblyHelper.Namespace))

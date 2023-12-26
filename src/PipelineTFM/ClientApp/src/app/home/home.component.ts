@@ -1,42 +1,32 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { Message } from 'app/entities/message.model';
+import { MessageComponent } from 'app/layouts/message/message.component';
+import { SendFormComponent } from 'app/layouts/send-form/send-form.component';
+import { MessagesService } from 'app/services/messages.service';
 
 import SharedModule from 'app/shared/shared.module';
-import { AccountService } from 'app/core/auth/account.service';
-import { Account } from 'app/core/auth/account.model';
+import { Observable } from 'rxjs';
 
 @Component({
   standalone: true,
   selector: 'jhi-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  imports: [SharedModule, RouterModule],
+  imports: [CommonModule, SharedModule, RouterModule, MessageComponent, SendFormComponent],
 })
-export default class HomeComponent implements OnInit, OnDestroy {
-  account: Account | null = null;
+export default class HomeComponent {
+  messages: Observable<Message[]> = new Observable<Message[]>();
 
-  private readonly destroy$ = new Subject<void>();
+  constructor(private messageService: MessagesService) {}
 
-  constructor(
-    private accountService: AccountService,
-    private router: Router,
-  ) {}
-
-  ngOnInit(): void {
-    this.accountService
-      .getAuthenticationState()
-      .pipe(takeUntil(this.destroy$))
-      .subscribe(account => (this.account = account));
+  ngOnInit() {
+    this.getMessages();
   }
 
-  login(): void {
-    this.router.navigate(['/login']);
-  }
-
-  ngOnDestroy(): void {
-    this.destroy$.next();
-    this.destroy$.complete();
+  getMessages() {
+    console.log('Get messages appelée');
+    this.messages = this.messageService.getMessages();
   }
 }

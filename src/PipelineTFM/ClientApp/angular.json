@@ -15,7 +15,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "jhi",
+      "prefix": "tfm",
       "architect": {
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",

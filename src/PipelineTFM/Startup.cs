@@ -1,7 +1,6 @@
 using System;
 using PipelineTFM.Infrastructure.Data;
 using PipelineTFM.Configuration;
-using PipelineTFM.Infrastructure.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +27,6 @@ public class Startup : IStartup
     public virtual void ConfigureServices(IServiceCollection services, IHostEnvironment environment)
     {
         services
-            .AddSecurityModule()
             .AddProblemDetailsModule(environment)
             .AddAutoMapperModule()
             .AddSwaggerModule()
@@ -39,14 +37,9 @@ public class Startup : IStartup
 
     public virtual void ConfigureMiddleware(IApplicationBuilder app, IHostEnvironment environment)
     {
-        IServiceProvider serviceProvider = app.ApplicationServices;
-        var securitySettingsOptions = serviceProvider.GetRequiredService<IOptions<SecuritySettings>>();
-        var securitySettings = securitySettingsOptions.Value;
         app
-            .UseApplicationSecurity(securitySettings)
             .UseApplicationProblemDetails()
-            .UseApplicationDatabase(environment)
-            .UseApplicationIdentity();
+            .UseApplicationDatabase(environment);
     }
 
     public virtual void ConfigureEndpoints(IApplicationBuilder app, IHostEnvironment environment)

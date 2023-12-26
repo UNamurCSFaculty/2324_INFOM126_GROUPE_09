@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -5,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace PipelineTFM.Web.Extensions;
 
+[ExcludeFromCodeCoverage]
 public static class HttpRequestExtensions
 {
     public static async Task<string> BodyAsStringAsync(this HttpRequest request, Encoding encoding = null)

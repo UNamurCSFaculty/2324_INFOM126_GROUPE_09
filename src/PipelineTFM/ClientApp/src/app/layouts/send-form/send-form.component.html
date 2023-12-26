@@ -1,0 +1,30 @@
+<div class="my-4">
+  <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="username">Nom d'utilisateur</label>
+      <input
+        minlength="3"
+        maxlength="32"
+        formControlName="author"
+        class="form-control"
+        id="username"
+        aria-describedby="usernameInfo"
+        placeholder="Entrez un nom d'utilisateur"
+      />
+      <small id="usernameInfo" class="form-text text-muted">Nom d'utilisateur entre 3 et 32 caractères</small>
+    </div>
+    <div class="form-group">
+      <label for="messageContent">Message</label>
+      <textarea
+        maxlength="512"
+        formControlName="content"
+        class="form-control"
+        id="messageContent"
+        rows="3"
+        aria-describedby="messageInfo"
+      ></textarea>
+      <small id="messageInfo" class="form-text text-muted">Maximum 512 caractères</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
+</div>

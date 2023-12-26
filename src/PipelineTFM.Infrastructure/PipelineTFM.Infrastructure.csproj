@@ -5,7 +5,7 @@
         <RootNamespace>PipelineTFM.Infrastructure</RootNamespace>
         <OutputType>Library</OutputType>
     </PropertyGroup>
-
+    
     <ItemGroup>
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
         <PackageReference Include="Serilog" />

@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Security.Authentication;
 using Hellang.Middleware.ProblemDetails;
 using Microsoft.Extensions.Hosting;
@@ -8,6 +9,7 @@ using Microsoft.Extensions.Options;
 
 namespace PipelineTFM.Web.Rest.Problems;
 
+[ExcludeFromCodeCoverage]
 public class ProblemDetailsConfiguration : IConfigureOptions<Hellang.Middleware.ProblemDetails.ProblemDetailsOptions>
 {
     public ProblemDetailsConfiguration(IHostEnvironment environment, IHttpContextAccessor httpContextAccessor)

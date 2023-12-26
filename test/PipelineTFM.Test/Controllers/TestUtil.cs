@@ -28,12 +28,7 @@ public static class TestUtil
             .Select(s => s[random.Next(s.Length)]).ToArray());
     }
 
-    public static string RandomNumeric(int length)
-    {
-        const string chars = "0123456789";
-        return new string(Enumerable.Repeat(chars, length)
-            .Select(s => s[random.Next(s.Length)]).ToArray());
-    }
+    public static int RandomInt(int maxValue) => random.Next(maxValue);
 
     public static void EqualsVerifier(Type type)
     {
@@ -48,11 +43,5 @@ public static class TestUtil
         // Test with an instance of the same class
         var domainObject2 = Activator.CreateInstance(type);
         domainObject1.Should().NotBe(domainObject2);
-    }
-
-    public static void BuildHttpContextWithMockUser(string username)
-    {
-        //            var mock = new Mock<HttpContext>();
-        //            mock.Setup(httpContext => httpContext.User).Returns(null);
     }
 }
