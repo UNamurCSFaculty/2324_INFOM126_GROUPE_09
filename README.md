@@ -1,7 +1,10 @@
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/UNamurCSFaculty/2324_INFOM126_GROUPE_09/dotnet.yml)](https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09/actions)
+![Quality Gate Status](http://thibber.duckdns.org:3456/api/project_badges/measure?project=TFM&metric=alert_status&token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0)
 ![Bugs](http://thibber.duckdns.org:3456/api/project_badges/measure?project=TFM&metric=bugs&token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0)
 ![Coverage](http://thibber.duckdns.org:3456/api/project_badges/measure?project=TFM&metric=coverage&token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0)
-# PipelineTFM 
+![Code Smells](http://thibber.duckdns.org:3456/api/project_badges/measure?project=TFM&metric=code_smells&token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0)
+![Maintainability Rating](http://thibber.duckdns.org:3456/api/project_badges/measure?project=TFM&metric=sqale_rating&token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0)
+# PipelineTFM
 
 This application was generated using JHipster 8.0.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.0.0](https://www.jhipster.tech/documentation-archive/v8.0.0).
 
