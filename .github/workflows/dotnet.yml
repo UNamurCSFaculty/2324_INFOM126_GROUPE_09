@@ -89,10 +89,13 @@ jobs:
         run: |
           New-Item -Path .\.sonar\scanner -ItemType Directory
           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
-      - name: Build and analyze
+      - name: Install Coverlet Console
         shell: powershell
-        run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"TFM" /d:sonar.token="${{ secrets.SONARQUBE_TOKEN }}" /d:sonar.host.url="${{ secrets.SONARQUBE_HOST }}"
-          dotnet build -c Release
-          dotnet test -p:CollectCoverage=true --no-build --verbosity normal test/PipelineTFM.Test/
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONARQUBE_TOKEN }}"
+        run: dotnet tool install --global coverlet.console
+      - name: Build and Analyze
+      shell: powershell
+      run: |
+        .\.sonar\scanner\dotnet-sonarscanner begin /k:"TFM" /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml /d:sonar.host.url="${{ secrets.SONARQUBE_HOST }}" /d:sonar.login="${{ secrets.SONARQUBE_TOKEN }}"
+        dotnet build -c Release
+        dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./TestResults/
+        .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONARQUBE_TOKEN }}"
