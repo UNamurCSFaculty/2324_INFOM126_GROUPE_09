@@ -100,5 +100,5 @@ jobs:
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"TFM" /d:sonar.cs.opencover.reportsPaths=test/**/coverage.opencover.xml /d:sonar.host.url="${{ secrets.SONARQUBE_HOST }}" /d:sonar.login="${{ secrets.SONARQUBE_TOKEN }}"
           dotnet build -c Release
-          dotnet test --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONARQUBE_TOKEN }}"
