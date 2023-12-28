@@ -46,4 +46,4 @@ jobs:
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY_GITHUB_PAGES_DOC }}
         publish_dir: ./docs
-        publish_branch: gh-pages  # Pushes to the gh-pages branch
+        publish_branch: TFM-11  # Pushes to the gh-pages branch
