@@ -38,12 +38,12 @@ jobs:
     # Generate Angular Documentation
     - name: Generate Angular Documentation
       run: |
-        compodoc -p src/PipelineTFM/ClientApp/tsconfig.json
+        compodoc -p src/PipelineTFM/ClientApp/tsconfig.json -d docs
 
     # Deploy to GitHub Pages
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3.9.3
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY_GITHUB_PAGES_DOC }}
-        publish_dir: ./documentation
+        publish_dir: ./docs
         publish_branch: gh-pages  # Pushes to the gh-pages branch
