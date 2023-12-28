@@ -7,11 +7,9 @@ name: TFM Workflow .NET
 # or when a pull requestion towards main branch is done
 on:
   push:
-    branches:
-      - '**'
+    branches: ['main']
   pull_request:
-    branches:
-      - '**'
+    branches: ['main']
 
 jobs:
   format:
