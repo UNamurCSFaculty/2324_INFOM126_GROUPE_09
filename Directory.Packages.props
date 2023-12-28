@@ -8,7 +8,7 @@
     <JHipsterNetPackageVersion>1.0.10</JHipsterNetPackageVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="coverlet.collector" Version="6.0.0" />
+    <PackageVersion Include="coverlet.msbuild" Version="6.0.0" />
     <PackageVersion Include="JHipsterNet.Core" Version="$(JHipsterNetPackageVersion)" />
     <PackageVersion Include="JHipsterNet.Web" Version="$(JHipsterNetPackageVersion)" />
     <PackageVersion Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
