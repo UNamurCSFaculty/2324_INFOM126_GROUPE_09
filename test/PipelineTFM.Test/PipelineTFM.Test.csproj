@@ -12,8 +12,8 @@
 
     <ItemGroup>
         <PackageReference Include="coverlet.msbuild">
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-            <PrivateAssets>all</PrivateAssets>
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="FakeItEasy" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
