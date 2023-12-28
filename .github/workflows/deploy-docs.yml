@@ -38,7 +38,7 @@ jobs:
     # Generate Angular Documentation
     - name: Generate Angular Documentation
       run: |
-        compodoc -p src/PipelineTFM/ClientApp/tsconfig.json -s
+        compodoc -p src/PipelineTFM/ClientApp/tsconfig.json
 
     # Deploy to GitHub Pages
     - name: Deploy
