@@ -2,9 +2,7 @@
 
 on:
   push:
-    branches: ["TFM-12"]
-#  pull_request:
-#    branches: ["main"]
+    branches: ["main"]
 
 jobs:
   build:
