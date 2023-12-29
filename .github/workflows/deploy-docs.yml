@@ -31,12 +31,12 @@ jobs:
     - name: Install DocFX
       run: |
         wget https://github.com/dotnet/docfx/releases/download/v2.74.1/docfx-linux-x64-v2.74.1.zip
-        mkdir docfx
-        unzip docfx-linux-x64-v2.74.1.zip -d docfx
+        mkdir docfx_app
+        unzip docfx-linux-x64-v2.74.1.zip -d docfx_app
 
     - name: Generate C# Documentation
       run: |
-        docfx/docfx dockfx/docfx.json
+        docfx_app/docfx dockfx/docfx.json
         mv dockfx/_site docs/csharp-docs
 
     - name: Generate Angular Documentation
