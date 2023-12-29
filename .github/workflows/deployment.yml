@@ -19,7 +19,7 @@ jobs:
           
       - name: Update project
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v
           cd ${{ secrets.SSH_BUILD_TFM_DIR }}
           git pull origin main      
           
