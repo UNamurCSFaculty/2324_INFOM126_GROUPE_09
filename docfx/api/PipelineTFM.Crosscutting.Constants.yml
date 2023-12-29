@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: PipelineTFM.Crosscutting.Constants
+  commentId: N:PipelineTFM.Crosscutting.Constants
+  id: PipelineTFM.Crosscutting.Constants
+  children:
+  - PipelineTFM.Crosscutting.Constants.ErrorConstants
+  langs:
+  - csharp
+  - vb
+  name: PipelineTFM.Crosscutting.Constants
+  nameWithType: PipelineTFM.Crosscutting.Constants
+  fullName: PipelineTFM.Crosscutting.Constants
+  type: Namespace
+  assemblies:
+  - PipelineTFM.Crosscutting
+references:
+- uid: PipelineTFM.Crosscutting.Constants.ErrorConstants
+  commentId: T:PipelineTFM.Crosscutting.Constants.ErrorConstants
+  href: PipelineTFM.Crosscutting.Constants.ErrorConstants.html
+  name: ErrorConstants
+  nameWithType: ErrorConstants
+  fullName: PipelineTFM.Crosscutting.Constants.ErrorConstants

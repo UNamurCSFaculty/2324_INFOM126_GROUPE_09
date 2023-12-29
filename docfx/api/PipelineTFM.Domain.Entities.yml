@@ -1,0 +1,80 @@
+### YamlMime:ManagedReference
+items:
+- uid: PipelineTFM.Domain.Entities
+  commentId: N:PipelineTFM.Domain.Entities
+  id: PipelineTFM.Domain.Entities
+  children:
+  - PipelineTFM.Domain.Entities.BaseEntity`1
+  - PipelineTFM.Domain.Entities.Message
+  langs:
+  - csharp
+  - vb
+  name: PipelineTFM.Domain.Entities
+  nameWithType: PipelineTFM.Domain.Entities
+  fullName: PipelineTFM.Domain.Entities
+  type: Namespace
+  assemblies:
+  - PipelineTFM.Domain
+references:
+- uid: PipelineTFM.Domain.Entities.BaseEntity`1
+  commentId: T:PipelineTFM.Domain.Entities.BaseEntity`1
+  href: PipelineTFM.Domain.Entities.BaseEntity-1.html
+  name: BaseEntity<TKey>
+  nameWithType: BaseEntity<TKey>
+  fullName: PipelineTFM.Domain.Entities.BaseEntity<TKey>
+  nameWithType.vb: BaseEntity(Of TKey)
+  fullName.vb: PipelineTFM.Domain.Entities.BaseEntity(Of TKey)
+  name.vb: BaseEntity(Of TKey)
+  spec.csharp:
+  - uid: PipelineTFM.Domain.Entities.BaseEntity`1
+    name: BaseEntity
+    href: PipelineTFM.Domain.Entities.BaseEntity-1.html
+  - name: <
+  - name: TKey
+  - name: '>'
+  spec.vb:
+  - uid: PipelineTFM.Domain.Entities.BaseEntity`1
+    name: BaseEntity
+    href: PipelineTFM.Domain.Entities.BaseEntity-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: )
+- uid: PipelineTFM.Domain.Entities.Message
+  commentId: T:PipelineTFM.Domain.Entities.Message
+  parent: PipelineTFM.Domain.Entities
+  href: PipelineTFM.Domain.Entities.Message.html
+  name: Message
+  nameWithType: Message
+  fullName: PipelineTFM.Domain.Entities.Message
+- uid: PipelineTFM.Domain.Entities
+  commentId: N:PipelineTFM.Domain.Entities
+  href: PipelineTFM.html
+  name: PipelineTFM.Domain.Entities
+  nameWithType: PipelineTFM.Domain.Entities
+  fullName: PipelineTFM.Domain.Entities
+  spec.csharp:
+  - uid: PipelineTFM
+    name: PipelineTFM
+    href: PipelineTFM.html
+  - name: .
+  - uid: PipelineTFM.Domain
+    name: Domain
+    href: PipelineTFM.Domain.html
+  - name: .
+  - uid: PipelineTFM.Domain.Entities
+    name: Entities
+    href: PipelineTFM.Domain.Entities.html
+  spec.vb:
+  - uid: PipelineTFM
+    name: PipelineTFM
+    href: PipelineTFM.html
+  - name: .
+  - uid: PipelineTFM.Domain
+    name: Domain
+    href: PipelineTFM.Domain.html
+  - name: .
+  - uid: PipelineTFM.Domain.Entities
+    name: Entities
+    href: PipelineTFM.Domain.Entities.html

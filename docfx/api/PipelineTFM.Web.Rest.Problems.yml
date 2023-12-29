@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: PipelineTFM.Web.Rest.Problems
+  commentId: N:PipelineTFM.Web.Rest.Problems
+  id: PipelineTFM.Web.Rest.Problems
+  children:
+  - PipelineTFM.Web.Rest.Problems.ProblemDetailsConfiguration
+  - PipelineTFM.Web.Rest.Problems.ValidationFailedProblem
+  langs:
+  - csharp
+  - vb
+  name: PipelineTFM.Web.Rest.Problems
+  nameWithType: PipelineTFM.Web.Rest.Problems
+  fullName: PipelineTFM.Web.Rest.Problems
+  type: Namespace
+  assemblies:
+  - PipelineTFM
+references:
+- uid: PipelineTFM.Web.Rest.Problems.ProblemDetailsConfiguration
+  commentId: T:PipelineTFM.Web.Rest.Problems.ProblemDetailsConfiguration
+  href: PipelineTFM.Web.Rest.Problems.ProblemDetailsConfiguration.html
+  name: ProblemDetailsConfiguration
+  nameWithType: ProblemDetailsConfiguration
+  fullName: PipelineTFM.Web.Rest.Problems.ProblemDetailsConfiguration
+- uid: PipelineTFM.Web.Rest.Problems.ValidationFailedProblem
+  commentId: T:PipelineTFM.Web.Rest.Problems.ValidationFailedProblem
+  href: PipelineTFM.Web.Rest.Problems.ValidationFailedProblem.html
+  name: ValidationFailedProblem
+  nameWithType: ValidationFailedProblem
+  fullName: PipelineTFM.Web.Rest.Problems.ValidationFailedProblem

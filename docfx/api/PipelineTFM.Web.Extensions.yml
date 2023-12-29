@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: PipelineTFM.Web.Extensions
+  commentId: N:PipelineTFM.Web.Extensions
+  id: PipelineTFM.Web.Extensions
+  children:
+  - PipelineTFM.Web.Extensions.ActionResultExtensions
+  - PipelineTFM.Web.Extensions.ActionResultWithHeaders
+  - PipelineTFM.Web.Extensions.HttpRequestExtensions
+  langs:
+  - csharp
+  - vb
+  name: PipelineTFM.Web.Extensions
+  nameWithType: PipelineTFM.Web.Extensions
+  fullName: PipelineTFM.Web.Extensions
+  type: Namespace
+  assemblies:
+  - PipelineTFM
+references:
+- uid: PipelineTFM.Web.Extensions.ActionResultExtensions
+  commentId: T:PipelineTFM.Web.Extensions.ActionResultExtensions
+  parent: PipelineTFM.Web.Extensions
+  href: PipelineTFM.Web.Extensions.ActionResultExtensions.html
+  name: ActionResultExtensions
+  nameWithType: ActionResultExtensions
+  fullName: PipelineTFM.Web.Extensions.ActionResultExtensions
+- uid: PipelineTFM.Web.Extensions.ActionResultWithHeaders
+  commentId: T:PipelineTFM.Web.Extensions.ActionResultWithHeaders
+  href: PipelineTFM.Web.Extensions.ActionResultWithHeaders.html
+  name: ActionResultWithHeaders
+  nameWithType: ActionResultWithHeaders
+  fullName: PipelineTFM.Web.Extensions.ActionResultWithHeaders
+- uid: PipelineTFM.Web.Extensions.HttpRequestExtensions
+  commentId: T:PipelineTFM.Web.Extensions.HttpRequestExtensions
+  href: PipelineTFM.Web.Extensions.HttpRequestExtensions.html
+  name: HttpRequestExtensions
+  nameWithType: HttpRequestExtensions
+  fullName: PipelineTFM.Web.Extensions.HttpRequestExtensions
+- uid: PipelineTFM.Web.Extensions
+  commentId: N:PipelineTFM.Web.Extensions
+  href: PipelineTFM.html
+  name: PipelineTFM.Web.Extensions
+  nameWithType: PipelineTFM.Web.Extensions
+  fullName: PipelineTFM.Web.Extensions
+  spec.csharp:
+  - uid: PipelineTFM
+    name: PipelineTFM
+    href: PipelineTFM.html
+  - name: .
+  - uid: PipelineTFM.Web
+    name: Web
+    href: PipelineTFM.Web.html
+  - name: .
+  - uid: PipelineTFM.Web.Extensions
+    name: Extensions
+    href: PipelineTFM.Web.Extensions.html
+  spec.vb:
+  - uid: PipelineTFM
+    name: PipelineTFM
+    href: PipelineTFM.html
+  - name: .
+  - uid: PipelineTFM.Web
+    name: Web
+    href: PipelineTFM.Web.html
+  - name: .
+  - uid: PipelineTFM.Web.Extensions
+    name: Extensions
+    href: PipelineTFM.Web.Extensions.html

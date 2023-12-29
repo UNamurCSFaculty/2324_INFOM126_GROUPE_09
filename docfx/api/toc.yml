@@ -1,0 +1,117 @@
+### YamlMime:TableOfContent
+items:
+- uid: PipelineTFM
+  name: PipelineTFM
+  items:
+  - uid: PipelineTFM.IStartup
+    name: IStartup
+  - uid: PipelineTFM.Startup
+    name: Startup
+- uid: PipelineTFM.Configuration
+  name: PipelineTFM.Configuration
+  items:
+  - uid: PipelineTFM.Configuration.AppSettingsConfiguration
+    name: AppSettingsConfiguration
+  - uid: PipelineTFM.Configuration.AutoMapperStartup
+    name: AutoMapperStartup
+  - uid: PipelineTFM.Configuration.ConfigurationHelper
+    name: ConfigurationHelper
+  - uid: PipelineTFM.Configuration.DatabaseConfiguration
+    name: DatabaseConfiguration
+  - uid: PipelineTFM.Configuration.ProblemDetailsStartup
+    name: ProblemDetailsStartup
+  - uid: PipelineTFM.Configuration.RepositoryStartup
+    name: RepositoryStartup
+  - uid: PipelineTFM.Configuration.SerilogConfiguration
+    name: SerilogConfiguration
+  - uid: PipelineTFM.Configuration.ServiceStartup
+    name: ServiceStartup
+  - uid: PipelineTFM.Configuration.SwaggerConfiguration
+    name: SwaggerConfiguration
+  - uid: PipelineTFM.Configuration.WebConfiguration
+    name: WebConfiguration
+- uid: PipelineTFM.Configuration.AutoMapper
+  name: PipelineTFM.Configuration.AutoMapper
+  items:
+  - uid: PipelineTFM.Configuration.AutoMapper.AutoMapperProfile
+    name: AutoMapperProfile
+- uid: PipelineTFM.Controllers
+  name: PipelineTFM.Controllers
+  items:
+  - uid: PipelineTFM.Controllers.MessageController
+    name: MessageController
+- uid: PipelineTFM.Crosscutting.Constants
+  name: PipelineTFM.Crosscutting.Constants
+  items:
+  - uid: PipelineTFM.Crosscutting.Constants.ErrorConstants
+    name: ErrorConstants
+- uid: PipelineTFM.Crosscutting.Exceptions
+  name: PipelineTFM.Crosscutting.Exceptions
+  items:
+  - uid: PipelineTFM.Crosscutting.Exceptions.BadRequestAlertException
+    name: BadRequestAlertException
+  - uid: PipelineTFM.Crosscutting.Exceptions.BaseException
+    name: BaseException
+  - uid: PipelineTFM.Crosscutting.Exceptions.InternalServerErrorException
+    name: InternalServerErrorException
+- uid: PipelineTFM.Domain.Entities
+  name: PipelineTFM.Domain.Entities
+  items:
+  - uid: PipelineTFM.Domain.Entities.BaseEntity`1
+    name: BaseEntity<TKey>
+  - uid: PipelineTFM.Domain.Entities.Message
+    name: Message
+- uid: PipelineTFM.Domain.Repositories.Interfaces
+  name: PipelineTFM.Domain.Repositories.Interfaces
+  items:
+  - uid: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository
+    name: IMessageRepository
+- uid: PipelineTFM.Domain.Services
+  name: PipelineTFM.Domain.Services
+  items:
+  - uid: PipelineTFM.Domain.Services.MessagesService
+    name: MessagesService
+  - uid: PipelineTFM.Domain.Services.ServicesClassesAssemblyHelper
+    name: ServicesClassesAssemblyHelper
+- uid: PipelineTFM.Domain.Services.Interfaces
+  name: PipelineTFM.Domain.Services.Interfaces
+  items:
+  - uid: PipelineTFM.Domain.Services.Interfaces.IMessagesService
+    name: IMessagesService
+- uid: PipelineTFM.Dto.Messages
+  name: PipelineTFM.Dto.Messages
+  items:
+  - uid: PipelineTFM.Dto.Messages.MessageDto
+    name: MessageDto
+- uid: PipelineTFM.Infrastructure.Data
+  name: PipelineTFM.Infrastructure.Data
+  items:
+  - uid: PipelineTFM.Infrastructure.Data.MessageDbContext
+    name: MessageDbContext
+- uid: PipelineTFM.Infrastructure.Data.Repositories
+  name: PipelineTFM.Infrastructure.Data.Repositories
+  items:
+  - uid: PipelineTFM.Infrastructure.Data.Repositories.MessageRepository
+    name: MessageRepository
+- uid: PipelineTFM.Web.Extensions
+  name: PipelineTFM.Web.Extensions
+  items:
+  - uid: PipelineTFM.Web.Extensions.ActionResultExtensions
+    name: ActionResultExtensions
+  - uid: PipelineTFM.Web.Extensions.ActionResultWithHeaders
+    name: ActionResultWithHeaders
+  - uid: PipelineTFM.Web.Extensions.HttpRequestExtensions
+    name: HttpRequestExtensions
+- uid: PipelineTFM.Web.Filters
+  name: PipelineTFM.Web.Filters
+  items:
+  - uid: PipelineTFM.Web.Filters.ValidateModelAttribute
+    name: ValidateModelAttribute
+- uid: PipelineTFM.Web.Rest.Problems
+  name: PipelineTFM.Web.Rest.Problems
+  items:
+  - uid: PipelineTFM.Web.Rest.Problems.ProblemDetailsConfiguration
+    name: ProblemDetailsConfiguration
+  - uid: PipelineTFM.Web.Rest.Problems.ValidationFailedProblem
+    name: ValidationFailedProblem
+memberLayout: SamePage
