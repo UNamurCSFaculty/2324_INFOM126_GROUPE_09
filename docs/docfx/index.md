@@ -2,10 +2,6 @@
 _layout: landing
 ---
 
-# This is the **HOMEPAGE**.
+# C# documentation
 
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
-
-## Quick Start Notes:
-
-1. Add images to the *images* folder if the file is referencing an image.
+This is the documentation for the C# code of the app. You'll find the API documentation in the [API](https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/cs-docs/api/PipelineTFM.html) section.
