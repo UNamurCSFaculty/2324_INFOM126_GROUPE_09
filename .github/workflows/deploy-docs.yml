@@ -43,13 +43,6 @@ jobs:
       run: |
         compodoc -p src/PipelineTFM/ClientApp/tsconfig.json -d ./docs/angular-docs
 
-    - name: Install TypeDoc
-      run: npm install -g typedoc
-
-    - name: Generate TypeScript Documentation
-      run: |
-        typedoc --tsconfig src/PipelineTFM/ClientApp/tsconfig.json --out ./docs/ts-docs
-
     - name: Copy landing page
       run: cp -R landing_page_doc/* ./docs
 
