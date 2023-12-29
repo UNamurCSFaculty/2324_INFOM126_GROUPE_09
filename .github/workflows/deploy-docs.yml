@@ -57,11 +57,6 @@ jobs:
       run: |
         typedoc --tsconfig src/PipelineTFM/ClientApp/tsconfig.json --out ./docs/ts-docs
 
-    # Create index.html to link to all documentations
-    - name: Create Index HTML
-      run: |
-        echo "<html><head><title>Documentation Index</title></head><body><h1>Documentation</h1><ul><li><a href='csharp-docs/README.html'>C# Documentation</a></li><li><a href='angular-docs/index.html'>Angular Documentation</a></li><li><a href='ts-docs/index.html'>TypeScript Documentation</a></li></ul></body></html>" > docs/index.html
-
     # Deploy to GitHub Pages
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3.9.3
