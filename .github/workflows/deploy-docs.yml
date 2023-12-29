@@ -33,14 +33,9 @@ jobs:
 
     - name: Install DocFX
       run: dotnet tool update -g docfx
-      #run: |
-      #  wget https://github.com/dotnet/docfx/releases/download/v2.74.1/docfx-linux-x64-v2.74.1.zip
-      #  mkdir docfx_app
-      #  unzip docfx-linux-x64-v2.74.1.zip -d docfx_app
 
     - name: Generate C# Documentation
       run: |
-        #docfx_app/docfx docs/docfx/docfx.json
         docfx docs/docfx/docfx.json
         mv docs/docfx/_site github_pages_tmp/cs-docs
 
