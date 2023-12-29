@@ -62,5 +62,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.9.3
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY_GITHUB_PAGES_DOC }}
-        publish_dir: ./docs
+        publish_dir: ./docs/docs
         publish_branch: gh-pages  # Pushes to the gh-pages branch
