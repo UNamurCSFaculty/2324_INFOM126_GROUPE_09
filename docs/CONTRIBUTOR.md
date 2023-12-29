@@ -37,7 +37,7 @@ Avant de pouvoir être fusionné sur la branche `main`, votre code doit respecte
 
 À chaque commit sur master, une instance SonarQube sera mise à jour avec diverses informations (coverage, code smells, statut de la quality gate, bugs, vulnérabilités, etc.)
 
-Vous pouvez accéder à SonarQube depuis le lien suivant http://thibber.duckdns.org:3456
+Vous pouvez accéder à SonarQube depuis le lien suivant https://sonarqube.thibber.be/
 
 - Nom d'utilisateur: `user`
 - Mot de passe: `user`
@@ -51,6 +51,6 @@ Afin de passer les quality gates, les seuils suivants sont définis:
 
 ## Releases
 
-À chaque push sur la branche `main`, l'application est déployée et [rendue accessible](http://thibber.duckdns.org).
+À chaque push sur la branche `main`, l'application est déployée et [rendue accessible](https://tfm-ase.thibber.be/).
 
 La documentation est également déployée et [mise à disposition](https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/).
