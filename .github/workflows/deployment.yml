@@ -15,22 +15,27 @@ jobs:
         run: |
           install -m 600 -D /dev/null ~/.ssh/id_rsa
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+          echo "${{ secrets.SSH_HOST }}" > ~/.ssh/known_hosts
           
       - name: Update project
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v
-          cd ${{ secrets.SSH_BUILD_TFM_DIR }}
-          git pull origin main      
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v "
+          cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
+          git pull origin main"
           
       - name: Stop current service
         run: |
-          docker compose -f ./docker/app.yml stop
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v "docker compose -f ./docker/app.yml stop"
           
       - name: Build
         run: |
-          docker compose -f ./docker/app.yml build
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v "docker compose -f ./docker/app.yml build"
 
       - name: Start new app
         run: |
-          docker compose -f ./docker/app.yml up -d
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v "docker compose -f ./docker/app.yml up -d"
+          
+      - name: Close SSH
+        run: |
+          exit
+          rm -rf ~/.ssh/id_rsa
