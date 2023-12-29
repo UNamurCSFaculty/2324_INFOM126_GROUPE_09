@@ -1,5 +1,5 @@
 {
-  "source_base_path": "/home/runner/work/2324_INFOM126_GROUPE_09/2324_INFOM126_GROUPE_09",
+  "source_base_path": "/home/runner/work/2324_INFOM126_GROUPE_09/2324_INFOM126_GROUPE_09/docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,16 +9,6 @@
           "relative_path": "index.json"
         }
       }
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html"
-        }
-      },
-      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -525,10 +515,56 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/CONTRIBUTOR.md",
+      "source_relative_path": "docs/getting-started.md",
       "output": {
         ".html": {
-          "relative_path": "docs/CONTRIBUTOR.html"
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""
