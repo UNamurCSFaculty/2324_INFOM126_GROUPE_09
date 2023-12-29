@@ -1,0 +1,488 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Application documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avaoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+
+               if ($darkModeToggles.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">Application documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Interfaces</li>
+  <li class="breadcrumb-item"
+  >
+  FileLoadError</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/PipelineTFM/ClientApp/src/app/core/util/data-util.service.ts</code>
+        </p>
+
+
+
+
+        <section data-compodoc="block-index">
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#key" 
+>
+                                            key
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#message" 
+>
+                                            message
+                                        </a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#params" 
+>
+                                            params
+                                        </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section data-compodoc="block-properties">
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="key"></a>
+                                        <span class="name "><b>key</b>
+                                            <a href="#key">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>key:         <code><a href="../miscellaneous/typealiases.html#FileLoadErrorType" target="_self" >FileLoadErrorType</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#FileLoadErrorType" target="_self" >FileLoadErrorType</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="message"></a>
+                                        <span class="name "><b>message</b>
+                                            <a href="#message">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>message:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="params"></a>
+                                        <span class="name "><b>params</b>
+                                            <a href="#params">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>params:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Buffer } from &#x27;buffer&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+import { FormGroup } from &#x27;@angular/forms&#x27;;
+import { Observable, Observer } from &#x27;rxjs&#x27;;
+
+export type FileLoadErrorType &#x3D; &#x27;not.image&#x27; | &#x27;could.not.extract&#x27;;
+
+export interface FileLoadError {
+  message: string;
+  key: FileLoadErrorType;
+  params?: any;
+}
+
+/**
+ * An utility service for data.
+ */
+@Injectable({
+  providedIn: &#x27;root&#x27;,
+})
+export class DataUtils {
+  /**
+   * Method to find the byte size of the string provides
+   */
+  byteSize(base64String: string): string {
+    return this.formatAsBytes(this.size(base64String));
+  }
+
+  /**
+   * Method to open file
+   */
+  openFile(data: string, contentType: string | null | undefined): void {
+    contentType &#x3D; contentType ?? &#x27;&#x27;;
+
+    const byteCharacters &#x3D; Buffer.from(data, &#x27;base64&#x27;).toString(&#x27;binary&#x27;);
+    const byteNumbers &#x3D; new Array(byteCharacters.length);
+    for (let i &#x3D; 0; i &lt; byteCharacters.length; i++) {
+      byteNumbers[i] &#x3D; byteCharacters.charCodeAt(i);
+    }
+    const byteArray &#x3D; new Uint8Array(byteNumbers);
+    const blob &#x3D; new Blob([byteArray], {
+      type: contentType,
+    });
+    const fileURL &#x3D; window.URL.createObjectURL(blob);
+    const win &#x3D; window.open(fileURL);
+    win!.onload &#x3D; function () {
+      URL.revokeObjectURL(fileURL);
+    };
+  }
+
+  /**
+   * Sets the base 64 data &amp; file type of the 1st file on the event (event.target.files[0]) in the passed entity object
+   * and returns an observable.
+   *
+   * @param event the object containing the file (at event.target.files[0])
+   * @param editForm the form group where the input field is located
+   * @param field the field name to set the file&#x27;s &#x27;base 64 data&#x27; on
+   * @param isImage boolean representing if the file represented by the event is an image
+   * @returns an observable that loads file to form field and completes if sussessful
+   *      or returns error as FileLoadError on failure
+   */
+  loadFileToForm(event: Event, editForm: FormGroup, field: string, isImage: boolean): Observable&lt;void&gt; {
+    return new Observable((observer: Observer&lt;void&gt;) &#x3D;&gt; {
+      const eventTarget: HTMLInputElement | null &#x3D; event.target as HTMLInputElement | null;
+      if (eventTarget?.files?.[0]) {
+        const file: File &#x3D; eventTarget.files[0];
+        if (isImage &amp;&amp; !file.type.startsWith(&#x27;image/&#x27;)) {
+          const error: FileLoadError &#x3D; {
+            message: &#x60;File was expected to be an image but was found to be &#x27;${file.type}&#x27;&#x60;,
+            key: &#x27;not.image&#x27;,
+            params: { fileType: file.type },
+          };
+          observer.error(error);
+        } else {
+          const fieldContentType: string &#x3D; field + &#x27;ContentType&#x27;;
+          this.toBase64(file, (base64Data: string) &#x3D;&gt; {
+            editForm.patchValue({
+              [field]: base64Data,
+              [fieldContentType]: file.type,
+            });
+            observer.next();
+            observer.complete();
+          });
+        }
+      } else {
+        const error: FileLoadError &#x3D; {
+          message: &#x27;Could not extract file&#x27;,
+          key: &#x27;could.not.extract&#x27;,
+          params: { event },
+        };
+        observer.error(error);
+      }
+    });
+  }
+
+  /**
+   * Method to convert the file to base64
+   */
+  private toBase64(file: File, callback: (base64Data: string) &#x3D;&gt; void): void {
+    const fileReader: FileReader &#x3D; new FileReader();
+    fileReader.onload &#x3D; (e: ProgressEvent&lt;FileReader&gt;) &#x3D;&gt; {
+      if (typeof e.target?.result &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+        const base64Data: string &#x3D; e.target.result.substring(e.target.result.indexOf(&#x27;base64,&#x27;) + &#x27;base64,&#x27;.length);
+        callback(base64Data);
+      }
+    };
+    fileReader.readAsDataURL(file);
+  }
+
+  private endsWith(suffix: string, str: string): boolean {
+    return str.includes(suffix, str.length - suffix.length);
+  }
+
+  private paddingSize(value: string): number {
+    if (this.endsWith(&#x27;&#x3D;&#x3D;&#x27;, value)) {
+      return 2;
+    }
+    if (this.endsWith(&#x27;&#x3D;&#x27;, value)) {
+      return 1;
+    }
+    return 0;
+  }
+
+  private size(value: string): number {
+    return (value.length / 4) * 3 - this.paddingSize(value);
+  }
+
+  private formatAsBytes(size: number): string {
+    return size.toString().replace(/\B(?&#x3D;(\d{3})+(?!\d))/g, &#x27; &#x27;) + &#x27; bytes&#x27;; // NOSONAR
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'FileLoadError.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
