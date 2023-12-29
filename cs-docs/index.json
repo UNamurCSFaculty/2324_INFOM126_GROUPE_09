@@ -256,7 +256,7 @@
   },
   "index.html": {
     "href": "index.html",
-    "title": "This is the HOMEPAGE. | Livre de bronze",
-    "keywords": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+    "title": "C# documentation | Livre de bronze",
+    "keywords": "C# documentation This is the documentation for the C# code of the app. You'll find the API documentation in the API section."
   }
 }
