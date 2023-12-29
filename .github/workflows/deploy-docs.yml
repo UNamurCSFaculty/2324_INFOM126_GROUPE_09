@@ -37,6 +37,8 @@ jobs:
     - name: Generate C# Documentation
       run: |
         docfx_app/docfx docs/docfx/docfx.json
+        mv docs/docfx/_site .docs/c#-docs
+        rm -rf ./docfx
 
     - name: Generate Angular Documentation
       run: |
