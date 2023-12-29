@@ -51,7 +51,7 @@ jobs:
         typedoc --tsconfig src/PipelineTFM/ClientApp/tsconfig.json --out ./docs/ts-docs
 
     - name: Copy landing page
-      run: cp -R landing_page_doc ./docs
+      run: cp -R landing_page_doc/* ./docs
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3.9.3
