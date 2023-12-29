@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>PipelineTFM | livre de bronze </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="PipelineTFM | livre de bronze ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09/blob/TFM-11/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="livre de bronze">
+            livre de bronze
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09/actions"><img src="https://img.shields.io/github/actions/workflow/status/UNamurCSFaculty/2324_INFOM126_GROUPE_09/dotnet.yml" alt="GitHub Workflow Status (with event)"></a>
+<img src="http://thibber.duckdns.org:3456/api/project_badges/measure?project=TFM&amp;metric=alert_status&amp;token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0" alt="Quality Gate Status">
+<img src="http://thibber.duckdns.org:3456/api/project_badges/measure?project=TFM&amp;metric=bugs&amp;token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0" alt="Bugs">
+<img src="http://thibber.duckdns.org:3456/api/project_badges/measure?project=TFM&amp;metric=coverage&amp;token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0" alt="Coverage">
+<img src="http://thibber.duckdns.org:3456/api/project_badges/measure?project=TFM&amp;metric=code_smells&amp;token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0" alt="Code Smells">
+<img src="http://thibber.duckdns.org:3456/api/project_badges/measure?project=TFM&amp;metric=sqale_rating&amp;token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0" alt="Maintainability Rating"></p>
+<h1 id="pipelinetfm">PipelineTFM</h1>
+<p>This application was generated using JHipster 8.0.0, you can find documentation and help at <a href="https://www.jhipster.tech/documentation-archive/v8.0.0">https://www.jhipster.tech/documentation-archive/v8.0.0</a>.</p>
+<p>This application was generated using JHipster 8.0.0 and JHipster .Net Core , you can find documentation and help at <a href="https://jhipsternet.readthedocs.io/en/latest/index.html">https://jhipsternet.readthedocs.io/en/latest/index.html</a> and <a href="https://www.jhipster.tech/documentation-archive/v8.0.0">https://www.jhipster.tech/documentation-archive/v8.0.0</a>.</p>
+<h2 id="project-structure">Project Structure</h2>
+<p>Node is required for generation and recommended for development. <code>package.json</code> is always generated for a better development experience with prettier, commit hooks, scripts and so on.</p>
+<p>In the project root, JHipster generates configuration files for tools like git, prettier, eslint, husky, and others that are well known and you can find references in the web.</p>
+<ul>
+<li><code>.yo-rc.json</code> - Yeoman configuration file
+JHipster configuration is stored in this file at <code>generator-jhipster</code> key. You may find <code>generator-jhipster-*</code> for specific blueprints configuration.</li>
+<li><code>.yo-resolve</code> (optional) - Yeoman conflict resolver
+Allows to use a specific action when conflicts are found skipping prompts for files that matches a pattern. Each line should match <code>[pattern] [action]</code> with pattern been a <a href="https://github.com/isaacs/minimatch#minimatch">Minimatch</a> pattern and action been one of skip (default if ommited) or force. Lines starting with <code>#</code> are considered comments and are ignored.</li>
+<li><code>.jhipster/*.json</code> - JHipster entity configuration files</li>
+<li><code>docker/</code> - Docker configurations for the application and services that the application depends on</li>
+<li><code>src/PipelineTFM/ClientApp/</code> - Web Application folder</li>
+</ul>
+<h2 id="development">Development</h2>
+<p>Before you can build this project, you must install and configure the following dependencies on your machine:</p>
+<ol>
+<li><a href="https://nodejs.org/">Node.js</a>: We use Node to run a development web server and build the project.
+Depending on your system, you can install Node either from source or as a pre-packaged bundle.</li>
+</ol>
+<p>After installing Node, you should be able to run the following command to install development tools.
+You will only need to run this command when dependencies change in <a href="package.json">package.json</a>.</p>
+<pre><code>npm install
+</code></pre>
+<p>We use npm scripts and <a href="https://cli.angular.io/">Angular CLI</a> with <a href="https://webpack.github.io/">Webpack</a> as our build system.</p>
+<p>Run the following commands in two separate terminals to create a blissful development experience where your browser
+auto-refreshes when files change on your hard drive.</p>
+<pre><code>./mvnw
+npm start
+</code></pre>
+<p>Npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
+specifying a newer version in <a href="package.json">package.json</a>. You can also run <code>npm update</code> and <code>npm install</code> to manage dependencies.
+Add the <code>help</code> flag on any command to see how you can use it. For example, <code>npm help update</code>.</p>
+<p>The <code>npm run</code> command will list all of the scripts available to run for this project.</p>
+<h3 id="pwa-support">PWA Support</h3>
+<p>JHipster ships with PWA (Progressive Web App) support, and it's turned off by default. One of the main components of a PWA is a service worker.</p>
+<p>The service worker initialization code is disabled by default. To enable it, uncomment the following code in <code>src/PipelineTFM/ClientApp/src/app/app.module.ts</code>:</p>
+<pre><code class="lang-typescript">ServiceWorkerModule.register('ngsw-worker.js', { enabled: false }),
+</code></pre>
+<h3 id="managing-dependencies">Managing dependencies</h3>
+<p>For example, to add <a href="https://leafletjs.com/">Leaflet</a> library as a runtime dependency of your application, you would run following command:</p>
+<pre><code>npm install --save --save-exact leaflet
+</code></pre>
+<p>To benefit from TypeScript type definitions from <a href="https://definitelytyped.org/">DefinitelyTyped</a> repository in development, you would run following command:</p>
+<pre><code>npm install --save-dev --save-exact @types/leaflet
+</code></pre>
+<p>Then you would import the JS and CSS files specified in library's installation instructions so that <a href="https://webpack.github.io/">Webpack</a> knows about them:
+Edit <a href="src/PipelineTFM/ClientApp/src/app/app.module.ts">src/PipelineTFM/ClientApp/src/app/app.module.ts</a> file:</p>
+<pre><code>import 'leaflet/dist/leaflet.js';
+</code></pre>
+<p>Edit <a href="src/PipelineTFM/ClientApp/src/content/scss/vendor.scss">src/PipelineTFM/ClientApp/src/content/scss/vendor.scss</a> file:</p>
+<pre><code>@import 'leaflet/dist/leaflet.css';
+</code></pre>
+<p>Note: There are still a few other things remaining to do for Leaflet that we won't detail here.</p>
+<p>For further instructions on how to develop with JHipster, have a look at <a href="https://www.jhipster.tech/documentation-archive/v8.0.0/development/">Using JHipster in development</a>.</p>
+<h3 id="using-angular-cli">Using Angular CLI</h3>
+<p>You can also use <a href="https://cli.angular.io/">Angular CLI</a> to generate some custom client code.</p>
+<p>For example, the following command:</p>
+<pre><code>ng generate component my-component
+</code></pre>
+<p>will generate few files:</p>
+<pre><code>create src/PipelineTFM/ClientApp/src/app/my-component/my-component.component.html
+create src/PipelineTFM/ClientApp/src/app/my-component/my-component.component.ts
+update src/PipelineTFM/ClientApp/src/app/app.module.ts
+</code></pre>
+<p>Before you can build this project, you must install and configure the following dependencies on your machine:</p>
+<ol>
+<li><a href="https://nodejs.org/">Node.js</a>: We use Node to run a development web server and build the project.
+Depending on your system, you can install Node either from source or as a pre-packaged bundle.</li>
+</ol>
+<p>After installing Node, you should be able to run the following command to install development tools.
+You will only need to run this command when dependencies change in <a href="package.json">package.json</a>.</p>
+<p>In ./src/PipelineTFM/ClientApp run</p>
+<pre><code>npm install
+</code></pre>
+<p>We use npm scripts and <a href="https://webpack.github.io/">Webpack</a> as our build system.</p>
+<p>Run the following commands in two separate terminals to create a blissful development experience where your browser
+auto-refreshes when files change on your hard drive.</p>
+<pre><code>npm --prefix ./src/PipelineTFM/ClientApp start
+</code></pre>
+<p>npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
+specifying a newer version in <a href="package.json">package.json</a>. You can also run <code>npm update</code> and <code>npm install</code> to manage dependencies.
+Add the <code>help</code> flag on any command to see how you can use it. For example, <code>npm help update</code>.</p>
+<p>The <code>npm --prefix ./src/PipelineTFM/ClientApp run</code> command will list all of the scripts available to run for this project.</p>
+<h2 id="building-for-production">Building for production</h2>
+<h3 id="net-production-builds">.Net Production builds</h3>
+<p>To build the artifacts and optimize the PipelineTFM application for production, run:</p>
+<pre><code>cd ./src/PipelineTFM
+rm -rf ./src/PipelineTFM/wwwroot
+dotnet publish --verbosity normal -c Release -o ./app/out ./PipelineTFM.csproj
+</code></pre>
+<p>The <code>./src/PipelineTFM/app/out</code> directory will contain your application dll and its depedencies.</p>
+<h2 id="testing">Testing</h2>
+<h3 id="client-tests">Client tests</h3>
+<p>Unit tests are run by <a href="https://facebook.github.io/jest/">Jest</a>. They're located in <a href="src/PipelineTFM/ClientApp/test/">src/PipelineTFM/ClientApp/test/</a> and can be run with:</p>
+<pre><code>npm test
+</code></pre>
+<h3 id="net-backend-tests">.Net Backend tests</h3>
+<p>To launch your application's tests, run:</p>
+<pre><code>dotnet test --verbosity normal
+</code></pre>
+<h2 id="others">Others</h2>
+<h3 id="code-style--formatting">Code style / formatting</h3>
+<p>To format the dotnet code, run</p>
+<pre><code>dotnet format
+</code></pre>
+<h3 id="code-quality">Code quality</h3>
+<p>By Script :</p>
+<ol>
+<li><p>Run Sonar in container : <code>docker compose -f ./docker/sonar.yml up -d</code></p>
+</li>
+<li><p>Wait container was up Run <code>SonarAnalysis.ps1</code> and go to http://localhost:9001</p>
+</li>
+</ol>
+<p>Manually :</p>
+<ol>
+<li><p>Run Sonar in container : <code>docker compose -f ./docker/sonar.yml up -d</code></p>
+</li>
+<li><p>Install sonar scanner for .net :</p>
+</li>
+</ol>
+<p><code>dotnet tool install --global dotnet-sonarscanner</code></p>
+<ol start="3">
+<li><p>Run <code>dotnet sonarscanner begin /d:sonar.login=admin /d:sonar.password=admin /k:&quot;PipelineTFM&quot; /d:sonar.host.url=&quot;http://localhost:9001&quot; /s:&quot;`pwd`/SonarQube.Analysis.xml&quot;</code></p>
+</li>
+<li><p>Build your application : <code>dotnet build</code></p>
+</li>
+<li><p>Publish sonar results : <code>dotnet sonarscanner end /d:sonar.login=admin /d:sonar.password=admin</code></p>
+</li>
+<li><p>Go to http://localhost:9001</p>
+</li>
+</ol>
+<h3 id="monitoring">Monitoring</h3>
+<ol>
+<li><p>Run container (uncomment chronograf and kapacitor if you would use it): <code>docker compose -f ./docker/monitoring.yml up -d</code></p>
+</li>
+<li><p>Go to http://localhost:3000 (or http://localhost:8888 if you use chronograf)</p>
+</li>
+<li><p>(Only for chronograf) Change influxdb connection string by <code>YourApp-influxdb</code></p>
+</li>
+<li><p>(Only for chronograf) Change kapacitor connection string by <code>YourApp-kapacitor</code></p>
+</li>
+<li><p>(Only for chronograf) You can now add dashboard (like docker), see your app log in Cronograf Log viewer and send alert with kapacitor</p>
+</li>
+</ol>
+<h3 id="build-a-docker-image">Build a Docker image</h3>
+<p>You can also fully dockerize your application and all the services that it depends on. To achieve this, first build a docker image of your app by running:</p>
+<pre><code class="lang-bash">docker build -f ./Dockerfile-Back -t pipelinetfm .
+</code></pre>
+<p>Then run:</p>
+<pre><code class="lang-bash">docker run -p 8080:80 pipelinetfm
+</code></pre>
+<p>Or you can simply run :</p>
+<pre><code class="lang-bash">docker compose -f .\docker\app.yml build
+</code></pre>
+<p>And</p>
+<pre><code class="lang-bash">docker compose -f .\docker\app.yml up
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09/blob/TFM-11/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
