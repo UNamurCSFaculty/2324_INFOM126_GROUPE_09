@@ -6,4 +6,4 @@ on:
 
 jobs:
   call-workflow:
-    uses: UNamurCSFaculty/2324_INFOM126_GROUPE_09/.github/workflows/dotnet.yml
+    uses: ./.github/workflows/dotnet.yml
