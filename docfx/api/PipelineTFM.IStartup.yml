@@ -1,0 +1,367 @@
+### YamlMime:ManagedReference
+items:
+- uid: PipelineTFM.IStartup
+  commentId: T:PipelineTFM.IStartup
+  id: IStartup
+  parent: PipelineTFM
+  children:
+  - PipelineTFM.IStartup.Configure(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  - PipelineTFM.IStartup.ConfigureEndpoints(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)
+  - PipelineTFM.IStartup.ConfigureMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)
+  - PipelineTFM.IStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Hosting.IHostEnvironment)
+  langs:
+  - csharp
+  - vb
+  name: IStartup
+  nameWithType: IStartup
+  fullName: PipelineTFM.IStartup
+  type: Interface
+  source:
+    remote:
+      path: src/PipelineTFM/IStartup.cs
+      branch: TFM-11
+      repo: https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09
+    id: IStartup
+    path: ../src/PipelineTFM/IStartup.cs
+    startLine: 7
+  assemblies:
+  - PipelineTFM
+  namespace: PipelineTFM
+  syntax:
+    content: public interface IStartup
+    content.vb: Public Interface IStartup
+- uid: PipelineTFM.IStartup.Configure(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  commentId: M:PipelineTFM.IStartup.Configure(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  id: Configure(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  parent: PipelineTFM.IStartup
+  langs:
+  - csharp
+  - vb
+  name: Configure(IConfiguration, IServiceCollection)
+  nameWithType: IStartup.Configure(IConfiguration, IServiceCollection)
+  fullName: PipelineTFM.IStartup.Configure(Microsoft.Extensions.Configuration.IConfiguration, Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  type: Method
+  source:
+    remote:
+      path: src/PipelineTFM/IStartup.cs
+      branch: TFM-11
+      repo: https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09
+    id: Configure
+    path: ../src/PipelineTFM/IStartup.cs
+    startLine: 9
+  assemblies:
+  - PipelineTFM
+  namespace: PipelineTFM
+  syntax:
+    content: void Configure(IConfiguration configuration, IServiceCollection services)
+    parameters:
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Sub Configure(configuration As IConfiguration, services As IServiceCollection)
+  overload: PipelineTFM.IStartup.Configure*
+- uid: PipelineTFM.IStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Hosting.IHostEnvironment)
+  commentId: M:PipelineTFM.IStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Hosting.IHostEnvironment)
+  id: ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Hosting.IHostEnvironment)
+  parent: PipelineTFM.IStartup
+  langs:
+  - csharp
+  - vb
+  name: ConfigureServices(IServiceCollection, IHostEnvironment)
+  nameWithType: IStartup.ConfigureServices(IServiceCollection, IHostEnvironment)
+  fullName: PipelineTFM.IStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Hosting.IHostEnvironment)
+  type: Method
+  source:
+    remote:
+      path: src/PipelineTFM/IStartup.cs
+      branch: TFM-11
+      repo: https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09
+    id: ConfigureServices
+    path: ../src/PipelineTFM/IStartup.cs
+    startLine: 10
+  assemblies:
+  - PipelineTFM
+  namespace: PipelineTFM
+  syntax:
+    content: void ConfigureServices(IServiceCollection services, IHostEnvironment environment)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: environment
+      type: Microsoft.Extensions.Hosting.IHostEnvironment
+    content.vb: Sub ConfigureServices(services As IServiceCollection, environment As IHostEnvironment)
+  overload: PipelineTFM.IStartup.ConfigureServices*
+- uid: PipelineTFM.IStartup.ConfigureMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)
+  commentId: M:PipelineTFM.IStartup.ConfigureMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)
+  id: ConfigureMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)
+  parent: PipelineTFM.IStartup
+  langs:
+  - csharp
+  - vb
+  name: ConfigureMiddleware(IApplicationBuilder, IHostEnvironment)
+  nameWithType: IStartup.ConfigureMiddleware(IApplicationBuilder, IHostEnvironment)
+  fullName: PipelineTFM.IStartup.ConfigureMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.Extensions.Hosting.IHostEnvironment)
+  type: Method
+  source:
+    remote:
+      path: src/PipelineTFM/IStartup.cs
+      branch: TFM-11
+      repo: https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09
+    id: ConfigureMiddleware
+    path: ../src/PipelineTFM/IStartup.cs
+    startLine: 11
+  assemblies:
+  - PipelineTFM
+  namespace: PipelineTFM
+  syntax:
+    content: void ConfigureMiddleware(IApplicationBuilder app, IHostEnvironment environment)
+    parameters:
+    - id: app
+      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
+    - id: environment
+      type: Microsoft.Extensions.Hosting.IHostEnvironment
+    content.vb: Sub ConfigureMiddleware(app As IApplicationBuilder, environment As IHostEnvironment)
+  overload: PipelineTFM.IStartup.ConfigureMiddleware*
+- uid: PipelineTFM.IStartup.ConfigureEndpoints(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)
+  commentId: M:PipelineTFM.IStartup.ConfigureEndpoints(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)
+  id: ConfigureEndpoints(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Hosting.IHostEnvironment)
+  parent: PipelineTFM.IStartup
+  langs:
+  - csharp
+  - vb
+  name: ConfigureEndpoints(IApplicationBuilder, IHostEnvironment)
+  nameWithType: IStartup.ConfigureEndpoints(IApplicationBuilder, IHostEnvironment)
+  fullName: PipelineTFM.IStartup.ConfigureEndpoints(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.Extensions.Hosting.IHostEnvironment)
+  type: Method
+  source:
+    remote:
+      path: src/PipelineTFM/IStartup.cs
+      branch: TFM-11
+      repo: https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09
+    id: ConfigureEndpoints
+    path: ../src/PipelineTFM/IStartup.cs
+    startLine: 12
+  assemblies:
+  - PipelineTFM
+  namespace: PipelineTFM
+  syntax:
+    content: void ConfigureEndpoints(IApplicationBuilder app, IHostEnvironment environment)
+    parameters:
+    - id: app
+      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
+    - id: environment
+      type: Microsoft.Extensions.Hosting.IHostEnvironment
+    content.vb: Sub ConfigureEndpoints(app As IApplicationBuilder, environment As IHostEnvironment)
+  overload: PipelineTFM.IStartup.ConfigureEndpoints*
+references:
+- uid: PipelineTFM
+  commentId: N:PipelineTFM
+  href: PipelineTFM.html
+  name: PipelineTFM
+  nameWithType: PipelineTFM
+  fullName: PipelineTFM
+- uid: PipelineTFM.IStartup.Configure*
+  commentId: Overload:PipelineTFM.IStartup.Configure
+  href: PipelineTFM.IStartup.html#PipelineTFM_IStartup_Configure_Microsoft_Extensions_Configuration_IConfiguration_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  name: Configure
+  nameWithType: IStartup.Configure
+  fullName: PipelineTFM.IStartup.Configure
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+- uid: PipelineTFM.IStartup.ConfigureServices*
+  commentId: Overload:PipelineTFM.IStartup.ConfigureServices
+  href: PipelineTFM.IStartup.html#PipelineTFM_IStartup_ConfigureServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Hosting_IHostEnvironment_
+  name: ConfigureServices
+  nameWithType: IStartup.ConfigureServices
+  fullName: PipelineTFM.IStartup.ConfigureServices
+- uid: Microsoft.Extensions.Hosting.IHostEnvironment
+  commentId: T:Microsoft.Extensions.Hosting.IHostEnvironment
+  parent: Microsoft.Extensions.Hosting
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostenvironment
+  name: IHostEnvironment
+  nameWithType: IHostEnvironment
+  fullName: Microsoft.Extensions.Hosting.IHostEnvironment
+- uid: Microsoft.Extensions.Hosting
+  commentId: N:Microsoft.Extensions.Hosting
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Hosting
+  nameWithType: Microsoft.Extensions.Hosting
+  fullName: Microsoft.Extensions.Hosting
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Hosting
+    name: Hosting
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Hosting
+    name: Hosting
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting
+- uid: PipelineTFM.IStartup.ConfigureMiddleware*
+  commentId: Overload:PipelineTFM.IStartup.ConfigureMiddleware
+  href: PipelineTFM.IStartup.html#PipelineTFM_IStartup_ConfigureMiddleware_Microsoft_AspNetCore_Builder_IApplicationBuilder_Microsoft_Extensions_Hosting_IHostEnvironment_
+  name: ConfigureMiddleware
+  nameWithType: IStartup.ConfigureMiddleware
+  fullName: PipelineTFM.IStartup.ConfigureMiddleware
+- uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
+  commentId: T:Microsoft.AspNetCore.Builder.IApplicationBuilder
+  parent: Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.iapplicationbuilder
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: Microsoft.AspNetCore.Builder.IApplicationBuilder
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+- uid: PipelineTFM.IStartup.ConfigureEndpoints*
+  commentId: Overload:PipelineTFM.IStartup.ConfigureEndpoints
+  href: PipelineTFM.IStartup.html#PipelineTFM_IStartup_ConfigureEndpoints_Microsoft_AspNetCore_Builder_IApplicationBuilder_Microsoft_Extensions_Hosting_IHostEnvironment_
+  name: ConfigureEndpoints
+  nameWithType: IStartup.ConfigureEndpoints
+  fullName: PipelineTFM.IStartup.ConfigureEndpoints

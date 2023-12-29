@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: PipelineTFM.Infrastructure.Data
+  commentId: N:PipelineTFM.Infrastructure.Data
+  id: PipelineTFM.Infrastructure.Data
+  children:
+  - PipelineTFM.Infrastructure.Data.MessageDbContext
+  langs:
+  - csharp
+  - vb
+  name: PipelineTFM.Infrastructure.Data
+  nameWithType: PipelineTFM.Infrastructure.Data
+  fullName: PipelineTFM.Infrastructure.Data
+  type: Namespace
+  assemblies:
+  - PipelineTFM.Infrastructure
+references:
+- uid: PipelineTFM.Infrastructure.Data.MessageDbContext
+  commentId: T:PipelineTFM.Infrastructure.Data.MessageDbContext
+  parent: PipelineTFM.Infrastructure.Data
+  href: PipelineTFM.Infrastructure.Data.MessageDbContext.html
+  name: MessageDbContext
+  nameWithType: MessageDbContext
+  fullName: PipelineTFM.Infrastructure.Data.MessageDbContext
+- uid: PipelineTFM.Infrastructure.Data
+  commentId: N:PipelineTFM.Infrastructure.Data
+  href: PipelineTFM.html
+  name: PipelineTFM.Infrastructure.Data
+  nameWithType: PipelineTFM.Infrastructure.Data
+  fullName: PipelineTFM.Infrastructure.Data
+  spec.csharp:
+  - uid: PipelineTFM
+    name: PipelineTFM
+    href: PipelineTFM.html
+  - name: .
+  - uid: PipelineTFM.Infrastructure
+    name: Infrastructure
+    href: PipelineTFM.Infrastructure.html
+  - name: .
+  - uid: PipelineTFM.Infrastructure.Data
+    name: Data
+    href: PipelineTFM.Infrastructure.Data.html
+  spec.vb:
+  - uid: PipelineTFM
+    name: PipelineTFM
+    href: PipelineTFM.html
+  - name: .
+  - uid: PipelineTFM.Infrastructure
+    name: Infrastructure
+    href: PipelineTFM.Infrastructure.html
+  - name: .
+  - uid: PipelineTFM.Infrastructure.Data
+    name: Data
+    href: PipelineTFM.Infrastructure.Data.html

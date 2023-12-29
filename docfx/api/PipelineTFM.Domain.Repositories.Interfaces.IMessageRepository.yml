@@ -1,0 +1,416 @@
+### YamlMime:ManagedReference
+items:
+- uid: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository
+  commentId: T:PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository
+  id: IMessageRepository
+  parent: PipelineTFM.Domain.Repositories.Interfaces
+  children:
+  - PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.Add(PipelineTFM.Domain.Entities.Message)
+  - PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetAllAsync
+  - PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetLastsAsync(System.Int32)
+  - PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.SaveChangesAsync
+  langs:
+  - csharp
+  - vb
+  name: IMessageRepository
+  nameWithType: IMessageRepository
+  fullName: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository
+  type: Interface
+  source:
+    remote:
+      path: src/PipelineTFM.Infrastructure/Data/Repositories/Interfaces/IMessageRepository.cs
+      branch: TFM-11
+      repo: https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09
+    id: IMessageRepository
+    path: ../src/PipelineTFM.Infrastructure/Data/Repositories/Interfaces/IMessageRepository.cs
+    startLine: 6
+  assemblies:
+  - PipelineTFM.Infrastructure
+  namespace: PipelineTFM.Domain.Repositories.Interfaces
+  syntax:
+    content: public interface IMessageRepository
+    content.vb: Public Interface IMessageRepository
+- uid: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetAllAsync
+  commentId: M:PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetAllAsync
+  id: GetAllAsync
+  parent: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: IMessageRepository.GetAllAsync()
+  fullName: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: src/PipelineTFM.Infrastructure/Data/Repositories/Interfaces/IMessageRepository.cs
+      branch: TFM-11
+      repo: https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09
+    id: GetAllAsync
+    path: ../src/PipelineTFM.Infrastructure/Data/Repositories/Interfaces/IMessageRepository.cs
+    startLine: 8
+  assemblies:
+  - PipelineTFM.Infrastructure
+  namespace: PipelineTFM.Domain.Repositories.Interfaces
+  syntax:
+    content: Task<IEnumerable<Message>> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{PipelineTFM.Domain.Entities.Message}}
+    content.vb: Function GetAllAsync() As Task(Of IEnumerable(Of Message))
+  overload: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetAllAsync*
+- uid: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetLastsAsync(System.Int32)
+  commentId: M:PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetLastsAsync(System.Int32)
+  id: GetLastsAsync(System.Int32)
+  parent: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository
+  langs:
+  - csharp
+  - vb
+  name: GetLastsAsync(int)
+  nameWithType: IMessageRepository.GetLastsAsync(int)
+  fullName: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetLastsAsync(int)
+  type: Method
+  source:
+    remote:
+      path: src/PipelineTFM.Infrastructure/Data/Repositories/Interfaces/IMessageRepository.cs
+      branch: TFM-11
+      repo: https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09
+    id: GetLastsAsync
+    path: ../src/PipelineTFM.Infrastructure/Data/Repositories/Interfaces/IMessageRepository.cs
+    startLine: 9
+  assemblies:
+  - PipelineTFM.Infrastructure
+  namespace: PipelineTFM.Domain.Repositories.Interfaces
+  syntax:
+    content: Task<IEnumerable<Message>> GetLastsAsync(int number)
+    parameters:
+    - id: number
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{PipelineTFM.Domain.Entities.Message}}
+    content.vb: Function GetLastsAsync(number As Integer) As Task(Of IEnumerable(Of Message))
+  overload: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetLastsAsync*
+  nameWithType.vb: IMessageRepository.GetLastsAsync(Integer)
+  fullName.vb: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetLastsAsync(Integer)
+  name.vb: GetLastsAsync(Integer)
+- uid: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.Add(PipelineTFM.Domain.Entities.Message)
+  commentId: M:PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.Add(PipelineTFM.Domain.Entities.Message)
+  id: Add(PipelineTFM.Domain.Entities.Message)
+  parent: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository
+  langs:
+  - csharp
+  - vb
+  name: Add(Message)
+  nameWithType: IMessageRepository.Add(Message)
+  fullName: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.Add(PipelineTFM.Domain.Entities.Message)
+  type: Method
+  source:
+    remote:
+      path: src/PipelineTFM.Infrastructure/Data/Repositories/Interfaces/IMessageRepository.cs
+      branch: TFM-11
+      repo: https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09
+    id: Add
+    path: ../src/PipelineTFM.Infrastructure/Data/Repositories/Interfaces/IMessageRepository.cs
+    startLine: 10
+  assemblies:
+  - PipelineTFM.Infrastructure
+  namespace: PipelineTFM.Domain.Repositories.Interfaces
+  syntax:
+    content: Message Add(Message message)
+    parameters:
+    - id: message
+      type: PipelineTFM.Domain.Entities.Message
+    return:
+      type: PipelineTFM.Domain.Entities.Message
+    content.vb: Function Add(message As Message) As Message
+  overload: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.Add*
+- uid: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.SaveChangesAsync
+  commentId: M:PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.SaveChangesAsync
+  id: SaveChangesAsync
+  parent: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository
+  langs:
+  - csharp
+  - vb
+  name: SaveChangesAsync()
+  nameWithType: IMessageRepository.SaveChangesAsync()
+  fullName: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.SaveChangesAsync()
+  type: Method
+  source:
+    remote:
+      path: src/PipelineTFM.Infrastructure/Data/Repositories/Interfaces/IMessageRepository.cs
+      branch: TFM-11
+      repo: https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09
+    id: SaveChangesAsync
+    path: ../src/PipelineTFM.Infrastructure/Data/Repositories/Interfaces/IMessageRepository.cs
+    startLine: 11
+  assemblies:
+  - PipelineTFM.Infrastructure
+  namespace: PipelineTFM.Domain.Repositories.Interfaces
+  syntax:
+    content: Task<int> SaveChangesAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+    content.vb: Function SaveChangesAsync() As Task(Of Integer)
+  overload: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.SaveChangesAsync*
+references:
+- uid: PipelineTFM.Domain.Repositories.Interfaces
+  commentId: N:PipelineTFM.Domain.Repositories.Interfaces
+  href: PipelineTFM.html
+  name: PipelineTFM.Domain.Repositories.Interfaces
+  nameWithType: PipelineTFM.Domain.Repositories.Interfaces
+  fullName: PipelineTFM.Domain.Repositories.Interfaces
+  spec.csharp:
+  - uid: PipelineTFM
+    name: PipelineTFM
+    href: PipelineTFM.html
+  - name: .
+  - uid: PipelineTFM.Domain
+    name: Domain
+    href: PipelineTFM.Domain.html
+  - name: .
+  - uid: PipelineTFM.Domain.Repositories
+    name: Repositories
+    href: PipelineTFM.Domain.Repositories.html
+  - name: .
+  - uid: PipelineTFM.Domain.Repositories.Interfaces
+    name: Interfaces
+    href: PipelineTFM.Domain.Repositories.Interfaces.html
+  spec.vb:
+  - uid: PipelineTFM
+    name: PipelineTFM
+    href: PipelineTFM.html
+  - name: .
+  - uid: PipelineTFM.Domain
+    name: Domain
+    href: PipelineTFM.Domain.html
+  - name: .
+  - uid: PipelineTFM.Domain.Repositories
+    name: Repositories
+    href: PipelineTFM.Domain.Repositories.html
+  - name: .
+  - uid: PipelineTFM.Domain.Repositories.Interfaces
+    name: Interfaces
+    href: PipelineTFM.Domain.Repositories.Interfaces.html
+- uid: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetAllAsync*
+  commentId: Overload:PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetAllAsync
+  href: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.html#PipelineTFM_Domain_Repositories_Interfaces_IMessageRepository_GetAllAsync
+  name: GetAllAsync
+  nameWithType: IMessageRepository.GetAllAsync
+  fullName: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetAllAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{PipelineTFM.Domain.Entities.Message}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{PipelineTFM.Domain.Entities.Message}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<Message>>
+  nameWithType: Task<IEnumerable<Message>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<PipelineTFM.Domain.Entities.Message>>
+  nameWithType.vb: Task(Of IEnumerable(Of Message))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of PipelineTFM.Domain.Entities.Message))
+  name.vb: Task(Of IEnumerable(Of Message))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: PipelineTFM.Domain.Entities.Message
+    name: Message
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: PipelineTFM.Domain.Entities.Message
+    name: Message
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetLastsAsync*
+  commentId: Overload:PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetLastsAsync
+  href: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.html#PipelineTFM_Domain_Repositories_Interfaces_IMessageRepository_GetLastsAsync_System_Int32_
+  name: GetLastsAsync
+  nameWithType: IMessageRepository.GetLastsAsync
+  fullName: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.GetLastsAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.Add*
+  commentId: Overload:PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.Add
+  href: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.html#PipelineTFM_Domain_Repositories_Interfaces_IMessageRepository_Add_PipelineTFM_Domain_Entities_Message_
+  name: Add
+  nameWithType: IMessageRepository.Add
+  fullName: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.Add
+- uid: PipelineTFM.Domain.Entities.Message
+  commentId: T:PipelineTFM.Domain.Entities.Message
+  parent: PipelineTFM.Domain.Entities
+  href: PipelineTFM.Domain.Entities.Message.html
+  name: Message
+  nameWithType: Message
+  fullName: PipelineTFM.Domain.Entities.Message
+- uid: PipelineTFM.Domain.Entities
+  commentId: N:PipelineTFM.Domain.Entities
+  href: PipelineTFM.html
+  name: PipelineTFM.Domain.Entities
+  nameWithType: PipelineTFM.Domain.Entities
+  fullName: PipelineTFM.Domain.Entities
+  spec.csharp:
+  - uid: PipelineTFM
+    name: PipelineTFM
+    href: PipelineTFM.html
+  - name: .
+  - uid: PipelineTFM.Domain
+    name: Domain
+    href: PipelineTFM.Domain.html
+  - name: .
+  - uid: PipelineTFM.Domain.Entities
+    name: Entities
+    href: PipelineTFM.Domain.Entities.html
+  spec.vb:
+  - uid: PipelineTFM
+    name: PipelineTFM
+    href: PipelineTFM.html
+  - name: .
+  - uid: PipelineTFM.Domain
+    name: Domain
+    href: PipelineTFM.Domain.html
+  - name: .
+  - uid: PipelineTFM.Domain.Entities
+    name: Entities
+    href: PipelineTFM.Domain.Entities.html
+- uid: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.SaveChangesAsync*
+  commentId: Overload:PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.SaveChangesAsync
+  href: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.html#PipelineTFM_Domain_Repositories_Interfaces_IMessageRepository_SaveChangesAsync
+  name: SaveChangesAsync
+  nameWithType: IMessageRepository.SaveChangesAsync
+  fullName: PipelineTFM.Domain.Repositories.Interfaces.IMessageRepository.SaveChangesAsync
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )

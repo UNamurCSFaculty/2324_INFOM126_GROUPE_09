@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: PipelineTFM.Web.Filters
+  commentId: N:PipelineTFM.Web.Filters
+  id: PipelineTFM.Web.Filters
+  children:
+  - PipelineTFM.Web.Filters.ValidateModelAttribute
+  langs:
+  - csharp
+  - vb
+  name: PipelineTFM.Web.Filters
+  nameWithType: PipelineTFM.Web.Filters
+  fullName: PipelineTFM.Web.Filters
+  type: Namespace
+  assemblies:
+  - PipelineTFM
+references:
+- uid: PipelineTFM.Web.Filters.ValidateModelAttribute
+  commentId: T:PipelineTFM.Web.Filters.ValidateModelAttribute
+  href: PipelineTFM.Web.Filters.ValidateModelAttribute.html
+  name: ValidateModelAttribute
+  nameWithType: ValidateModelAttribute
+  fullName: PipelineTFM.Web.Filters.ValidateModelAttribute

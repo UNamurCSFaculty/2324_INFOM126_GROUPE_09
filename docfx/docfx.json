@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "src": "src",
+          "src": "../src",
           "files": [
             "**/*.csproj"
           ]
@@ -36,8 +36,8 @@
       "modern"
     ],
     "globalMetadata": {
-      "_appName": "livre de bronze",
-      "_appTitle": "livre de bronze",
+      "_appName": "page de bronze",
+      "_appTitle": "page de bronze",
       "_enableSearch": true,
       "pdf": true
     }

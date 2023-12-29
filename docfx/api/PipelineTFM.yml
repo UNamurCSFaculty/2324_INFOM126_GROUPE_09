@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: PipelineTFM
+  commentId: N:PipelineTFM
+  id: PipelineTFM
+  children:
+  - PipelineTFM.IStartup
+  - PipelineTFM.Startup
+  langs:
+  - csharp
+  - vb
+  name: PipelineTFM
+  nameWithType: PipelineTFM
+  fullName: PipelineTFM
+  type: Namespace
+  assemblies:
+  - PipelineTFM
+references:
+- uid: PipelineTFM.IStartup
+  commentId: T:PipelineTFM.IStartup
+  parent: PipelineTFM
+  href: PipelineTFM.IStartup.html
+  name: IStartup
+  nameWithType: IStartup
+  fullName: PipelineTFM.IStartup
+- uid: PipelineTFM.Startup
+  commentId: T:PipelineTFM.Startup
+  href: PipelineTFM.Startup.html
+  name: Startup
+  nameWithType: Startup
+  fullName: PipelineTFM.Startup
+- uid: PipelineTFM
+  commentId: N:PipelineTFM
+  href: PipelineTFM.html
+  name: PipelineTFM
+  nameWithType: PipelineTFM
+  fullName: PipelineTFM
