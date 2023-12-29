@@ -21,21 +21,30 @@ jobs:
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v "
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
-          git pull origin main"
+          git pull origin main && 
+          exit"
           
       - name: Stop current service
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v "docker compose -f ./docker/app.yml stop"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v "
+          cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
+          docker compose -f ./docker/app.yml stop && 
+          exit"
           
       - name: Build
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v "docker compose -f ./docker/app.yml build"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v "
+          cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
+          docker compose -f ./docker/app.yml build && 
+          exit"
 
       - name: Start new app
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v "docker compose -f ./docker/app.yml up -d"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -v "
+          cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
+          docker compose -f ./docker/app.yml up -d && 
+          exit"
           
       - name: Close SSH
         run: |
-          exit
           rm -rf ~/.ssh/id_rsa
