@@ -48,6 +48,9 @@ jobs:
       - name: dotnet test
         shell: powershell
         run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+      - name: Stop SonarQube
+        shell: powershell
+        run: .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONARQUBE_TOKEN }}"
       - name: SonarQube Quality Gate check
         id: sonarqube-quality-gate-check
         uses: sonarsource/sonarqube-quality-gate-action@master
@@ -57,6 +60,3 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONARQUBE_HOST }}
-      - name: Stop SonarQube
-        shell: powershell
-        run: .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONARQUBE_TOKEN }}"
