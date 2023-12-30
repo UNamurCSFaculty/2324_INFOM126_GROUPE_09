@@ -18,28 +18,28 @@ jobs:
       
       - name: Update project
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PORT }}"
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
           git pull origin main && 
           exit"
           
       - name: Stop current service
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PORT }}"
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
           docker compose -f ./docker/app.yml stop && 
           exit"
           
       - name: Build
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PORT }}"
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
           docker compose -f ./docker/app.yml build && 
           exit"
 
       - name: Start new app
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PORT }}"
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
           docker compose -f ./docker/app.yml up -d && 
           exit"
