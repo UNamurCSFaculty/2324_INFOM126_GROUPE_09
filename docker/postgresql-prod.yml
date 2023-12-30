@@ -1,8 +1,7 @@
-name: PipelineTFM
+name: pipelinetfm
 services:
   postgresql:
     image: postgres:16.0
-    container_name: postgres
     volumes:
       - ~/volumes/jhipster/PipelineTFM/postgresql/:/var/lib/postgresql/data/
     environment:
