@@ -43,18 +43,18 @@ You can automatically format the code using these commands:
 
 On every commit on the `main` branch, a SonarQube instance will be updated with some informations about the code quality (coverage, code smells, quality gate status, bugs, vulnerabilities, etc.)
 
-You can access the project's SonarQube instance [here](http://thibber.duckdns.org:3456):
+You can access the project's SonarQube instance [here](https://sonarqube.thibber.be):
 
 - Username: `user`
 - Password: `user`
 
 In order to pass the quality gates, you have to meet the following thresholds:
 
-- **Issues**: 0
+- **Issues**: max. 1
 - **Security Hotspot Reviewed**: 100%
 - **Coverage**: min. 60% (C# back-end only)
 - **Duplicated Lines**: max. 3%
 
 ## Releases
 
-Every time the `main` branch is updated, the app is deployed [here](http://thibber.duckdns.org). The code documentation is also deployed [here](https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/).
+Every time the `main` branch is updated, the app is deployed [here](https://tfm-ase.thibber.be/). The code documentation is also deployed [here](https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/).
