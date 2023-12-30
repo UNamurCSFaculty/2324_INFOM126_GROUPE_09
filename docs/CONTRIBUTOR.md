@@ -51,7 +51,7 @@ You can access the project's SonarQube instance [here](https://sonarqube.thibber
 In order to pass the quality gates, you have to meet the following thresholds:
 
 - **Issues**: max. 1
-- **Security Hotspot Reviewed**: 100%
+- **Security Hotspot Reviewed**: min. 95%
 - **Coverage**: min. 60% (C# back-end only)
 - **Duplicated Lines**: max. 3%
 
