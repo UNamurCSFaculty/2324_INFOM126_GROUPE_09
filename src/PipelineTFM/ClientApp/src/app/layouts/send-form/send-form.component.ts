@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Message } from 'app/entities/message.model';
 import { MessagesService } from 'app/services/messages.service';
@@ -7,7 +7,7 @@ import { MessagesService } from 'app/services/messages.service';
   standalone: true,
   selector: 'tfm-send-form',
   templateUrl: './send-form.component.html',
-  styleUrls: ['./send-form.component.scss'],
+  styleUrls: [],
   imports: [FormsModule, ReactiveFormsModule],
 })
 export class SendFormComponent {

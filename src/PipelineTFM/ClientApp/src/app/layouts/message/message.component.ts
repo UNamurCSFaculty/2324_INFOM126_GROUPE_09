@@ -5,7 +5,7 @@ import { Message } from 'app/entities/message.model';
   standalone: true,
   selector: 'tfm-message',
   templateUrl: './message.component.html',
-  styleUrls: ['./message.component.scss'],
+  styleUrls: [],
 })
 export class MessageComponent {
   @Input() message: Message = {

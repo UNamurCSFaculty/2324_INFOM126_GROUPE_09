@@ -67,7 +67,7 @@ public class MessageServiceTest
         messages.Should().HaveCount(maxNumberOfMessages);
     }
 
-    private void PostMultipleMessages(int messagesToPost, IMessagesService service)
+    private static void PostMultipleMessages(int messagesToPost, IMessagesService service)
     {
         for (int i = 0; i < messagesToPost; i++)
         {

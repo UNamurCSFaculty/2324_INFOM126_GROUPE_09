@@ -5,7 +5,6 @@ import { DEBUG_INFO_ENABLED } from 'app/app.constants';
 import { errorRoute } from './layouts/error/error.route';
 
 import HomeComponent from './home/home.component';
-import NavbarComponent from './layouts/navbar/navbar.component';
 
 @NgModule({
   imports: [
