@@ -27,21 +27,21 @@ jobs:
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
-          docker compose -f ./docker/app.yml stop && 
+          docker compose -f ./docker/app-prod.yml stop && 
           exit"
           
       - name: Build
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
-          docker compose -f ./docker/app.yml build && 
+          docker compose -f ./docker/app-prod.yml build && 
           exit"
 
       - name: Start new app
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
-          docker compose -f ./docker/app.yml up -d && 
+          docker compose -f ./docker/app-prod.yml up -d && 
           exit"
           
       - name: Close SSH
