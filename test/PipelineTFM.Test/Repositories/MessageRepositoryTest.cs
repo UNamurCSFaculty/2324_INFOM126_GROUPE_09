@@ -80,7 +80,7 @@ public class MessageRepositoryTest
         messages.Count().Should().Be(maxMessages);
     }
 
-    private Task<int> AddMessages(int numberToAdd, IMessageRepository repository)
+    private static Task<int> AddMessages(int numberToAdd, IMessageRepository repository)
     {
         for (int i = 0; i < numberToAdd; i++)
         {
