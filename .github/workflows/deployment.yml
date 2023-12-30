@@ -18,7 +18,7 @@ jobs:
           
       - name: Ping test
         run: |
-          ping ${{ secrets.SSH_HOST }}"
+          ping ${{ secrets.SSH_HOST }}
           
       - name: Update project
         run: |
