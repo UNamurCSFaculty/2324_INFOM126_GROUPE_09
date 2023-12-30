@@ -1,56 +1,60 @@
-# Contribuer au projet PipelineTFM
+# Contribute to PipelineTFM
 
-## Gestion des branches
+## Branch managing
 
-### Création
+### Creation
 
-Chaque branche doit correspondre à un **issue** GitHub. Pour chaque issue créé, il est demandé d'ajouter **au moins un label** correspondant ainsi qu'une **description** précise. Des templates sont mis à disposition pour vous aider à compléter votre issue.
+Each branch must correspond to a **Github issue**. For every issue created, you must add **at least one label** and a description of the work to be done. Some issue **templates** are provided to help you.
 
-### Nommage
+### Naming
 
-Chaque branche créée doit suivre le format suivant: `TFM-{ID}`, `{ID}` étant un nombre représentant l'identifiant de **l'issue**.
+Every branch must match the following format: `TFM-{ID}`. `{ID}` correspond to the **issue identifier**.
 
 ## Commits
 
-### Nommage des messages
+### Message naming
 
-Pour chaque commit, le message doit suivre le format suivant: `{BRANCHE}: {MESSAGE}`. Par exemple: `TFM-1: Added user login page`.
+For each commit, the message must match the following format: `{BRANCHE}: {MESSAGE}` (e.g `TFM-1: Added user login page`).
 
 ## Pull request
 
-Une fois le développement terminé, le code doit passer par une **pull request** et être validée par au moins 1 reviewer avant d'être merge sur la branche principale `main`.
+Once the development is completed, the code has to go through a **pull request** and be approved by at least one reviewer before being merged on the `main` branch.
 
-Pour effectuer la **code review**, vous pouvez ajouter l'un des reviewers suivants:
+You can add one of these **reviewers** for the code review of your branch:
 
 - [mderycke22](https://github.com/mderycke22)
 - [ThibBer](https://github.com/mderycke22)
 - [flipflop133](https://github.com/flipflop133)
 
-## Formattage
+## Formatting
 
-Avant de pouvoir être fusionné sur la branche `main`, votre code doit respecter les standards du projet concernant le formattage. Ce formattage peut être effectué grâce à des commandes.
+In order to pass the quality check of your **pull request**, the code has to be compliant regarding the project formatting standards.
 
-- Pour l'application web: le formattage du code peut être effectué avec l'extension Prettier ou la commande `npm run prettier:format`. Le formattage du code peut être simplement vérifié à l'aide de la commande `npm run prettier:check`.
-- Pour le back-end: le formattage du code peut être effectué avec la commande `dotnet format`. Le formattage du code peut être simplement vérifié à l'aide de la commande `dotnet format --verify-no-changes`
+You can automatically format the code using these commands:
 
-## Qualité du code
+- For the web application:
+  - Format using prettier or the following command: `npm run prettier:format`.
+  - You can simply check if the code is compliant by using this command: `npm run prettier:check`.
+- For the back-end:
+  - Format using the following command: `dotnet format`.
+  - You can simply check if the code is compliant by using this command: `dotnet format --verify-no-changes`
 
-À chaque commit sur master, une instance SonarQube sera mise à jour avec diverses informations (coverage, code smells, statut de la quality gate, bugs, vulnérabilités, etc.)
+## Code quality
 
-Vous pouvez accéder à SonarQube depuis le lien suivant http://thibber.duckdns.org:3456
+On every commit on the `main` branch, a SonarQube instance will be updated with some informations about the code quality (coverage, code smells, quality gate status, bugs, vulnerabilities, etc.)
 
-- Nom d'utilisateur: `user`
-- Mot de passe: `user`
+You can access the project's SonarQube instance [here](http://thibber.duckdns.org:3456):
 
-Afin de passer les quality gates, les seuils suivants sont définis:
+- Username: `user`
+- Password: `user`
 
-- **Issues**: pas plus de 0
-- **Problème de sécurités revus (Security Hotspot Reviewed)**: 100%
-- **Couverture du code (Coverage)**: minimum 60%
-- **Lignes dipliquées (Duplicated Lines)**: maximum 3%
+In order to pass the quality gates, you have to meet the following thresholds:
+
+- **Issues**: 0
+- **Security Hotspot Reviewed**: 100%
+- **Coverage**: min. 60% (C# back-end only)
+- **Duplicated Lines**: max. 3%
 
 ## Releases
 
-À chaque push sur la branche `main`, l'application est déployée et [rendue accessible](http://thibber.duckdns.org).
-
-La documentation est également déployée et [mise à disposition](https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/).
+Every time the `main` branch is updated, the app is deployed [here](http://thibber.duckdns.org). The code documentation is also deployed [here](https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/).
