@@ -1,0 +1,49 @@
+﻿name: Deploy TFM app
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore: ['**.md']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Write SSH keys
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+          
+      - name: Update project
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
+          cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
+          git pull origin main && 
+          exit"
+          
+      - name: Stop current service
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
+          cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
+          docker compose -f ./docker/app.yml stop && 
+          exit"
+          
+      - name: Build
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
+          cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
+          docker compose -f ./docker/app.yml build && 
+          exit"
+
+      - name: Start new app
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
+          cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
+          docker compose -f ./docker/app.yml up -d && 
+          exit"
+          
+      - name: Close SSH
+        run: |
+          rm -rf ~/.ssh/id_rsa
