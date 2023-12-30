@@ -129,12 +129,6 @@
 
 
 
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                <code>OnInit</code>
-    </p>
 
 
 <section data-compodoc="block-metadata">
@@ -161,7 +155,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>jhi-main</code></td>
+                <td class="col-md-9"><code>tfm-main</code></td>
             </tr>
 
 
@@ -185,120 +179,28 @@
     </table>
 </section>
 
-    <section data-compodoc="block-index">
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#ngOnInit" >ngOnInit</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
 
 
 
 
-        </tbody>
-    </table>
-</section>
-
-    <section data-compodoc="block-constructor">
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/PipelineTFM/ClientApp/src/app/layouts/main/main.component.ts:11</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
 
-
-
-
-    <section data-compodoc="block-methods">
-    
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <span ><b>ngOnInit</b></span>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
-
-
-                    <tr>
-                        <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="14"
-                                    class="link-to-prism">src/PipelineTFM/ClientApp/src/app/layouts/main/main.component.ts:14</a></div>
-                        </td>
-                    </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                        <div class="io-description">
-                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                        </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
 import { AppPageTitleStrategy } from &#x27;app/app-page-title-strategy&#x27;;
-import { Router } from &#x27;@angular/router&#x27;;
 
 @Component({
-  selector: &#x27;jhi-main&#x27;,
+  selector: &#x27;tfm-main&#x27;,
   templateUrl: &#x27;./main.component.html&#x27;,
   providers: [AppPageTitleStrategy],
 })
-export default class MainComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export default class MainComponent {}
 </code></pre>
     </div>
 
@@ -306,7 +208,7 @@ export default class MainComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;div&gt;
   &lt;router-outlet name&#x3D;&quot;navbar&quot;&gt;&lt;/router-outlet&gt;
 &lt;/div&gt;
-&lt;jhi-navbar&gt;&lt;/jhi-navbar&gt;
+&lt;tfm-navbar&gt;&lt;/tfm-navbar&gt;
 &lt;div class&#x3D;&quot;w-100&quot;&gt;
   &lt;div class&#x3D;&quot;card jh-card&quot;&gt;
     &lt;router-outlet&gt;&lt;/router-outlet&gt;
@@ -342,9 +244,9 @@ export default class MainComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <router-outlet name="navbar"></router-outlet></div><jhi-navbar></jhi-navbar><div class="w-100">  <div class="card jh-card">    <router-outlet></router-outlet>  </div>  <tfm-footer></tfm-footer></div></div>'
-    var COMPONENTS = [{'name': 'AlertComponent', 'selector': 'jhi-alert'},{'name': 'AlertErrorComponent', 'selector': 'jhi-alert-error'},{'name': 'ErrorComponent', 'selector': 'jhi-error'},{'name': 'FilterComponent', 'selector': 'jhi-filter'},{'name': 'FooterComponent', 'selector': 'tfm-footer'},{'name': 'HomeComponent', 'selector': 'jhi-home'},{'name': 'ItemCountComponent', 'selector': 'jhi-item-count'},{'name': 'MainComponent', 'selector': 'jhi-main'},{'name': 'MessageComponent', 'selector': 'tfm-message'},{'name': 'NavbarComponent', 'selector': 'jhi-navbar'},{'name': 'SendFormComponent', 'selector': 'tfm-send-form'}];
-    var DIRECTIVES = [{'name': 'SortByDirective', 'selector': '[jhiSortBy]'},{'name': 'SortDirective', 'selector': '[jhiSort]'}];
+        var COMPONENT_TEMPLATE = '<div><div>  <router-outlet name="navbar"></router-outlet></div><tfm-navbar></tfm-navbar><div class="w-100">  <div class="card jh-card">    <router-outlet></router-outlet>  </div>  <tfm-footer></tfm-footer></div></div>'
+    var COMPONENTS = [{'name': 'ErrorComponent', 'selector': 'jhi-error'},{'name': 'FooterComponent', 'selector': 'tfm-footer'},{'name': 'HomeComponent', 'selector': 'tfm-home'},{'name': 'MainComponent', 'selector': 'tfm-main'},{'name': 'MessageComponent', 'selector': 'tfm-message'},{'name': 'NavbarComponent', 'selector': 'tfm-navbar'},{'name': 'SendFormComponent', 'selector': 'tfm-send-form'}];
+    var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'MainComponent'};
 </script>
 <script src="../js/tree.js"></script>

@@ -166,7 +166,7 @@
             <tr>
                 <td class="col-md-3">imports</td>
                 <td class="col-md-9">
-                                <code><a href="../modules/SharedModule.html" target="_self" >SharedModule</a></code>
+                            <code>CommonModule</code>
                 </td>
             </tr>
 
@@ -366,15 +366,15 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonModule } from &#x27;@angular/common&#x27;;
+import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { ActivatedRoute } from &#x27;@angular/router&#x27;;
-import SharedModule from &#x27;app/shared/shared.module&#x27;;
 
 @Component({
   standalone: true,
   selector: &#x27;jhi-error&#x27;,
   templateUrl: &#x27;./error.component.html&#x27;,
-  imports: [SharedModule],
+  imports: [CommonModule],
 })
 export default class ErrorComponent implements OnInit {
   errorMessage?: string;
@@ -438,8 +438,8 @@ export default class ErrorComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div>  <div class="row">    <div class="col-md-4">      <span class="hipster img-fluid rounded"></span>    </div>    <div class="col-md-8">      <h1>Page d\'erreur !</h1>      <div *ngIf="errorMessage">        <div class="alert alert-danger">{{ errorMessage }}</div>      </div>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AlertComponent', 'selector': 'jhi-alert'},{'name': 'AlertErrorComponent', 'selector': 'jhi-alert-error'},{'name': 'ErrorComponent', 'selector': 'jhi-error'},{'name': 'FilterComponent', 'selector': 'jhi-filter'},{'name': 'FooterComponent', 'selector': 'tfm-footer'},{'name': 'HomeComponent', 'selector': 'jhi-home'},{'name': 'ItemCountComponent', 'selector': 'jhi-item-count'},{'name': 'MainComponent', 'selector': 'jhi-main'},{'name': 'MessageComponent', 'selector': 'tfm-message'},{'name': 'NavbarComponent', 'selector': 'jhi-navbar'},{'name': 'SendFormComponent', 'selector': 'tfm-send-form'}];
-    var DIRECTIVES = [{'name': 'SortByDirective', 'selector': '[jhiSortBy]'},{'name': 'SortDirective', 'selector': '[jhiSort]'}];
+    var COMPONENTS = [{'name': 'ErrorComponent', 'selector': 'jhi-error'},{'name': 'FooterComponent', 'selector': 'tfm-footer'},{'name': 'HomeComponent', 'selector': 'tfm-home'},{'name': 'MainComponent', 'selector': 'tfm-main'},{'name': 'MessageComponent', 'selector': 'tfm-message'},{'name': 'NavbarComponent', 'selector': 'tfm-navbar'},{'name': 'SendFormComponent', 'selector': 'tfm-send-form'}];
+    var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ErrorComponent'};
 </script>
 <script src="../js/tree.js"></script>

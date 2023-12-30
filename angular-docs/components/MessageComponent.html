@@ -113,10 +113,6 @@
                 role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
         </li>
         <li class="nav-item">
-            <a href="#styleData" class="nav-link"
-                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li class="nav-item">
             <a href="#tree" class="nav-link"
                 role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
@@ -162,10 +158,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./message.component.scss</code></td>
-            </tr>
 
 
 
@@ -465,7 +457,7 @@ import { Message } from &#x27;app/entities/message.model&#x27;;
   standalone: true,
   selector: &#x27;tfm-message&#x27;,
   templateUrl: &#x27;./message.component.html&#x27;,
-  styleUrls: [&#x27;./message.component.scss&#x27;],
+  styleUrls: [],
 })
 export class MessageComponent {
   @Input() message: Message &#x3D; {
@@ -506,12 +498,6 @@ export class MessageComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="styleData">
-                <p class="comment">
-                    <code>./message.component.scss</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
-    </div>
 
     <div class="tab-pane fade " id="tree">
         <div id="tree-container"></div>
@@ -539,8 +525,8 @@ export class MessageComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="card my-2">  <div class="card-body">    <h5 class="card-title">{{ message.author }}</h5>    <h6 class="card-subtitle mb-2 text-muted">{{ printDate(message.publicationDate) }}</h6>    <p class="card-text">{{ message.content }}</p>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AlertComponent', 'selector': 'jhi-alert'},{'name': 'AlertErrorComponent', 'selector': 'jhi-alert-error'},{'name': 'ErrorComponent', 'selector': 'jhi-error'},{'name': 'FilterComponent', 'selector': 'jhi-filter'},{'name': 'FooterComponent', 'selector': 'tfm-footer'},{'name': 'HomeComponent', 'selector': 'jhi-home'},{'name': 'ItemCountComponent', 'selector': 'jhi-item-count'},{'name': 'MainComponent', 'selector': 'jhi-main'},{'name': 'MessageComponent', 'selector': 'tfm-message'},{'name': 'NavbarComponent', 'selector': 'jhi-navbar'},{'name': 'SendFormComponent', 'selector': 'tfm-send-form'}];
-    var DIRECTIVES = [{'name': 'SortByDirective', 'selector': '[jhiSortBy]'},{'name': 'SortDirective', 'selector': '[jhiSort]'}];
+    var COMPONENTS = [{'name': 'ErrorComponent', 'selector': 'jhi-error'},{'name': 'FooterComponent', 'selector': 'tfm-footer'},{'name': 'HomeComponent', 'selector': 'tfm-home'},{'name': 'MainComponent', 'selector': 'tfm-main'},{'name': 'MessageComponent', 'selector': 'tfm-message'},{'name': 'NavbarComponent', 'selector': 'tfm-navbar'},{'name': 'SendFormComponent', 'selector': 'tfm-send-form'}];
+    var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'MessageComponent'};
 </script>
 <script src="../js/tree.js"></script>

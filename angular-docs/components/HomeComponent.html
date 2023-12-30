@@ -113,10 +113,6 @@
                 role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
         </li>
         <li class="nav-item">
-            <a href="#styleData" class="nav-link"
-                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li class="nav-item">
             <a href="#tree" class="nav-link"
                 role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
@@ -153,7 +149,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>jhi-home</code></td>
+                <td class="col-md-9"><code>tfm-home</code></td>
             </tr>
 
             <tr>
@@ -165,17 +161,12 @@
                 <td class="col-md-3">imports</td>
                 <td class="col-md-9">
                             <code>CommonModule</code>
-                                <code><a href="../modules/SharedModule.html" target="_self" >SharedModule</a></code>
                             <code>RouterModule</code>
                                 <code><a href="../components/MessageComponent.html" target="_self" >MessageComponent</a></code>
                                 <code><a href="../components/SendFormComponent.html" target="_self" >SendFormComponent</a></code>
                 </td>
             </tr>
 
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./home.component.scss</code></td>
-            </tr>
 
 
 
@@ -251,7 +242,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/PipelineTFM/ClientApp/src/app/home/home.component.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/PipelineTFM/ClientApp/src/app/home/home.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -318,8 +309,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="28"
-                                    class="link-to-prism">src/PipelineTFM/ClientApp/src/app/home/home.component.ts:28</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="27"
+                                    class="link-to-prism">src/PipelineTFM/ClientApp/src/app/home/home.component.ts:27</a></div>
                         </td>
                     </tr>
 
@@ -355,8 +346,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="24"
-                                    class="link-to-prism">src/PipelineTFM/ClientApp/src/app/home/home.component.ts:24</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="23"
+                                    class="link-to-prism">src/PipelineTFM/ClientApp/src/app/home/home.component.ts:23</a></div>
                         </td>
                     </tr>
 
@@ -402,7 +393,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/PipelineTFM/ClientApp/src/app/home/home.component.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/PipelineTFM/ClientApp/src/app/home/home.component.ts:19</a></div>
                         </td>
                     </tr>
 
@@ -423,15 +414,14 @@ import { MessageComponent } from &#x27;app/layouts/message/message.component&#x2
 import { SendFormComponent } from &#x27;app/layouts/send-form/send-form.component&#x27;;
 import { MessagesService } from &#x27;app/services/messages.service&#x27;;
 
-import SharedModule from &#x27;app/shared/shared.module&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 
 @Component({
   standalone: true,
-  selector: &#x27;jhi-home&#x27;,
+  selector: &#x27;tfm-home&#x27;,
   templateUrl: &#x27;./home.component.html&#x27;,
-  styleUrls: [&#x27;./home.component.scss&#x27;],
-  imports: [CommonModule, SharedModule, RouterModule, MessageComponent, SendFormComponent],
+  styleUrls: [],
+  imports: [CommonModule, RouterModule, MessageComponent, SendFormComponent],
 })
 export default class HomeComponent {
   messages: Observable&lt;Message[]&gt; &#x3D; new Observable&lt;Message[]&gt;();
@@ -443,7 +433,6 @@ export default class HomeComponent {
   }
 
   getMessages() {
-    console.log(&#x27;Get messages appelée&#x27;);
     this.messages &#x3D; this.messageService.getMessages();
   }
 }
@@ -457,48 +446,19 @@ export default class HomeComponent {
   &lt;/div&gt;
 
   &lt;div class&#x3D;&quot;w-100&quot;&gt;
-    &lt;h1 class&#x3D;&quot;display-4 row justify-content-center&quot;&gt;Bienvenue sur le livre de bronze PipelineTFM&lt;/h1&gt;
-    &lt;h2 class&#x3D;&quot;row justify-content-center&quot;&gt;Les 10 messages les plus récents&lt;/h2&gt;
+    &lt;h1 class&#x3D;&quot;display-3 text-center my-2&quot;&gt;Bienvenue sur le livre de bronze PipelineTFM&lt;/h1&gt;
+    &lt;h2 class&#x3D;&quot;text-center&quot;&gt;Les 10 messages les plus récents&lt;/h2&gt;
     &lt;div class&#x3D;&quot;d-flex align-items-center flex-column&quot; *ngFor&#x3D;&quot;let msg of messages | async&quot;&gt;
-      &lt;tfm-message class&#x3D;&quot;w-50&quot; [message]&#x3D;&quot;msg&quot;&gt;&lt;/tfm-message&gt;
+      &lt;tfm-message class&#x3D;&quot;col-12 col-lg-8 col-xl-6&quot; [message]&#x3D;&quot;msg&quot;&gt;&lt;/tfm-message&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;d-flex justify-content-center&quot;&gt;
-      &lt;tfm-send-form (messagePosted)&#x3D;&quot;getMessages()&quot; class&#x3D;&quot;w-50&quot;&gt;&lt;/tfm-send-form&gt;
+      &lt;tfm-send-form (messagePosted)&#x3D;&quot;getMessages()&quot; class&#x3D;&quot;col-12 col-lg-8 col-xl-6&quot;&gt;&lt;/tfm-send-form&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="styleData">
-                <p class="comment">
-                    <code>./home.component.scss</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss">/* &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
-Main page styles
-&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; */
-
-/*.hipster {
-  display: inline-block;
-  width: 347px;
-  height: 497px;
-  background: url(&#x27;../../content/images/jhipster_family_member_3.svg&#x27;) no-repeat center top;
-  background-size: contain;
-}*/
-
-/* wait autoprefixer update to allow simple generation of high pixel density media query */
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (-moz-min-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
-  .hipster {
-    //background: url(&#x27;../../content/images/jhipster_family_member_3.svg&#x27;) no-repeat center top;
-    background-size: contain;
-  }
-}
-</code></pre>
-    </div>
 
     <div class="tab-pane fade " id="tree">
         <div id="tree-container"></div>
@@ -525,9 +485,9 @@ Main page styles
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="col-md-3">    <span class="hipster img-fluid rounded"></span>  </div>  <div class="w-100">    <h1 class="display-4 row justify-content-center">Bienvenue sur le livre de bronze PipelineTFM</h1>    <h2 class="row justify-content-center">Les 10 messages les plus récents</h2>    <div class="d-flex align-items-center flex-column" *ngFor="let msg of messages | async">      <tfm-message class="w-50" [message]="msg"></tfm-message>    </div>    <div class="d-flex justify-content-center">      <tfm-send-form (messagePosted)="getMessages()" class="w-50"></tfm-send-form>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AlertComponent', 'selector': 'jhi-alert'},{'name': 'AlertErrorComponent', 'selector': 'jhi-alert-error'},{'name': 'ErrorComponent', 'selector': 'jhi-error'},{'name': 'FilterComponent', 'selector': 'jhi-filter'},{'name': 'FooterComponent', 'selector': 'tfm-footer'},{'name': 'HomeComponent', 'selector': 'jhi-home'},{'name': 'ItemCountComponent', 'selector': 'jhi-item-count'},{'name': 'MainComponent', 'selector': 'jhi-main'},{'name': 'MessageComponent', 'selector': 'tfm-message'},{'name': 'NavbarComponent', 'selector': 'jhi-navbar'},{'name': 'SendFormComponent', 'selector': 'tfm-send-form'}];
-    var DIRECTIVES = [{'name': 'SortByDirective', 'selector': '[jhiSortBy]'},{'name': 'SortDirective', 'selector': '[jhiSort]'}];
+        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="col-md-3">    <span class="hipster img-fluid rounded"></span>  </div>  <div class="w-100">    <h1 class="display-3 text-center my-2">Bienvenue sur le livre de bronze PipelineTFM</h1>    <h2 class="text-center">Les 10 messages les plus récents</h2>    <div class="d-flex align-items-center flex-column" *ngFor="let msg of messages | async">      <tfm-message class="col-12 col-lg-8 col-xl-6" [message]="msg"></tfm-message>    </div>    <div class="d-flex justify-content-center">      <tfm-send-form (messagePosted)="getMessages()" class="col-12 col-lg-8 col-xl-6"></tfm-send-form>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'ErrorComponent', 'selector': 'jhi-error'},{'name': 'FooterComponent', 'selector': 'tfm-footer'},{'name': 'HomeComponent', 'selector': 'tfm-home'},{'name': 'MainComponent', 'selector': 'tfm-main'},{'name': 'MessageComponent', 'selector': 'tfm-message'},{'name': 'NavbarComponent', 'selector': 'tfm-navbar'},{'name': 'SendFormComponent', 'selector': 'tfm-send-form'}];
+    var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>
 <script src="../js/tree.js"></script>

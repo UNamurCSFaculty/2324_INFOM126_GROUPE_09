@@ -113,10 +113,6 @@
                 role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
         </li>
         <li class="nav-item">
-            <a href="#styleData" class="nav-link"
-                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li class="nav-item">
             <a href="#tree" class="nav-link"
                 role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
@@ -169,10 +165,6 @@
                 </td>
             </tr>
 
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./send-form.component.scss</code></td>
-            </tr>
 
 
 
@@ -467,7 +459,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, Output, EventEmitter } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Output, EventEmitter } from &#x27;@angular/core&#x27;;
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
 import { Message } from &#x27;app/entities/message.model&#x27;;
 import { MessagesService } from &#x27;app/services/messages.service&#x27;;
@@ -476,7 +468,7 @@ import { MessagesService } from &#x27;app/services/messages.service&#x27;;
   standalone: true,
   selector: &#x27;tfm-send-form&#x27;,
   templateUrl: &#x27;./send-form.component.html&#x27;,
-  styleUrls: [&#x27;./send-form.component.scss&#x27;],
+  styleUrls: [],
   imports: [FormsModule, ReactiveFormsModule],
 })
 export class SendFormComponent {
@@ -538,18 +530,12 @@ export class SendFormComponent {
       &gt;&lt;/textarea&gt;
       &lt;small id&#x3D;&quot;messageInfo&quot; class&#x3D;&quot;form-text text-muted&quot;&gt;Maximum 512 caractères&lt;/small&gt;
     &lt;/div&gt;
-    &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;Envoyer&lt;/button&gt;
+    &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary my-2 col-12 col-sm-8 col-md-5 col-xl-2&quot;&gt;Envoyer&lt;/button&gt;
   &lt;/form&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="styleData">
-                <p class="comment">
-                    <code>./send-form.component.scss</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
-    </div>
 
     <div class="tab-pane fade " id="tree">
         <div id="tree-container"></div>
@@ -576,9 +562,9 @@ export class SendFormComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="my-4">  <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">    <div class="form-group">      <label for="username">Nom d\'utilisateur</label>      <input        minlength="3"        maxlength="32"        formControlName="author"        class="form-control"        id="username"        aria-describedby="usernameInfo"        placeholder="Entrez un nom d\'utilisateur"      />      <small id="usernameInfo" class="form-text text-muted">Nom d\'utilisateur entre 3 et 32 caractères</small>    </div>    <div class="form-group">      <label for="messageContent">Message</label>      <textarea        maxlength="512"        formControlName="content"        class="form-control"        id="messageContent"        rows="3"        aria-describedby="messageInfo"      ></textarea>      <small id="messageInfo" class="form-text text-muted">Maximum 512 caractères</small>    </div>    <button type="submit" class="btn btn-primary">Envoyer</button>  </form></div></div>'
-    var COMPONENTS = [{'name': 'AlertComponent', 'selector': 'jhi-alert'},{'name': 'AlertErrorComponent', 'selector': 'jhi-alert-error'},{'name': 'ErrorComponent', 'selector': 'jhi-error'},{'name': 'FilterComponent', 'selector': 'jhi-filter'},{'name': 'FooterComponent', 'selector': 'tfm-footer'},{'name': 'HomeComponent', 'selector': 'jhi-home'},{'name': 'ItemCountComponent', 'selector': 'jhi-item-count'},{'name': 'MainComponent', 'selector': 'jhi-main'},{'name': 'MessageComponent', 'selector': 'tfm-message'},{'name': 'NavbarComponent', 'selector': 'jhi-navbar'},{'name': 'SendFormComponent', 'selector': 'tfm-send-form'}];
-    var DIRECTIVES = [{'name': 'SortByDirective', 'selector': '[jhiSortBy]'},{'name': 'SortDirective', 'selector': '[jhiSort]'}];
+        var COMPONENT_TEMPLATE = '<div><div class="my-4">  <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">    <div class="form-group">      <label for="username">Nom d\'utilisateur</label>      <input        minlength="3"        maxlength="32"        formControlName="author"        class="form-control"        id="username"        aria-describedby="usernameInfo"        placeholder="Entrez un nom d\'utilisateur"      />      <small id="usernameInfo" class="form-text text-muted">Nom d\'utilisateur entre 3 et 32 caractères</small>    </div>    <div class="form-group">      <label for="messageContent">Message</label>      <textarea        maxlength="512"        formControlName="content"        class="form-control"        id="messageContent"        rows="3"        aria-describedby="messageInfo"      ></textarea>      <small id="messageInfo" class="form-text text-muted">Maximum 512 caractères</small>    </div>    <button type="submit" class="btn btn-primary my-2 col-12 col-sm-8 col-md-5 col-xl-2">Envoyer</button>  </form></div></div>'
+    var COMPONENTS = [{'name': 'ErrorComponent', 'selector': 'jhi-error'},{'name': 'FooterComponent', 'selector': 'tfm-footer'},{'name': 'HomeComponent', 'selector': 'tfm-home'},{'name': 'MainComponent', 'selector': 'tfm-main'},{'name': 'MessageComponent', 'selector': 'tfm-message'},{'name': 'NavbarComponent', 'selector': 'tfm-navbar'},{'name': 'SendFormComponent', 'selector': 'tfm-send-form'}];
+    var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SendFormComponent'};
 </script>
 <script src="../js/tree.js"></script>
