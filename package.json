@@ -13,6 +13,7 @@
     "test": "npm test --prefix src/PipelineTFM/ClientApp/"
   },
   "devDependencies": {
+    "@compodoc/compodoc": "^1.1.23",
     "concurrently": "8.2.2",
     "generator-jhipster": "8.0.0",
     "generator-jhipster-dotnetcore": "4.0.0"

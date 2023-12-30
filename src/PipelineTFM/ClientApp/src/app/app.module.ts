@@ -1,5 +1,5 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
-import { CommonModule, registerLocaleData } from '@angular/common';
+import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import locale from '@angular/common/locales/fr';
 import { BrowserModule, Title } from '@angular/platform-browser';

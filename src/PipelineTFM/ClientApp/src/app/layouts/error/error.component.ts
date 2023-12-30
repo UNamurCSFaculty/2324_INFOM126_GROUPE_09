@@ -1,12 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import SharedModule from 'app/shared/shared.module';
 
 @Component({
   standalone: true,
   selector: 'jhi-error',
   templateUrl: './error.component.html',
-  imports: [SharedModule],
+  imports: [CommonModule],
 })
 export default class ErrorComponent implements OnInit {
   errorMessage?: string;

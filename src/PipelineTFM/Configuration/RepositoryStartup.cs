@@ -11,8 +11,6 @@ public static class RepositoryStartup
 {
     public static IServiceCollection AddRepositoryModule(this IServiceCollection services)
     {
-        //services.AddScoped<IMessageRepository, MessageRepository>();
-
         services.Scan(scan => scan
             .FromAssembliesOf(typeof(IMessageRepository), typeof(MessageRepository))
             // Register repository interfaces using the I prefix convention for interfaces to match interface/class

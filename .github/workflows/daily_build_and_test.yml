@@ -1,0 +1,20 @@
+name: Daily Build and Test
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight UTC
+
+jobs:
+  call-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Date
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          START_DATE='2024-01-06'
+          if [[ "$TODAY" < "$START_DATE" ]]; then
+            echo "Before start date, skipping run."
+            exit 0
+          fi
+      - name: Run Workflow
+        uses: ./.github/workflows/dotnet.yml

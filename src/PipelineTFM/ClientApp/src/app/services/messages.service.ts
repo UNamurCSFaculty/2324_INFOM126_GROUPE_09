@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ApplicationConfigService } from 'app/core/config/application-config.service';
 import { Message } from 'app/entities/message.model';
-import { Observable, map, take } from 'rxjs';
+import { Observable } from 'rxjs';
 
 // Should be injected in a module and not in root
 @Injectable({ providedIn: 'root' })
