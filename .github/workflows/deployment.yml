@@ -20,6 +20,7 @@ jobs:
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
+          git checkout main && 
           git pull origin main && 
           exit"
           
