@@ -15,3 +15,5 @@ Please make sure the bug doesn't exist before opening a new issue, also check op
 * What should happen
 * Did it work in an older version
 * Which browser did you used (include version)
+
+### Steps to reproduce
