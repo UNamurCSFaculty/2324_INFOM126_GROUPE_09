@@ -15,35 +15,29 @@ jobs:
           install -m 600 -D /dev/null ~/.ssh/id_rsa
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
-          
+      
       - name: Update project
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
+          git checkout main && 
           git pull origin main && 
-          exit"
-          
-      - name: Stop current service
-        run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
-          cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
-          docker compose -f ./docker/app.yml stop && 
           exit"
           
       - name: Build
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
-          docker compose -f ./docker/app.yml build && 
+          docker compose -f ./docker/app-prod.yml build && 
           exit"
 
-      - name: Start new app
+      - name: Restart
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "
           cd ${{ secrets.SSH_BUILD_TFM_DIR }} &&
-          docker compose -f ./docker/app.yml up -d && 
+          docker compose -f ./docker/app-prod.yml up -d && 
           exit"
           
-      - name: Close SSH
+      - name: Delete SSH key
         run: |
           rm -rf ~/.ssh/id_rsa

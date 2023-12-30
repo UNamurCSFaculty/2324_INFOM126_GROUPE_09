@@ -1,0 +1,19 @@
+name: pipelinetfm
+services:
+  app:
+    container_name: tfm
+    restart: unless-stopped
+    build:
+      context: ../
+      dockerfile: Dockerfile-Back
+    ports:
+      - 5000:80
+    depends_on:
+      postgresql:
+        condition: service_healthy
+  postgresql:
+    container_name: postgres
+    restart: unless-stopped
+    extends:
+      file: ./postgresql-prod.yml
+      service: postgresql
