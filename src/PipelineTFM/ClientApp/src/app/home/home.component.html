@@ -4,13 +4,13 @@
   </div>
 
   <div class="w-100">
-    <h1 class="display-4 row justify-content-center">Bienvenue sur le livre de bronze PipelineTFM</h1>
-    <h2 class="row justify-content-center">Les 10 messages les plus récents</h2>
+    <h1 class="display-3 text-center my-2">Bienvenue sur le livre de bronze PipelineTFM</h1>
+    <h2 class="text-center">Les 10 messages les plus récents</h2>
     <div class="d-flex align-items-center flex-column" *ngFor="let msg of messages | async">
-      <tfm-message class="w-50" [message]="msg"></tfm-message>
+      <tfm-message class="col-12 col-lg-8 col-xl-6" [message]="msg"></tfm-message>
     </div>
     <div class="d-flex justify-content-center">
-      <tfm-send-form (messagePosted)="getMessages()" class="w-50"></tfm-send-form>
+      <tfm-send-form (messagePosted)="getMessages()" class="col-12 col-lg-8 col-xl-6"></tfm-send-form>
     </div>
   </div>
 </div>
