@@ -258,3 +258,7 @@ docker compose -f .\docker\app.yml up
 [Leaflet]: https://leafletjs.com/
 [DefinitelyTyped]: https://definitelytyped.org/
 [Angular CLI]: https://cli.angular.io/
+
+## Further Documentation and Resources
+
+For more detailed documentation on our project, visit our [documentation page]([link-to-the-documentation](https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/)). Here, you'll find comprehensive guides, API references, and other resources to help you understand and work with our project effectively.

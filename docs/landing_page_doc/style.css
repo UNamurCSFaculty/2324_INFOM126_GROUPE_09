@@ -1,0 +1,94 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.content-container {
+    text-align: center;
+    padding: 2vw;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 960px;
+}
+
+.button-block {
+    margin: 1vw;
+    width: calc(33.333% - 2vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-block img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.description {
+    font-size: 1.25em;
+    margin-top: 0.5em;
+}
+
+/* Responsive styles for tablets */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .button-block {
+        width: calc(50% - 2vw);
+    }
+}
+
+/* Responsive styles for mobile phones */
+@media only screen and (max-width: 480px) {
+
+    body,
+    html {
+        display: block;
+    }
+
+    .content-container {
+        padding: 5vw;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .button-container {
+        justify-content: space-around;
+    }
+
+    .button-block {
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    .button-block img {
+        width: 100px;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+}
