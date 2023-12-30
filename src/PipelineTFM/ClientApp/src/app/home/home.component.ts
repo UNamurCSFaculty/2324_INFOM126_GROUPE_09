@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
   standalone: true,
   selector: 'tfm-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  styleUrls: [],
   imports: [CommonModule, RouterModule, MessageComponent, SendFormComponent],
 })
 export default class HomeComponent {
