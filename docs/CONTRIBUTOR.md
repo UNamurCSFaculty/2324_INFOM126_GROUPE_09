@@ -8,7 +8,7 @@ Each branch must correspond to a **Github issue**. For every issue created, you 
 
 ### Naming
 
-Every branch must match the following format: `TFM-{ID}`. `{ID}` correspond to the **issue identifier**.
+Every branch must match the following format: `TFM-{ID}`. `{ID}` corresponds to the **issue identifier**.
 
 ## Commits
 
