@@ -57,4 +57,4 @@ In order to pass the quality gates, you have to meet the following thresholds:
 
 ## Releases
 
-Every time the `main` branch is updated, the app is deployed [here](https://tfm-ase.thibber.be/). The code documentation is also deployed [here](https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/).
+Every time the `main` branch is updated, the app is deployed [here](https://tfm-ase.thibber.be/). The code documentation is also deployed [here](https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/). A daily build is also triggered on the main branch.
