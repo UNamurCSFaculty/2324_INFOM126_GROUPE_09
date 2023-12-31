@@ -43,10 +43,7 @@ You can automatically format the code using these commands:
 
 On every commit on the `main` branch, a SonarQube instance will be updated with some informations about the code quality (coverage, code smells, quality gate status, bugs, vulnerabilities, etc.)
 
-You can access the project's SonarQube instance [here](https://sonarqube.thibber.be):
-
-- Username: `user`
-- Password: `user`
+You can access the project's SonarQube instance [here](https://sonarqube.thibber.be)
 
 In order to pass the quality gates, you have to meet the following thresholds:
 
