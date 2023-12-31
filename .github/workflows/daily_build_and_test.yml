@@ -9,12 +9,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check Date
+        id: check_date
         run: |
           TODAY=$(date +%Y-%m-%d)
           START_DATE='2024-01-06'
           if [[ "$TODAY" < "$START_DATE" ]]; then
             echo "Before start date, skipping run."
+            echo "::set-output name=skip::true"
             exit 0
+          else
+            echo "::set-output name=skip::false"
           fi
+
+      - name: Checkout Repository
+        if: steps.check_date.outputs.skip != 'true'
+        uses: actions/checkout@v4
+
       - name: Run Workflow
+        if: steps.check_date.outputs.skip != 'true'
         uses: ./.github/workflows/dotnet.yml
