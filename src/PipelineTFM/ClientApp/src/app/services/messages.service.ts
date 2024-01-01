@@ -4,7 +4,6 @@ import { ApplicationConfigService } from 'app/core/config/application-config.ser
 import { Message } from 'app/entities/message.model';
 import { Observable } from 'rxjs';
 
-// Should be injected in a module and not in root
 @Injectable({ providedIn: 'root' })
 export class MessagesService {
   private readonly apiUrl = this.applicationConfigService.getEndpointFor('api/messages');
