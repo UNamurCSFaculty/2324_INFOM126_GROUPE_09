@@ -191,13 +191,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#getAtLeastTwoDigits" >getAtLeastTwoDigits</a>
-                            </li>
-                            <li>
-                                <a href="#ngOnInit" >ngOnInit</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Public</span>
                                 <a href="#printDate" >printDate</a>
                             </li>
@@ -273,112 +266,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getAtLeastTwoDigits"></a>
-                    <span class="name">
-                            <span class="modifier">Private</span>
-                        <span ><b>getAtLeastTwoDigits</b></span>
-                        <a href="#getAtLeastTwoDigits"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getAtLeastTwoDigits(unit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
-                </td>
-            </tr>
-
-
-                    <tr>
-                        <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="28"
-                                    class="link-to-prism">src/PipelineTFM/ClientApp/src/app/layouts/message/message.component.ts:28</a></div>
-                        </td>
-                    </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                            <div class="io-description">
-                                <b>Parameters :</b>
-                                
-                                <table class="params">
-                                    <thead>
-                                        <tr>
-                                            <td>Name</td>
-                                                <td>Type</td>
-                                            <td>Optional</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                                <td>unit</td>
-                                            <td>
-                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                            </td>
-
-                                            <td>
-                                                    No
-                                            </td>
-
-
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        <div class="io-description">
-                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </div>
-                            <div class="io-description">
-                                
-                            </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <span ><b>ngOnInit</b></span>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
-
-
-                    <tr>
-                        <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="33"
-                                    class="link-to-prism">src/PipelineTFM/ClientApp/src/app/layouts/message/message.component.ts:33</a></div>
-                        </td>
-                    </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                        <div class="io-description">
-                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                        </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="printDate"></a>
                     <span class="name">
                             <span class="modifier">Public</span>
@@ -434,7 +321,7 @@
                                 </table>
                             </div>
                         <div class="io-description">
-                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                         </div>
                             <div class="io-description">
@@ -467,22 +354,19 @@ export class MessageComponent {
   };
 
   public printDate(date: Date | undefined) {
-    // Important since date won&#x27;t considered as a Date
+    // Important since date won&#x27;t be considered as a Date somehow
+    console.log(typeof date);
     const toDate: Date &#x3D; date ? new Date(date) : new Date();
-    return &#x60;${this.getAtLeastTwoDigits(toDate.getDate())}/${this.getAtLeastTwoDigits(toDate.getMonth())}/${this.getAtLeastTwoDigits(
-      toDate.getFullYear(),
-    )} 
-    ${this.getAtLeastTwoDigits(toDate.getHours())}:${this.getAtLeastTwoDigits(toDate.getMinutes())}:${this.getAtLeastTwoDigits(
-      toDate.getSeconds(),
-    )}&#x60;;
-  }
 
-  private getAtLeastTwoDigits(unit: number): string {
-    const numAsStr &#x3D; unit.toString();
-    return numAsStr.length &gt;&#x3D; 2 ? numAsStr : &#x60;0${numAsStr}&#x60;;
+    return toDate.toLocaleDateString(&#x27;fr-FR&#x27;, {
+      day: &#x27;2-digit&#x27;,
+      month: &#x27;2-digit&#x27;,
+      year: &#x27;numeric&#x27;,
+      hour: &#x27;2-digit&#x27;,
+      minute: &#x27;2-digit&#x27;,
+      second: &#x27;2-digit&#x27;,
+    });
   }
-
-  ngOnInit() {}
 }
 </code></pre>
     </div>
