@@ -12,8 +12,7 @@ public static class SwaggerConfiguration
     {
         services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v3", new OpenApiInfo { Title = "PipelineTFM API", Version = "0.0.1" });
-            c.OperationFilter<PageableModelFilter>();
+            c.SwaggerDoc("v3", new OpenApiInfo { Title = "PipelineTFM - Livre de bronze API", Version = "1.0.0" });
         });
 
         return services;
