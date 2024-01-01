@@ -15,20 +15,17 @@ export class MessageComponent {
   };
 
   public printDate(date: Date | undefined) {
-    // Important since date won't considered as a Date
+    // Important since date won't be considered as a Date somehow
+    console.log(typeof date);
     const toDate: Date = date ? new Date(date) : new Date();
-    return `${this.getAtLeastTwoDigits(toDate.getDate())}/${this.getAtLeastTwoDigits(toDate.getMonth())}/${this.getAtLeastTwoDigits(
-      toDate.getFullYear(),
-    )} 
-    ${this.getAtLeastTwoDigits(toDate.getHours())}:${this.getAtLeastTwoDigits(toDate.getMinutes())}:${this.getAtLeastTwoDigits(
-      toDate.getSeconds(),
-    )}`;
-  }
 
-  private getAtLeastTwoDigits(unit: number): string {
-    const numAsStr = unit.toString();
-    return numAsStr.length >= 2 ? numAsStr : `0${numAsStr}`;
+    return toDate.toLocaleDateString('fr-FR', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    });
   }
-
-  ngOnInit() {}
 }
