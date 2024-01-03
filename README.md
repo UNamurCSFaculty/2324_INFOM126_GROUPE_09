@@ -5,9 +5,9 @@
 [![Code Smells](https://sonarqube.thibber.be/api/project_badges/measure?project=TFM&metric=code_smells&token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0)](https://sonarqube.thibber.be)
 [![Maintainability Rating](https://sonarqube.thibber.be/api/project_badges/measure?project=TFM&metric=sqale_rating&token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0)](https://sonarqube.thibber.be)
 
-![TFM demo](./docs/images/tfm_demo.gif)
-
 # PipelineTFM
+
+![TFM demo](./docs/images/tfm_demo.gif)
 
 ## Introduction
 
