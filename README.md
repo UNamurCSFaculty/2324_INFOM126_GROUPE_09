@@ -5,175 +5,72 @@
 [![Code Smells](https://sonarqube.thibber.be/api/project_badges/measure?project=TFM&metric=code_smells&token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0)](https://sonarqube.thibber.be)
 [![Maintainability Rating](https://sonarqube.thibber.be/api/project_badges/measure?project=TFM&metric=sqale_rating&token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0)](https://sonarqube.thibber.be)
 
+![TFM demo](./docs/images/tfm_demo.gif)
+
 # PipelineTFM
 
-This application was generated using JHipster 8.0.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.0.0](https://www.jhipster.tech/documentation-archive/v8.0.0).
+## Introduction
 
-This application was generated using JHipster 8.0.0 and JHipster .Net Core , you can find documentation and help at https://jhipsternet.readthedocs.io/en/latest/index.html and [https://www.jhipster.tech/documentation-archive/v8.0.0](https://www.jhipster.tech/documentation-archive/v8.0.0).
+PipelineTFM is a simple guest book application based on a template generated using JHipster 8.0.0 and JHipster .Net Core. You can find documentation and help at https://jhipsternet.readthedocs.io/en/latest/index.html and [https://www.jhipster.tech/documentation-archive/v8.0.0](https://www.jhipster.tech/documentation-archive/v8.0.0).
 
-## Project Structure
+## Prerequisites
 
-Node is required for generation and recommended for development. `package.json` is always generated for a better development experience with prettier, commit hooks, scripts and so on.
+In order to run the project, make sure you have these tools installed on your machine:
 
-In the project root, JHipster generates configuration files for tools like git, prettier, eslint, husky, and others that are well known and you can find references in the web.
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/)
+- [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+- [Docker](https://www.docker.com/products/docker-desktop/)
+- [Angular CLI](https://github.com/angular/angular-cli)
+- Jetbrains Rider or Visual Studio
 
-- `.yo-rc.json` - Yeoman configuration file
-  JHipster configuration is stored in this file at `generator-jhipster` key. You may find `generator-jhipster-*` for specific blueprints configuration.
-- `.yo-resolve` (optional) - Yeoman conflict resolver
-  Allows to use a specific action when conflicts are found skipping prompts for files that matches a pattern. Each line should match `[pattern] [action]` with pattern been a [Minimatch](https://github.com/isaacs/minimatch#minimatch) pattern and action been one of skip (default if ommited) or force. Lines starting with `#` are considered comments and are ignored.
-- `.jhipster/*.json` - JHipster entity configuration files
-- `docker/` - Docker configurations for the application and services that the application depends on
-- `src/PipelineTFM/ClientApp/` - Web Application folder
+## Project setup
 
-## Development
+1. Clone the repository
 
-Before you can build this project, you must install and configure the following dependencies on your machine:
+```
+git clone https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09.git
+```
 
-1. [Node.js][]: We use Node to run a development web server and build the project.
-   Depending on your system, you can install Node either from source or as a pre-packaged bundle.
-
-After installing Node, you should be able to run the following command to install development tools.
-You will only need to run this command when dependencies change in [package.json](package.json).
+2. Install Node dependencies in the root folder and in `src/PipelineTFM/ClientApp`
 
 ```
 npm install
+cd src/PipelineTFM/ClientApp
+npm install
 ```
 
-We use npm scripts and [Angular CLI][] with [Webpack][] as our build system.
-
-Run the following commands in two separate terminals to create a blissful development experience where your browser
-auto-refreshes when files change on your hard drive.
+3. Deploy the PostgreSQL database Docker container
 
 ```
-./mvnw
-npm start
+docker compose -f docker/postgresql.yml -p pipelinetfm up -d
 ```
 
-Npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
-specifying a newer version in [package.json](package.json). You can also run `npm update` and `npm install` to manage dependencies.
-Add the `help` flag on any command to see how you can use it. For example, `npm help update`.
+4. Open the solution in Jetbrains Rider or Visual Studio
 
-The `npm run` command will list all of the scripts available to run for this project.
+5. Run the `PipelineTFM: PipelineTFM-LivreBronzeApp` configuration
 
-### PWA Support
-
-JHipster ships with PWA (Progressive Web App) support, and it's turned off by default. One of the main components of a PWA is a service worker.
-
-The service worker initialization code is disabled by default. To enable it, uncomment the following code in `src/PipelineTFM/ClientApp/src/app/app.module.ts`:
-
-```typescript
-ServiceWorkerModule.register('ngsw-worker.js', { enabled: false }),
-```
-
-### Managing dependencies
-
-For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
-
-```
-npm install --save --save-exact leaflet
-```
-
-To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run following command:
-
-```
-npm install --save-dev --save-exact @types/leaflet
-```
-
-Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
-Edit [src/PipelineTFM/ClientApp/src/app/app.module.ts](src/PipelineTFM/ClientApp/src/app/app.module.ts) file:
-
-```
-import 'leaflet/dist/leaflet.js';
-```
-
-Edit [src/PipelineTFM/ClientApp/src/content/scss/vendor.scss](src/PipelineTFM/ClientApp/src/content/scss/vendor.scss) file:
-
-```
-@import 'leaflet/dist/leaflet.css';
-```
-
-Note: There are still a few other things remaining to do for Leaflet that we won't detail here.
-
-For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
-
-### Using Angular CLI
-
-You can also use [Angular CLI][] to generate some custom client code.
-
-For example, the following command:
-
-```
-ng generate component my-component
-```
-
-will generate few files:
-
-```
-create src/PipelineTFM/ClientApp/src/app/my-component/my-component.component.html
-create src/PipelineTFM/ClientApp/src/app/my-component/my-component.component.ts
-update src/PipelineTFM/ClientApp/src/app/app.module.ts
-```
-
-Before you can build this project, you must install and configure the following dependencies on your machine:
-
-1. [Node.js][]: We use Node to run a development web server and build the project.
-   Depending on your system, you can install Node either from source or as a pre-packaged bundle.
-
-After installing Node, you should be able to run the following command to install development tools.
-You will only need to run this command when dependencies change in [package.json](package.json).
-
-In ./src/PipelineTFM/ClientApp run
-
-    npm install
-
-We use npm scripts and [Webpack][] as our build system.
-
-Run the following commands in two separate terminals to create a blissful development experience where your browser
-auto-refreshes when files change on your hard drive.
-
-    npm --prefix ./src/PipelineTFM/ClientApp start
-
-npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
-specifying a newer version in [package.json](package.json). You can also run `npm update` and `npm install` to manage dependencies.
-Add the `help` flag on any command to see how you can use it. For example, `npm help update`.
-
-The `npm --prefix ./src/PipelineTFM/ClientApp run` command will list all of the scripts available to run for this project.
-
-## Building for production
-
-### .Net Production builds
-
-To build the artifacts and optimize the PipelineTFM application for production, run:
-
-```
-cd ./src/PipelineTFM
-rm -rf ./src/PipelineTFM/wwwroot
-dotnet publish --verbosity normal -c Release -o ./app/out ./PipelineTFM.csproj
-```
-
-The `./src/PipelineTFM/app/out` directory will contain your application dll and its depedencies.
+![Project app configuration](./docs/images/run_app_profile.png)
 
 ## Testing
 
 ### Client tests
 
-Unit tests are run by [Jest][]. They're located in [src/PipelineTFM/ClientApp/test/](src/PipelineTFM/ClientApp/test/) and can be run with:
+Unit tests are run by Jest. They're located in [src/PipelineTFM/ClientApp/test/](src/PipelineTFM/ClientApp/test/) and can be run with:
 
 ```
 npm test
 ```
 
-### .Net Backend tests
+### .NET Backend tests
 
-To launch your application's tests, run:
+To launch application's tests, run:
 
 ```
 dotnet test --verbosity normal
 ```
 
-## Others
-
-### Code style / formatting
+## Code style / formatting
 
 To format the dotnet code, run
 
@@ -181,7 +78,7 @@ To format the dotnet code, run
 dotnet format
 ```
 
-### Code quality
+## Code quality
 
 By Script :
 
@@ -205,21 +102,23 @@ Manually :
 
 6. Go to http://localhost:9001
 
-### Monitoring
+## Building for production
 
-1. Run container (uncomment chronograf and kapacitor if you would use it): `docker compose -f ./docker/monitoring.yml up -d`
+### .NET Production builds
 
-2. Go to http://localhost:3000 (or http://localhost:8888 if you use chronograf)
+To build the artifacts and optimize the PipelineTFM application for production, run:
 
-3. (Only for chronograf) Change influxdb connection string by `YourApp-influxdb`
+```
+cd ./src/PipelineTFM
+rm -rf ./src/PipelineTFM/wwwroot
+dotnet publish --verbosity normal -c Release -o ./app/out ./PipelineTFM.csproj
+```
 
-4. (Only for chronograf) Change kapacitor connection string by `YourApp-kapacitor`
-
-5. (Only for chronograf) You can now add dashboard (like docker), see your app log in Cronograf Log viewer and send alert with kapacitor
+The `./src/PipelineTFM/app/out` directory will contain your application dll and its depedencies.
 
 ### Build a Docker image
 
-You can also fully dockerize your application and all the services that it depends on. To achieve this, first build a docker image of your app by running:
+You can also fully dockerize the application and all the services that it depends on. To achieve this, first build a docker image of your app by running:
 
 ```bash
 docker build -f ./Dockerfile-Back -t pipelinetfm .
@@ -243,23 +142,6 @@ And
 docker compose -f .\docker\app.yml up
 ```
 
-[JHipster Homepage and latest documentation]: https://www.jhipster.tech
-[JHipster 8.0.0 archive]: https://www.jhipster.tech/documentation-archive/v8.0.0
-[Using JHipster in development]: https://www.jhipster.tech/documentation-archive/v8.0.0/development/
-[Using Docker and Docker-Compose]: https://www.jhipster.tech/documentation-archive/v8.0.0/docker-compose
-[Using JHipster in production]: https://www.jhipster.tech/documentation-archive/v8.0.0/production/
-[Running tests page]: https://www.jhipster.tech/documentation-archive/v8.0.0/running-tests/
-[Code quality page]: https://www.jhipster.tech/documentation-archive/v8.0.0/code-quality/
-[Setting up Continuous Integration]: https://www.jhipster.tech/documentation-archive/v8.0.0/setting-up-ci/
-[Node.js]: https://nodejs.org/
-[NPM]: https://www.npmjs.com/
-[Webpack]: https://webpack.github.io/
-[BrowserSync]: https://www.browsersync.io/
-[Jest]: https://facebook.github.io/jest/
-[Leaflet]: https://leafletjs.com/
-[DefinitelyTyped]: https://definitelytyped.org/
-[Angular CLI]: https://cli.angular.io/
-
 ## Further Documentation and Resources
 
-For more detailed documentation on our project, visit our [documentation page](<[link-to-the-documentation](https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/)>). Here, you'll find comprehensive guides, API references, and other resources to help you understand and work with our project effectively.
+For more detailed documentation on our project, visit our [documentation page](https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/). Here, you'll find comprehensive guides, API references, and other resources to help you understand and work with our project effectively.
