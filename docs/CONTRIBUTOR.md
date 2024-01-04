@@ -49,7 +49,7 @@ In order to pass the quality gates, you have to meet the following thresholds:
 
 - **Issues**: max. 1
 - **Security Hotspot Reviewed**: min. 95%
-- **Coverage**: min. 60% (C# back-end only)
+- **Coverage**: min. 60% (C# back-end only, some projects are excluded)
 - **Duplicated Lines**: max. 3%
 
 ## Releases
