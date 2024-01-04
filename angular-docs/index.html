@@ -96,128 +96,81 @@
 <a href="https://sonarqube.thibber.be"><img src="https://sonarqube.thibber.be/api/project_badges/measure?project=TFM&metric=code_smells&token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0" alt="Code Smells" class="img-responsive"></a>
 <a href="https://sonarqube.thibber.be"><img src="https://sonarqube.thibber.be/api/project_badges/measure?project=TFM&metric=sqale_rating&token=sqb_13579984a83999bd2bfbfa7fe8df90892c81fca0" alt="Maintainability Rating" class="img-responsive"></a></p>
 <h1>PipelineTFM</h1>
-<p>This application was generated using JHipster 8.0.0, you can find documentation and help at <a href="https://www.jhipster.tech/documentation-archive/v8.0.0">https://www.jhipster.tech/documentation-archive/v8.0.0</a>.</p>
-<p>This application was generated using JHipster 8.0.0 and JHipster .Net Core , you can find documentation and help at <a href="https://jhipsternet.readthedocs.io/en/latest/index.html">https://jhipsternet.readthedocs.io/en/latest/index.html</a> and <a href="https://www.jhipster.tech/documentation-archive/v8.0.0">https://www.jhipster.tech/documentation-archive/v8.0.0</a>.</p>
-<h2>Project Structure</h2>
-<p>Node is required for generation and recommended for development. <code>package.json</code> is always generated for a better development experience with prettier, commit hooks, scripts and so on.</p>
-<p>In the project root, JHipster generates configuration files for tools like git, prettier, eslint, husky, and others that are well known and you can find references in the web.</p>
+<p><img src="./docs/images/tfm_demo.gif" alt="TFM demo" class="img-responsive"></p>
+<h2>Introduction</h2>
+<p>PipelineTFM is a simple guest book application based on a template generated using JHipster 8.0.0 and JHipster .Net Core. You can find documentation and help at <a href="https://jhipsternet.readthedocs.io/en/latest/index.html">https://jhipsternet.readthedocs.io/en/latest/index.html</a> and <a href="https://www.jhipster.tech/documentation-archive/v8.0.0">https://www.jhipster.tech/documentation-archive/v8.0.0</a>.</p>
+<h2>Prerequisites</h2>
+<p>In order to run the project, make sure you have these tools installed on your machine:</p>
 <ul>
-<li><code>.yo-rc.json</code> - Yeoman configuration file
-JHipster configuration is stored in this file at <code>generator-jhipster</code> key. You may find <code>generator-jhipster-*</code> for specific blueprints configuration.</li>
-<li><code>.yo-resolve</code> (optional) - Yeoman conflict resolver
-Allows to use a specific action when conflicts are found skipping prompts for files that matches a pattern. Each line should match <code>[pattern] [action]</code> with pattern been a <a href="https://github.com/isaacs/minimatch#minimatch">Minimatch</a> pattern and action been one of skip (default if ommited) or force. Lines starting with <code>#</code> are considered comments and are ignored.</li>
-<li><code>.jhipster/*.json</code> - JHipster entity configuration files</li>
-<li><code>docker/</code> - Docker configurations for the application and services that the application depends on</li>
-<li><code>src/PipelineTFM/ClientApp/</code> - Web Application folder</li>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://nodejs.org/">Node.js</a></li>
+<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">.NET 7.0</a></li>
+<li><a href="https://www.docker.com/products/docker-desktop/">Docker</a></li>
+<li><a href="https://github.com/angular/angular-cli">Angular CLI</a></li>
+<li>Jetbrains Rider or Visual Studio</li>
 </ul>
-<h2>Development</h2>
-<p>Before you can build this project, you must install and configure the following dependencies on your machine:</p>
+<h2>Project setup</h2>
 <ol>
-<li><a href="https://nodejs.org/">Node.js</a>: We use Node to run a development web server and build the project.
-Depending on your system, you can install Node either from source or as a pre-packaged bundle.</li>
+<li>Clone the repository</li>
 </ol>
-<p>After installing Node, you should be able to run the following command to install development tools.
-You will only need to run this command when dependencies change in <a href="package.json">package.json</a>.</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">npm install</code></pre></div><p>We use npm scripts and <a href="https://cli.angular.io/">Angular CLI</a> with <a href="https://webpack.github.io/">Webpack</a> as our build system.</p>
-<p>Run the following commands in two separate terminals to create a blissful development experience where your browser
-auto-refreshes when files change on your hard drive.</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">./mvnw
-npm start</code></pre></div><p>Npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
-specifying a newer version in <a href="package.json">package.json</a>. You can also run <code>npm update</code> and <code>npm install</code> to manage dependencies.
-Add the <code>help</code> flag on any command to see how you can use it. For example, <code>npm help update</code>.</p>
-<p>The <code>npm run</code> command will list all of the scripts available to run for this project.</p>
-<h3>PWA Support</h3>
-<p>JHipster ships with PWA (Progressive Web App) support, and it&#39;s turned off by default. One of the main components of a PWA is a service worker.</p>
-<p>The service worker initialization code is disabled by default. To enable it, uncomment the following code in <code>src/PipelineTFM/ClientApp/src/app/app.module.ts</code>:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">ServiceWorkerModule.register(&#39;ngsw-worker.js&#39;, { enabled: false }),</code></pre></div><h3>Managing dependencies</h3>
-<p>For example, to add <a href="https://leafletjs.com/">Leaflet</a> library as a runtime dependency of your application, you would run following command:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">npm install --save --save-exact leaflet</code></pre></div><p>To benefit from TypeScript type definitions from <a href="https://definitelytyped.org/">DefinitelyTyped</a> repository in development, you would run following command:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">npm install --save-dev --save-exact &#64;types/leaflet</code></pre></div><p>Then you would import the JS and CSS files specified in library&#39;s installation instructions so that <a href="https://webpack.github.io/">Webpack</a> knows about them:
-Edit <a href="src/PipelineTFM/ClientApp/src/app/app.module.ts">src/PipelineTFM/ClientApp/src/app/app.module.ts</a> file:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">import &#39;leaflet/dist/leaflet.js&#39;;</code></pre></div><p>Edit <a href="src/PipelineTFM/ClientApp/src/content/scss/vendor.scss">src/PipelineTFM/ClientApp/src/content/scss/vendor.scss</a> file:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">&#64;import &#39;leaflet/dist/leaflet.css&#39;;</code></pre></div><p>Note: There are still a few other things remaining to do for Leaflet that we won&#39;t detail here.</p>
-<p>For further instructions on how to develop with JHipster, have a look at <a href="https://www.jhipster.tech/documentation-archive/v8.0.0/development/">Using JHipster in development</a>.</p>
-<h3>Using Angular CLI</h3>
-<p>You can also use <a href="https://cli.angular.io/">Angular CLI</a> to generate some custom client code.</p>
-<p>For example, the following command:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">ng generate component my-component</code></pre></div><p>will generate few files:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">create src/PipelineTFM/ClientApp/src/app/my-component/my-component.component.html
-create src/PipelineTFM/ClientApp/src/app/my-component/my-component.component.ts
-update src/PipelineTFM/ClientApp/src/app/app.module.ts</code></pre></div><p>Before you can build this project, you must install and configure the following dependencies on your machine:</p>
-<ol>
-<li><a href="https://nodejs.org/">Node.js</a>: We use Node to run a development web server and build the project.
-Depending on your system, you can install Node either from source or as a pre-packaged bundle.</li>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">git clone https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_09.git</code></pre></div><ol start="2">
+<li>Install Node dependencies in the root folder and in <code>src/PipelineTFM/ClientApp</code></li>
 </ol>
-<p>After installing Node, you should be able to run the following command to install development tools.
-You will only need to run this command when dependencies change in <a href="package.json">package.json</a>.</p>
-<p>In ./src/PipelineTFM/ClientApp run</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">npm install</code></pre></div><p>We use npm scripts and <a href="https://webpack.github.io/">Webpack</a> as our build system.</p>
-<p>Run the following commands in two separate terminals to create a blissful development experience where your browser
-auto-refreshes when files change on your hard drive.</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">npm --prefix ./src/PipelineTFM/ClientApp start</code></pre></div><p>npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
-specifying a newer version in <a href="package.json">package.json</a>. You can also run <code>npm update</code> and <code>npm install</code> to manage dependencies.
-Add the <code>help</code> flag on any command to see how you can use it. For example, <code>npm help update</code>.</p>
-<p>The <code>npm --prefix ./src/PipelineTFM/ClientApp run</code> command will list all of the scripts available to run for this project.</p>
-<h2>Building for production</h2>
-<h3>.Net Production builds</h3>
-<p>To build the artifacts and optimize the PipelineTFM application for production, run:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">cd ./src/PipelineTFM
-rm -rf ./src/PipelineTFM/wwwroot
-dotnet publish --verbosity normal -c Release -o ./app/out ./PipelineTFM.csproj</code></pre></div><p>The <code>./src/PipelineTFM/app/out</code> directory will contain your application dll and its depedencies.</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">npm install
+cd src/PipelineTFM/ClientApp
+npm install</code></pre></div><ol start="3">
+<li>Deploy the PostgreSQL database Docker container and make sure it&#39;s running</li>
+</ol>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">docker compose -f docker/postgresql.yml -p pipelinetfm up -d</code></pre></div><ol start="4">
+<li><p>Open the solution in Jetbrains Rider or Visual Studio</p>
+</li>
+<li><p>Run the <code>PipelineTFM: PipelineTFM-LivreBronzeApp</code> configuration</p>
+</li>
+</ol>
+<p><img src="./docs/images/run_app_profile.png" alt="Project app configuration" class="img-responsive"></p>
 <h2>Testing</h2>
 <h3>Client tests</h3>
-<p>Unit tests are run by <a href="https://facebook.github.io/jest/">Jest</a>. They&#39;re located in <a href="src/PipelineTFM/ClientApp/test/">src/PipelineTFM/ClientApp/test/</a> and can be run with:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">npm test</code></pre></div><h3>.Net Backend tests</h3>
-<p>To launch your application&#39;s tests, run:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">dotnet test --verbosity normal</code></pre></div><h2>Others</h2>
-<h3>Code style / formatting</h3>
-<p>To format the dotnet code, run</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">dotnet format</code></pre></div><h3>Code quality</h3>
-<p>By Script :</p>
+<p>Unit tests are run by Jest. They&#39;re located in <a href="src/PipelineTFM/ClientApp/test/">src/PipelineTFM/ClientApp/test/</a> and can be run with:</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">npm test</code></pre></div><h3>.NET Backend tests</h3>
+<p>To launch application&#39;s tests, run:</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">dotnet test --verbosity normal</code></pre></div><p>or to check the coverage (C# backend only, <code>PipelineTFM.Crosscutting</code> and <code>PipelineTFM.Dto</code> are excluded from coverage)</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">dotnet test -p:CollectCoverage=true --no-build --verbosity normal test/PipelineTFM.Test/</code></pre></div><h2>Code style / formatting</h2>
+<h3>.NET Format</h3>
+<p>To format the dotnet code, open a terminal in the project root and run</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">dotnet format</code></pre></div><p>or if you only want to check the format status</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">dotnet format --verify-no-changes</code></pre></div><h3>Client format</h3>
+<p>To format the web app code, open a terminal in the <code>src/PipelineTFM/ClientApp</code> folder and run</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">npm run prettier:format</code></pre></div><p>or if you only want to check the format status</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">npm run prettier:check</code></pre></div><p>However, the SonarQube quality gate doesn&#39;t check every file. If you want to use the format check, you can run</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">npm run prettier:check-ci</code></pre></div><h2>Code quality</h2>
+<p>A Docker Compose file for SonarQube is provided to deploy your own instance.</p>
+<p>Manually (using bash):</p>
 <ol>
 <li><p>Run Sonar in container : <code>docker compose -f ./docker/sonar.yml up -d</code></p>
 </li>
-<li><p>Wait container was up Run <code>SonarAnalysis.ps1</code> and go to <a href="http://localhost:9001">http://localhost:9001</a></p>
+<li><p>Install Sonar scanner for .NET : <code>dotnet tool install --global dotnet-sonarscanner</code></p>
 </li>
-</ol>
-<p>Manually :</p>
-<ol>
-<li><p>Run Sonar in container : <code>docker compose -f ./docker/sonar.yml up -d</code></p>
-</li>
-<li><p>Install sonar scanner for .net :</p>
-</li>
-</ol>
-<p><code>dotnet tool install --global dotnet-sonarscanner</code></p>
-<ol start="3">
-<li><p>Run <code>dotnet sonarscanner begin /d:sonar.login=admin /d:sonar.password=admin /k:&quot;PipelineTFM&quot; /d:sonar.host.url=&quot;http://localhost:9001&quot; /s:&quot;`pwd`/SonarQube.Analysis.xml&quot;</code></p>
+<li><p>Run <code>dotnet sonarscanner begin -d:sonar.login=admin -d:sonar.password=admin -key:&quot;PipelineTFM&quot; -d:sonar.host.url=&quot;http://localhost:9001&quot; -s:&quot;`pwd`/SonarQube.Analysis.xml&quot;</code></p>
 </li>
 <li><p>Build your application : <code>dotnet build</code></p>
 </li>
-<li><p>Publish sonar results : <code>dotnet sonarscanner end /d:sonar.login=admin /d:sonar.password=admin</code></p>
+<li><p>Publish sonar results : <code>dotnet sonarscanner end -d:sonar.login=admin -d:sonar.password=admin</code></p>
 </li>
 <li><p>Go to <a href="http://localhost:9001">http://localhost:9001</a></p>
 </li>
 </ol>
-<h3>Monitoring</h3>
-<ol>
-<li><p>Run container (uncomment chronograf and kapacitor if you would use it): <code>docker compose -f ./docker/monitoring.yml up -d</code></p>
-</li>
-<li><p>Go to <a href="http://localhost:3000">http://localhost:3000</a> (or <a href="http://localhost:8888">http://localhost:8888</a> if you use chronograf)</p>
-</li>
-<li><p>(Only for chronograf) Change influxdb connection string by <code>YourApp-influxdb</code></p>
-</li>
-<li><p>(Only for chronograf) Change kapacitor connection string by <code>YourApp-kapacitor</code></p>
-</li>
-<li><p>(Only for chronograf) You can now add dashboard (like docker), see your app log in Cronograf Log viewer and send alert with kapacitor</p>
-</li>
-</ol>
+<h2>Building for production</h2>
+<h3>.NET Production builds</h3>
+<p>To build the artifacts and optimize the PipelineTFM application for production, run:</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">cd ./src/PipelineTFM
+rm -rf ./src/PipelineTFM/wwwroot
+dotnet publish --verbosity normal -c Release -o ./app/out ./PipelineTFM.csproj</code></pre></div><p>The <code>./src/PipelineTFM/app/out</code> directory will contain your application dll and its depedencies.</p>
 <h3>Build a Docker image</h3>
-<p>You can also fully dockerize your application and all the services that it depends on. To achieve this, first build a docker image of your app by running:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">docker build -f ./Dockerfile-Back -t pipelinetfm .</code></pre></div><p>Then run:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">docker run -p 8080:80 pipelinetfm</code></pre></div><p>Or you can simply run :</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">docker compose -f .\docker\app.yml build</code></pre></div><p>And</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">docker compose -f .\docker\app.yml up</code></pre></div><h2>Further Documentation and Resources</h2>
-<p>For more detailed documentation on our project, visit our <a href="%5Blink-to-the-documentation%5D(https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/)">documentation page</a>. Here, you&#39;ll find comprehensive guides, API references, and other resources to help you understand and work with our project effectively.</p>
+<p>You can also fully dockerize the application and all the services that it depends on. To achieve this, run:</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">docker compose -f ./docker/app-prod.yml build</code></pre></div><p>and then</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">docker compose -f ./docker/app-prod.yml up</code></pre></div><p>Go to <a href="http://localhost:5000">http://localhost:5000</a></p>
+<h2>Further Documentation and Resources</h2>
+<p>For more detailed documentation on our project, visit our <a href="https://unamurcsfaculty.github.io/2324_INFOM126_GROUPE_09/">documentation page</a>. Here, you&#39;ll find comprehensive guides, API references, and other resources to help you understand and work with our project effectively.</p>
 
 
 
