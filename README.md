@@ -149,13 +149,13 @@ The `./src/PipelineTFM/app/out` directory will contain your application dll and 
 You can also fully dockerize the application and all the services that it depends on. To achieve this, run:
 
 ```bash
-docker compose -f ./docker/app.yml build
+docker compose -f ./docker/app-prod.yml build
 ```
 
 and then
 
 ```bash
-docker compose -f ./docker/app.yml up
+docker compose -f ./docker/app-prod.yml up
 ```
 
 Go to http://localhost:5000
