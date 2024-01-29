@@ -13,6 +13,8 @@
 
 PipelineTFM is a simple guest book application based on a template generated using JHipster 8.0.0 and JHipster .Net Core. You can find documentation and help at https://jhipsternet.readthedocs.io/en/latest/index.html and [https://www.jhipster.tech/documentation-archive/v8.0.0](https://www.jhipster.tech/documentation-archive/v8.0.0).
 
+Hello there.
+
 ## Prerequisites
 
 In order to run the project, make sure you have these tools installed on your machine:
